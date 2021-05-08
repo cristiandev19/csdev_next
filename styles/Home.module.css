@@ -1,20 +1,34 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
+  padding: 0;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 100vh;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.logo {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentside {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  width: 80%;
+  margin: auto;
 }
 
 .footer {
@@ -108,10 +122,6 @@
   line-height: 1.5;
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
 
 @media (max-width: 600px) {
   .grid {
