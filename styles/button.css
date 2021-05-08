@@ -1,0 +1,10 @@
+.primary-btn {
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
