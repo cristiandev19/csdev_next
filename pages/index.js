@@ -3,6 +3,8 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  const urlCV = 'https://drive.google.com/file/d/1gj3sskWpp9RNnZTr4_WIgJRH6Uaw5fT5/view?usp=sharing';
+
   return (
     <div className={styles.container}>
       <Head>
