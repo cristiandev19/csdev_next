@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #E91E63;
+  --secondary-color: red;
+  --tertiary-color: red;
+  --quaternary-color: red;
+  --font-regular: 'inter';
+  --font-bold: 'interbold';
+  --text-color: black;
+  --white-color: white;
+  --black-color: black;
+}
+
 html,
 body {
   padding: 0;
@@ -14,3 +26,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.fullwidth {
+  width: 100%;
+}
+
