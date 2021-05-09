@@ -1,10 +1,92 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Progress from '../components/atoms/Progress/Progress';
+import ProgressImg from '../components/molecules/ProgressImg/ProgressImg';
 import styles from '../styles/Home.module.css';
+import Button from '../components/atoms/Button/Button';
 
 export default function Home() {
   const urlCV = 'https://drive.google.com/file/d/1gj3sskWpp9RNnZTr4_WIgJRH6Uaw5fT5/view?usp=sharing';
+
+  const dataSkills = [
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/figma.png',
+      color: '#A259FF',
+      percent: 19,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/git.png',
+      color: '#F05133',
+      percent: 59,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/invision.png',
+      color: '#FF3366',
+      percent: 24,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/mongo.png',
+      color: '#70B35E',
+      percent: 79,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/node.png',
+      color: '#83CD29',
+      percent: 86,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/sass.png',
+      color: '#CD6799',
+      percent: 100,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/sql.png',
+      color: '#157EFB',
+      percent: 18,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/vue.png',
+      color: '#00C887',
+      percent: 37,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/angular.png',
+      color: '#DD0031',
+      percent: 55,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/aws.png',
+      color: '#FF9900',
+      percent: 76,
+    },
+    {
+      radius: 60,
+      stroke: 8,
+      image: '/images/css.png',
+      color: '#2965F1',
+      percent: 79,
+    },
+  ]
+
 
   return (
     <div className={styles.container}>
@@ -37,86 +119,85 @@ export default function Home() {
 
             <p>Un fullstack developer autodidacta por pasión, vocación y profesión. Me encanta ser retado constantemente a superar mis miedos y limites.</p>
 
-            <button className="primary-btn">Descargar CV</button>
+            <Button text="Descargar CV" />
           </div>
         </section>
         <section>
-          Nueva seccion
-          <h2>Habilidades</h2>
+          <h2 className={styles.title}>Habilidades</h2>
 
-          <div>
+          <div className={styles.list}>
 
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/figma.png'}
               color={'#A259FF'}
               percent={19}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/git.png'}
               color={'#F05133'}
               percent={59}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/invision.png'}
               color={'#FF3366'}
               percent={24}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/mongo.png'}
               color={'#70B35E'}
               percent={79}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/node.png'}
               color={'#83CD29'}
               percent={86}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/sass.png'}
               color={'#CD6799'}
               percent={100}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/sql.png'}
               color={'#157EFB'}
               percent={18}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/vue.png'}
               color={'#00C887'}
               percent={37}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/angular.png'}
               color={'#DD0031'}
               percent={55}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/aws.png'}
               color={'#FF9900'}
               percent={76}
             />
-            <Progress
+            <ProgressImg
               radius={60}
               stroke={8}
               image={'/images/css.png'}
