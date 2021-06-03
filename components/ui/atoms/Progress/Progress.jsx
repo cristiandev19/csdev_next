@@ -4,23 +4,9 @@ import PropTypes from 'prop-types';
 const Progress = ({
   radius, stroke, color, percent,
 }) => {
-  const [strokeDashoffset, setStrokeDashoffset] = useState(null);
-  const [circumference, setCircumference] = useState(null);
-  const [normalizedRadius, setNormalizedRadius] = useState(null);
-
-  useEffect(() => {
-    console.log('creando');
-    setNormalizedRadius(radius - stroke * 2);
-    setCircumference(normalizedRadius * 2 * Math.PI);
-    setStrokeDashoffset(circumference - percent / 100 * circumference);
-  }, []);
-
-  useEffect(() => {
-    console.log('cambios')
-    setNormalizedRadius(radius - stroke * 2);
-    setCircumference(normalizedRadius * 2 * Math.PI);
-    setStrokeDashoffset(circumference - percent / 100 * circumference);
-  }, [percent]);
+  const normalizedRadius = radius - stroke * 2;
+  const circumference = normalizedRadius * 2 * Math.PI;
+  const strokeDashoffset = circumference - percent / 100 * circumference;
 
   return (
     <svg
@@ -33,7 +19,7 @@ const Progress = ({
         strokeWidth={ stroke }
         strokeDasharray={ circumference + ' ' + circumference }
         style={ { strokeDashoffset } }
-        // stroke-width={ stroke }
+        // strokeWidth={ stroke }
         r={ normalizedRadius }
         cx={ radius }
         cy={ radius }
