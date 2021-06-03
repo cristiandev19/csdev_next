@@ -105,6 +105,18 @@
   line-height: 1.5;
 }
 
+.trophy {
+  width: 90%;
+  margin: auto;
+}
+
+.trophySection {
+  padding: 30px 0;
+}
+
+.skillSection {
+  padding: 30px 0;
+}
 
 @media (max-width: 600px) {
   .grid {
