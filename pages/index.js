@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import ProgressImg from '../components/molecules/ProgressImg/ProgressImg';
+import ProgressImg from '../components/ui/molecules/ProgressImg/ProgressImg';
 import styles from '../styles/Home.module.css';
-import Button from '../components/atoms/Button/Button';
+import Button from '../components/ui/atoms/Button/Button';
 
 export default function Home() {
   const urlCV = 'https://drive.google.com/file/d/1gj3sskWpp9RNnZTr4_WIgJRH6Uaw5fT5/view?usp=sharing';
