@@ -1,5 +1,6 @@
 .progress-container {
   position: relative;
+  margin: auto;
 }
 
 .progress-image {
