@@ -3,9 +3,11 @@ import Image from 'next/image';
 import ProgressImg from '../components/ui/molecules/ProgressImg/ProgressImg';
 import styles from '../styles/Home.module.css';
 import Button from '../components/ui/atoms/Button/Button';
+import LinkButton from '../components/ui/atoms/LinkButton/LinkButton';
+import TrophyResponsive from '../components/TrophyResponsive/TrophyResponsive';
 
 export default function Home() {
-  const urlCV = 'https://drive.google.com/file/d/1gj3sskWpp9RNnZTr4_WIgJRH6Uaw5fT5/view?usp=sharing';
+  const urlCV = 'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
 
   const dataSkills = [
     {
@@ -186,14 +188,15 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Cristian sotomayor</title>
+        <title>Cristian Sotomayor</title>
         <meta name="description" content="Personal web made with next" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
 
-        <section className={styles.main}>
+        <section className={styles.mainSection}>
+
           <div>
             <figure className={styles.logo}>
               <img src={'/logo1.png'} alt="" className="fullwidth"/>
@@ -214,7 +217,11 @@ export default function Home() {
 
             <p>Un fullstack developer autodidacta por pasión, vocación y profesión. Me encanta ser retado constantemente a superar mis miedos y limites.</p>
 
-            <Button text="Descargar CV" />
+            {/* <Button text="Descargar CV" /> urlCV */}
+            <LinkButton href={urlCV}>
+              Descargar CV
+            </LinkButton>
+            {/* <a href={urlCV} target="_blank" rel="noreferrer">Descargar CV</a> */}
           </div>
         </section>
         <section className={styles.skillSection}>
@@ -243,12 +250,18 @@ export default function Home() {
           <h2 className={styles.title}>Github</h2>
 
           <div className={styles.trophy}>
-            <a href="https://github.com/ryo-ma/github-profile-trophy">
-              <img className="fullwidth" src="https://github-profile-trophy.vercel.app/?username=cristiandev19" alt="cristiandev19" />
-            </a>
+            <TrophyResponsive />
           </div>
         </section>
 
+        <section>
+
+          <div className="flex-justify">
+            {/* <iframe src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe> */}
+
+            <iframe height="500" width="500" src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe>
+          </div>
+        </section>
       </main>
       {/*
       <footer className={styles.footer}>
