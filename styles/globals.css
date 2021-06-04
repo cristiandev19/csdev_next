@@ -31,3 +31,7 @@ a {
   width: 100%;
 }
 
+.flex-justify {
+  display: flex;
+  justify-content: center;
+}
