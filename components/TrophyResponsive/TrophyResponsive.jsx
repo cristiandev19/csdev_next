@@ -14,7 +14,6 @@ const TrophyResponsive = props => {
   const [col, setCol] = useState(4);
 
   useEffect(() => {
-    console.log('cada que cambia', size)
     if (size.width >= widthSizeCol.large) {
       setCol(6);
     } else if (size.width >= widthSizeCol.medium) {
