@@ -256,7 +256,9 @@ export default function Home() {
 
         <section className={styles.hitosSection}>
           <div>
-            <p>Empece mi carrera como desarrollador de software en un programa llamado "Peru Rumbo GSoC 2018" organizado por LinuxAtUNI del cual llegue a ser el Top 1</p>
+            <p>
+              Empece mi carrera como desarrollador de software en un programa llamado "Peru Rumbo GSoC 2018" organizado por LinuxAtUNI del cual llegue a ser el Top 1.
+            </p>
           </div>
           <div className="flex-justify">
             {/* <iframe src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe> */}
