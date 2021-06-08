@@ -254,16 +254,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section>
-
+        <section className={styles.hitosSection}>
+          <div>
+            <p>Empece mi carrera como desarrollador de software en un programa llamado "Peru Rumbo GSoC 2018" organizado por LinuxAtUNI del cual llegue a ser el Top 1</p>
+          </div>
           <div className="flex-justify">
             {/* <iframe src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe> */}
 
-            <iframe height="500" width="500" src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe>
+            <iframe height="500" width="100%" src="https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018"></iframe>
           </div>
         </section>
       </main>
-      {/*
+      {/*       
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
