@@ -217,11 +217,9 @@ export default function Home() {
 
             <p>Un fullstack developer autodidacta por pasión, vocación y profesión. Me encanta ser retado constantemente a superar mis miedos y limites.</p>
 
-            {/* <Button text="Descargar CV" /> urlCV */}
             <LinkButton href={urlCV}>
               Descargar CV
             </LinkButton>
-            {/* <a href={urlCV} target="_blank" rel="noreferrer">Descargar CV</a> */}
           </div>
         </section>
         <section className={styles.skillSection}>
