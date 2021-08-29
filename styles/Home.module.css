@@ -9,22 +9,6 @@
 }
 
 
-.logo {
-  width: 70%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.contentside {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 80%;
-  margin: auto;
-}
 
 .footer {
   width: 100%;
@@ -42,9 +26,6 @@
   flex-grow: 1;
 }
 
-.title {
-  text-align: center;
-}
 
 .description {
   line-height: 1.5;
@@ -99,33 +80,6 @@
   line-height: 1.5;
 }
 
-.trophy {
-  width: 90%;
-  margin: auto;
-}
-
-
-.mainSection {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
-  height: 100vh;
-}
-
-.trophySection {
-  padding: 50px 0;
-  height: 100vh;
-}
-
-.skillSection {
-  padding: 50px 0;
-  height: 100vh;
-}
-
-.hitosSection {
-  padding: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
 
 @media (max-width: 600px) {
   .grid {
@@ -134,8 +88,3 @@
   }
 }
 
-
-.list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
-}
