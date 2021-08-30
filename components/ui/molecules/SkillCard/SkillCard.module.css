@@ -1,0 +1,23 @@
+.skill-card {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.skill-card {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+}
+
+.skill-card__header {
+  display: flex;
+  width: 100%;
+}
+
+.skill-card__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
