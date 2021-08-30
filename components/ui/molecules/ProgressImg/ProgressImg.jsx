@@ -5,10 +5,10 @@ import styles from './ProgressImg.module.css'
 
 
 const ProgressImg = ({
-  radius, stroke, image, color, percent,
+  radius, stroke, image, color, percent, onClick,
 }) => {
   return (
-    <div className={styles['progress-container']}>
+    <div className={styles['progress-container']} onClick={onClick}>
       <Progress
         radius={radius}
         stroke={stroke}
@@ -26,6 +26,7 @@ ProgressImg.propTypes = {
   stroke: PropTypes.number.isRequired,
   image: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ProgressImg;
