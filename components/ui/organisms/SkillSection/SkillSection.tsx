@@ -14,7 +14,6 @@ export type DataSkill = {
 };
 
 const SkillSection = () => {
-
   const [skillSelected, setSkillSelected] = useState(null);
 
   const dataSkills: DataSkill[] = [
@@ -29,7 +28,7 @@ const SkillSection = () => {
         'Implemente un sistema de versionamiento (semver) para que las subidas y el uso de git tags para que los cambios a producción sean mas simples de encontrar y que sean cambiables en caso de problemas.',
         'Cree scripts de automatizacion con git para hacer cambios sobre multiples ramas, por ejemplo borrar multiples ramas que estaban en un repositorio remoto.',
         'Monitorear las ramas y ultimos cambios dentro de un repositorio.',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -42,7 +41,7 @@ const SkillSection = () => {
         'Uso de todas las funciones de MongoDB para filtrar, modificar y tratar la data.',
         'Crear una copia de la información para crear un ambiente de pruebas funcional dentro del mismo cluster.',
         'Optimizar el modelado de la informacion dentro de las colecciones.',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -55,7 +54,7 @@ const SkillSection = () => {
         'He trabajado en proyectos de frontend con VanillaJs de los cuales implemente animaciones, validaciones e integraciones con API’s para posteriormente hacer un updgrade progresivo a una libreria como Vue para que sea mas interactivo.',
         'He creado y mantenido proyectos con librerias de JS como Vue y React, de este ultimo implementando librerias como MaterialUI y hooks para formularios con validaciones.',
         'Hice mantenimiento de proyectos backend con Nodejs, tanto un monolito alojado en un servidor en la nube como de un proyecto usando microservicios (lambda) en la nube alojados en AWS.',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -67,7 +66,7 @@ const SkillSection = () => {
       skills: [
         'He trabajado en proyectos de frontend con Typescript usando el framework Angular.',
         'He creado y mantenido proyectos backend con Nodejs usando Typescript como lenguaje de desarrollo para implementar conceptos de SOLID y DDD dentro de un servidor. ',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -93,7 +92,7 @@ const SkillSection = () => {
         'Hice maquetaciones de interfaces con Sass usando Angular, y adaptando diseños al estandar de material.',
         'Con CSS adapte una guia de estilos para que su aplicacion a distintos componentes y reutilización sea mas simple.',
         'Hice animaciones tanto en Sass como en CSS para darle mas fluidez a interfaces. En un proyecto usando las animaciones de Angular y en otro usando directivas nativas de CSS.',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -107,7 +106,7 @@ const SkillSection = () => {
         'Uso de bases de datos de replica (maestro-esclavo) para un sistema altamente concurrente.',
         'Optimización de querys tanto en legibilidad como en rendimiento. Pase reportes de un año que tardaba mas de 30 segundos a que para la misma información tarde 2 a 3 segundos.',
         'Uso de JSON y JSONB dentro de PostgreSQL para organizar información.',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -121,7 +120,7 @@ const SkillSection = () => {
         'Cree hooks personalizados para trabajos especificos en la UI como hover y decomponiendo hooks de librerias como React Form Hook para entender mejor su funcionamiento',
         'Use hooks propios del lenguaje como useState, useEffect, useContext y demas propios de la libreria.',
         'Hice prueba unitarias con testing library y jest',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -133,7 +132,7 @@ const SkillSection = () => {
       skills: [
         'Hice una implementación de esta libreria en proyectos legacy que renderizaban pug, para hacerlo mas dinamico y que respondiera a las necesidades del los usuarios de manera mas fluida',
         'Implemente componentes reutilizables a la par de VanillaJs para hacer mejoras continuas',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -149,7 +148,7 @@ const SkillSection = () => {
         'Trabaje con librerias como Angular Material y Highcharts para la interfaz de usuario.',
         'Realice optimizaciones en logica de componentes usando mecanismos propios de Angular como pipes, change detections strategies y demas.',
         'Use formularios reactivos de manera extensiva para validaciones de multiples campos, de arreglos de formularios, validaciones personalizadas y demas. ',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -175,7 +174,7 @@ const SkillSection = () => {
         'Uso Figma como herramienta de maquetado de pantallas, imagenes, logos, etc.',
         'Y uso Invision como herramienta de maquetado rapido cuando necesito plasmar ideas de una reunion en un wireframe mas visual para darle una idea al stakeholder de como quedaria.',
         'Este curriculum fue hecho en figma asi como todos los demas componentes visualies exceptuando imagenes ',
-      ]
+      ],
     },
     {
       radius: 60,
@@ -188,23 +187,21 @@ const SkillSection = () => {
         'Uso Figma como herramienta de maquetado de pantallas, imagenes, logos, etc.',
         'Y uso Invision como herramienta de maquetado rapido cuando necesito plasmar ideas de una reunion en un wireframe mas visual para darle una idea al stakeholder de como quedaria.',
         'Este curriculum fue hecho en figma asi como todos los demas componentes visualies exceptuando imagenes ',
-      ]
+      ],
     },
-  ]
-
+  ];
 
   const handleClick = (data) => {
-    console.log('data', data);
     setSkillSelected(data);
-  }
-  
+  };
+
   const handleClose = () => {
     setSkillSelected(null);
-  }
+  };
 
   return (
     <section className={styles.skillSection}>
-      <h2 className={'text-center'}>Habilidades</h2>
+      <h2 className="text-center">Habilidades</h2>
 
       {
         !skillSelected && (
@@ -231,7 +228,7 @@ const SkillSection = () => {
         skillSelected && <SkillCard data={skillSelected} handleClose={handleClose} />
       }
     </section>
-  )
-}
+  );
+};
 
 export default SkillSection;
