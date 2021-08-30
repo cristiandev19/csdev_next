@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProgressImg from '../../molecules/ProgressImg/ProgressImg';
+import SkillCard from '../../molecules/SkillCard/SkillCard';
 import styles from './SkillSection.module.css';
 
-type DataSkill = {
+export type DataSkill = {
   radius: number;
   stroke: number;
   image: string;
@@ -13,6 +14,8 @@ type DataSkill = {
 };
 
 const SkillSection = () => {
+
+  const [skillSelected, setSkillSelected] = useState(null);
 
   const dataSkills: DataSkill[] = [
     {
@@ -189,27 +192,44 @@ const SkillSection = () => {
     },
   ]
 
+
+  const handleClick = (data) => {
+    console.log('data', data);
+    setSkillSelected(data);
+  }
+  
+  const handleClose = () => {
+    setSkillSelected(null);
+  }
+
   return (
     <section className={styles.skillSection}>
       <h2 className={'text-center'}>Habilidades</h2>
 
-      <div className={styles.list}>
+      {
+        !skillSelected && (
+          <div className={styles.list}>
 
-        {
-          dataSkills.map((data) => (
-            <ProgressImg
-              radius={data.radius}
-              stroke={data.stroke}
-              image={data.image}
-              color={data.color}
-              percent={data.percent}
-              key={data.image}
-            />
-          ))
-        }
+            {
+              dataSkills.map((data) => (
+                <ProgressImg
+                  radius={data.radius}
+                  stroke={data.stroke}
+                  color={data.color}
+                  image={data.image}
+                  percent={data.percent}
+                  key={data.image}
+                  onClick={() => handleClick(data)}
+                />
+              ))
+            }
 
-      </div>
-
+          </div>
+        )
+      }
+      {
+        skillSelected && <SkillCard data={skillSelected} handleClose={handleClose} />
+      }
     </section>
   )
 }
