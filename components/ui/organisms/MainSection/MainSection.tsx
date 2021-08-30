@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import useWindowSize, { WidthSizesProps } from '../../../../hooks/useWindowSize';
 import LinkButton from '../../atoms/LinkButton/LinkButton';
 import styles from './MainSection.module.css';
 
+const devNamePerSize: WidthSizesProps<string> = {
+  extrasmall: 'CSDEV19',
+  small: 'CSDEV19',
+  medium: 'CSDEV19',
+  large: 'Cristian Sotomayor',
+  extralarge: 'Cristian Sotomayor',
+};
+
+
 const MainSection = () => {
   const urlCV: string = 'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
+
+  const [devName, setDevName] = useState('Cristian Sotomayor')
+
+  const [size, widthStates] = useWindowSize();
+
+  useEffect(() => {
+    setDevName(devNamePerSize[widthStates]);
+  }, [size])
+
 
   return (
     <section className={styles.mainSection}>
@@ -23,8 +42,10 @@ const MainSection = () => {
       <div className={styles.contentside}>
 
         <h2>¡Hola a todos!</h2>
-
-        <h1>&#60;Cristian Sotomayor /&#62;</h1>
+        
+        <h1 className={styles['typing-effect']}>&#60;{devName} /&#62;</h1>
+        {/* <div className={styles.wrapper}>
+        </div> */}
 
         <p>Soy un fullstack developer autodidacta por pasión, vocación y profesión. Me encanta ser retado constantemente a superar mis miedos y limites.</p>
 
