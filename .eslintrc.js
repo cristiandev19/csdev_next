@@ -24,6 +24,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
     'no-use-before-define': 'off',
+    'react/jsx-props-no-spreading': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
   },
