@@ -1,6 +1,6 @@
 :root {
   --primary-color: #E91E63;
-  --secondary-color: red;
+  --secondary-color: #FF9C00;
   --tertiary-color: red;
   --quaternary-color: red;
   --font-regular: 'inter';
@@ -27,6 +27,17 @@ a {
   box-sizing: border-box;
 }
 
+*::selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+/* Firefox */
+*::-moz-selection {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
 section {
   display: block;
   min-height: 100vh;
@@ -38,6 +49,10 @@ section {
 
 .full-vh {
   height: 100vh;
+}
+
+.flex {
+  display: flex;
 }
 
 .flex-justify {
