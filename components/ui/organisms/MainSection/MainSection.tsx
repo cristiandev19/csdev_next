@@ -14,6 +14,7 @@ const devNamePerSize: WidthSizesProps<string> = {
 
 const MainSection = () => {
   const urlCV: string = 'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
+  const urlLogo: string = 'https://s3.us-east-2.amazonaws.com/csdev19.personal/logo.png';
   const text = 'Soy un fullstack developer autodidacta por pasión, vocación y profesión. Me encanta ser retado constantemente a superar mis miedos y limites.';
 
   const [devName, setDevName] = useState('Cristian Sotomayor');
@@ -44,7 +45,7 @@ const MainSection = () => {
           'm-auto',
         )}
       >
-        <img src="/logo1.png" alt="" className="w-full" />
+        <img src={urlLogo} alt="" className="w-full" />
       </figure>
       <div className="flex flex-col justify-center">
         <div className="">¡Hola a todos!</div>
