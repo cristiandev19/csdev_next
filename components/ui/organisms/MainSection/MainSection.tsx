@@ -1,12 +1,13 @@
+import clsx from 'clsx';
 import React, { useEffect, useState } from 'react';
 import useWindowSize, { WidthSizesProps } from '../../../../hooks/useWindowSize';
 import LinkButton from '../../atoms/LinkButton/LinkButton';
 import styles from './MainSection.module.css';
 
 const devNamePerSize: WidthSizesProps<string> = {
-  extrasmall: 'CSDEV19',
-  small: 'CSDEV19',
-  medium: 'CSDEV19',
+  extrasmall: 'Cristian S.',
+  small: 'Cristian S.',
+  medium: 'Cristian Sotomayor',
   large: 'Cristian Sotomayor',
   extralarge: 'Cristian Sotomayor',
 };
@@ -24,31 +25,37 @@ const MainSection = () => {
   }, [size]);
 
   return (
-    <section className={styles.mainSection}>
+    <section
+      className={clsx(
+        'grid',
+        'grid-cols-1',
+        'sm:grid-cols-2',
+        'md:grid-cols-2',
+        'mt-28',
+        'sm:mt-0',
+        'xl:mt-12',
+      )}
+    >
+      <figure
+        className={clsx(
+          'w-4/5',
+          'flex',
+          'xl:w-3/5',
+          'm-auto',
+        )}
+      >
+        <img src="/logo1.png" alt="" className="w-full" />
+      </figure>
+      <div className="flex flex-col justify-center">
+        <div className="">¡Hola a todos!</div>
 
-      <div>
-        <figure className={styles.logo}>
-          <img src="/logo1.png" alt="" className="fullwidth" />
-
-          {/* <Image
-            src="/logo1.png"
-            alt="Picture of the author"
-            layout="fill"
-            className="full-width"
-          /> */}
-        </figure>
-      </div>
-      <div className={styles.contentside}>
-
-        <h2>¡Hola a todos!</h2>
-
-        <h1 className={styles['typing-effect']}>
-          &#60;
-          {devName}
-          /&#62;
-        </h1>
-        {/* <div className={styles.wrapper}>
-        </div> */}
+        <div className="container-typing">
+          <h1 className="typing-effect my-4">
+            &#60;
+            {devName}
+            /&#62;
+          </h1>
+        </div>
 
         <p>{text}</p>
 
