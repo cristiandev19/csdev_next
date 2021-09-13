@@ -29,8 +29,8 @@ const SkillCard = ({
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    <figure className="flex-justify">
-      <img src={data.image} alt="" />
+    <figure>
+      <img className="m-auto" src={data.image} alt="" />
     </figure>
     <ul>
       {
