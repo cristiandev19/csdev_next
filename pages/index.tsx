@@ -1,31 +1,50 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
 import MainSection from '../components/ui/organisms/MainSection/MainSection';
 import SkillSection from '../components/ui/organisms/SkillSection/SkillSection';
 import TrophySection from '../components/ui/organisms/TrophySection/TrophySection';
 import MilestoneSection from '../components/ui/organisms/MilestoneSection/MilestoneSection';
+import useWindowSize, { WidthSizesProps } from '../hooks/useWindowSize';
+import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSection';
 
-const Home = () => (
-  <div className={styles.container}>
-    <Head>
-      <title>Cristian Sotomayor</title>
-      <meta name="description" content="Personal web made with next" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const addToolBar: WidthSizesProps<boolean> = {
+  extrasmall: true,
+  small: true,
+  medium: true,
+  large: true,
+  extralarge: false,
+};
 
-    <main>
+const Home = () => {
+  const [showToolbar, setShowToolbar] = useState(true);
 
-      <MainSection />
+  const [size, widthStates] = useWindowSize();
 
-      <SkillSection />
+  useEffect(() => {
+    setShowToolbar(addToolBar[widthStates]);
+  }, [size]);
 
-      <TrophySection />
+  return (
+    <div>
+      <Head>
+        <title>Cristian Sotomayor</title>
+        <meta name="description" content="Personal web made with next" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <MilestoneSection />
+      <HeaderSection />
 
-    </main>
-  </div>
-);
+      <div className="container mx-auto sm:px-0 px-8">
+        <MainSection />
+
+        <SkillSection />
+
+        <TrophySection />
+
+        <MilestoneSection />
+      </div>
+    </div>
+  );
+};
 
 export default Home;
