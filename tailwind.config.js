@@ -13,7 +13,7 @@ const focusedSiblingPlugin = plugin(({ addVariant }) => {
 module.exports = {
   mode: 'jit',
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -21,7 +21,9 @@ module.exports = {
         'cs-red': '#B6B6B6',
         'cs-white': '#FFFFFF',
         'cs-black': '#0E151D',
-      }, 
+        'cs-rose': '#FF338F',
+        'cs-yellow': '#F6AE13',
+      },
       fontFamily: {
         title: ['Poppins', 'sans-serif'],
         sans: ['Lato', 'sans-serif'],
