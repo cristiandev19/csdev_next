@@ -12,7 +12,7 @@ const Progress = ({
 }: ProgressProps) => {
   const normalizedRadius = radius - stroke * 2;
   const circumference = normalizedRadius * 2 * Math.PI;
-  const strokeDashoffset = ((circumference - percent) / 100) * circumference;
+  const strokeDashoffset = ((100 - percent) * circumference) / 100;
 
   return (
     <svg
@@ -25,7 +25,6 @@ const Progress = ({
         strokeWidth={stroke}
         strokeDasharray={`${circumference} ${circumference}`}
         style={{ strokeDashoffset }}
-        // strokeWidth={ stroke }
         r={normalizedRadius}
         cx={radius}
         cy={radius}
