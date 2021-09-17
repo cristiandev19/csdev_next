@@ -201,7 +201,7 @@ const SkillSection = () => {
 
   return (
     <section className={styles.skillSection}>
-      <h2 className="text-center">Habilidades</h2>
+      <h2 className="text-center text-2xl my-8">Habilidades</h2>
 
       {
         !skillSelected && (
