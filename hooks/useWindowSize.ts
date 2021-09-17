@@ -6,10 +6,9 @@ export interface WidthSizesProps<T> {
   medium: T;
   large: T;
   extralarge: T;
-};
+}
 
 const useWindowSize = () => {
-
   const widthSizes: WidthSizesProps<number> = {
     extrasmall: 200,
     small: 400,
@@ -18,24 +17,22 @@ const useWindowSize = () => {
     extralarge: 1400,
   };
 
-  const getKeyByValue = (object, value) => {
-    return Object.keys(object).find(key => object[key] === value);
-  }
+  const getKeyByValue = (object, value) => Object.keys(object).find((key) => object[key] === value);
 
   const getStateByWith = (width) => {
     let value;
     if (width <= widthSizes.extrasmall) {
       value = getKeyByValue(widthSizes, widthSizes.extrasmall);
     } else if (width <= widthSizes.small) {
-      value = getKeyByValue(widthSizes, widthSizes.small)
+      value = getKeyByValue(widthSizes, widthSizes.small);
     } else if (width <= widthSizes.medium) {
-      value = getKeyByValue(widthSizes, widthSizes.medium)
+      value = getKeyByValue(widthSizes, widthSizes.medium);
     } else if (width <= widthSizes.large) {
-      value = getKeyByValue(widthSizes, widthSizes.large)
+      value = getKeyByValue(widthSizes, widthSizes.large);
     } else if (width <= widthSizes.extralarge) {
-      value = getKeyByValue(widthSizes, widthSizes.extralarge)
+      value = getKeyByValue(widthSizes, widthSizes.extralarge);
     } else {
-      value = getKeyByValue(widthSizes, widthSizes.extralarge)
+      value = getKeyByValue(widthSizes, widthSizes.extralarge);
     }
     return value;
   };
@@ -67,6 +64,6 @@ const useWindowSize = () => {
   }, []); // Empty array ensures that effect is only run on mount
 
   return [windowSize, widthState];
-}
+};
 
 export default useWindowSize;
