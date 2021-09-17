@@ -47,7 +47,7 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main className="h-screen  dark:bg-cs-black dark:text-white">
+        <main className="min-h-screen dark:bg-cs-black dark:text-white">
           {children}
         </main>
       </div>
