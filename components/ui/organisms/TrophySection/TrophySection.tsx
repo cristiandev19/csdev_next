@@ -4,7 +4,7 @@ import styles from './TrophySection.module.css';
 
 const TrophySection = () => (
   <section className={styles.trophySection}>
-    <h2 className="text-center">Github</h2>
+    <h2 className="text-center text-2xl my-8">Github</h2>
 
     <div className={styles.trophy}>
       <TrophyResponsive />
