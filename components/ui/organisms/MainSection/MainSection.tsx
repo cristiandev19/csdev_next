@@ -34,7 +34,6 @@ const MainSection = () => {
         'md:grid-cols-2',
         themeState?.theme === 'dark' && 'pt-36',
         'sm:mt-0',
-        'xl:mt-12',
       )}
     >
       <figure
@@ -50,12 +49,14 @@ const MainSection = () => {
       <div className="flex flex-col justify-center">
         <div className="">¡Hola a todos!</div>
 
-        <div className="container-typing">
-          <h1 className="typing-effect my-4">
-            &#60;
-            {devName}
-            /&#62;
-          </h1>
+        <div className="flex">
+          <div className="typing-effect">
+            <h1>
+              &#60;
+              {devName}
+              /&#62;
+            </h1>
+          </div>
         </div>
 
         <p>{text}</p>
