@@ -41,23 +41,16 @@ section {
   min-height: 100vh;
 }
 
-
-.container-typing {
-  display: inherit;
-  clear: both;
-}
-
-.typing-effect {
+.typing-effect h1 {
+  /* display: flex; */
   font-family: monospace;
   font-size: 2em;
-  animation: typing 6s steps(22, end) infinite, blink 0.85s step-end infinite;
   white-space: nowrap;
-  letter-spacing: .10em;
   overflow: hidden;
   border-right: 5px solid;
   border-color: var(--primary-color);
-  display: inherit !important;
-  clear: both;
+  letter-spacing: .10em;
+  animation: typing 6s steps(22, end) infinite, blink 0.85s step-end infinite;
 }
 
 @keyframes typing {
