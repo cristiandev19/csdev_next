@@ -1,15 +1,7 @@
-import React from 'react';
+import React, { VoidFunctionComponent } from 'react';
 
-const SkillsList = props => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-SkillsList.propTypes = {
-
-}
+const SkillsList: VoidFunctionComponent = () => (
+  <div />
+);
 
 export default SkillsList;

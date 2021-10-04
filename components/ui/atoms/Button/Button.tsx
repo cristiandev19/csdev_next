@@ -1,19 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import styles from './Button.module.css'
+import React, { FunctionComponent } from 'react';
+import styles from './Button.module.css';
 
-const Button = ({
-  text,
-}) => {
-  return (
-    <>
-      <button className={styles['primary-btn']}>{ text }</button>
-    </>
-  )
-}
+type ButtonProps = {
+  children: React.ReactNode;
+};
 
-Button.propTypes = {
-  text: PropTypes.string.isRequired,
-}
+const Button: FunctionComponent<ButtonProps> = ({
+  children,
+}) => (
+  <>
+    <button type="button" className={styles['primary-btn']}>{ children }</button>
+  </>
+);
 
 export default Button;
