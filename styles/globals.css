@@ -44,7 +44,6 @@ section {
 .typing-effect h1 {
   /* display: flex; */
   font-family: monospace;
-  font-size: 2em;
   white-space: nowrap;
   overflow: hidden;
   border-right: 5px solid;
