@@ -26,6 +26,8 @@ const MainSection = () => {
     setDevName(devNamePerSize[widthStates]);
   }, [size]);
 
+  console.log('hola');
+
   return (
     <section
       className={clsx(
@@ -51,7 +53,7 @@ const MainSection = () => {
 
         <div className="flex">
           <div className="typing-effect">
-            <h1>
+            <h1 className="my-4 text-xl lg:text-2xl">
               &#60;
               {devName}
               /&#62;
