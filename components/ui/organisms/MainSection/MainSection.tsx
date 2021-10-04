@@ -26,8 +26,6 @@ const MainSection = () => {
     setDevName(devNamePerSize[widthStates]);
   }, [size]);
 
-  console.log('hola');
-
   return (
     <section
       className={clsx(
