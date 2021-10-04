@@ -17,7 +17,7 @@ const Home = () => (
 
       <TrophySection />
 
-      <MilestoneSection />
+      {/* <MilestoneSection /> */}
     </div>
   </PageTemplate>
 );
