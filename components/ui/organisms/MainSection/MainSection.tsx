@@ -37,7 +37,7 @@ const MainSection: VoidFunctionComponent = () => {
         className={clsx(
           'w-4/5',
           'flex',
-          'xl:w-full',
+          'xl:w-4/5',
           'm-auto',
           'sm:my-auto',
           'sm:ml-0',
