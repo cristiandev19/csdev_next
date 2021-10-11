@@ -31,7 +31,13 @@ const MainSection: VoidFunctionComponent = () => {
 
   return (
     <section
-      className={clsx('grid', 'grid-cols-1', 'md:grid-cols-2', 'sm:mt-0')}
+      className={clsx(
+        'grid',
+        'grid-cols-1',
+        'md:grid-cols-2',
+        'sm:mt-0',
+        'xl:mt-4',
+      )}
     >
       <figure
         className={clsx(
