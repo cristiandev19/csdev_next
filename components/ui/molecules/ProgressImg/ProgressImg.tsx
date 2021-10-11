@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import Progress from '../../atoms/Progress/Progress';
 import styles from './ProgressImg.module.css';
 
@@ -8,12 +8,17 @@ type ProgressImgProps = {
   image: string;
   color: string;
   percent: number;
-  onClick: any;
-}
+  onClick: () => void;
+};
 
-const ProgressImg = ({
-  radius, stroke, image, color, percent, onClick,
-}: ProgressImgProps) => {
+const ProgressImg: FunctionComponent<ProgressImgProps> = ({
+  radius,
+  stroke,
+  image,
+  color,
+  percent,
+  onClick,
+}) => {
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       // Do whatever when esc is pressed
@@ -22,7 +27,10 @@ const ProgressImg = ({
   };
 
   const [progressProperties] = useState({
-    radius, stroke, color, percent,
+    radius,
+    stroke,
+    color,
+    percent,
   });
 
   return (
@@ -40,7 +48,10 @@ const ProgressImg = ({
         percent={progressProperties.percent}
       />
       <img src={image} alt="" className={styles['progress-image']} />
-      <text style={{ color }} className={styles['progress-percent']}>{ `${percent}%` }</text>
+      <text
+        style={{ color }}
+        className={styles['progress-percent']}
+      >{`${percent}%`}</text>
     </div>
   );
 };

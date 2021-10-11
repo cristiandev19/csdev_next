@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
 
 interface LinkedinIconProps {
-  width ?: number;
-  height ?: number;
+  width?: number;
+  height?: number;
 }
 
 const defaultProps: LinkedinIconProps = {

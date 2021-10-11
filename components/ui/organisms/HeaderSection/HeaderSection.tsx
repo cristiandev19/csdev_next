@@ -1,9 +1,14 @@
 import clsx from 'clsx';
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useState,
+  VoidFunctionComponent,
+} from 'react';
 import ThemeContext from '../../../../contexts/theme/theme.context';
 import { ThemeActionTypes } from '../../../../contexts/theme/theme.reducer';
 
-const HeaderSection = () => {
+const HeaderSection: VoidFunctionComponent = () => {
   const { themeState, themeDispatch } = useContext(ThemeContext);
 
   const [checked, setChecked] = useState(themeState?.theme === 'dark');
@@ -25,7 +30,8 @@ const HeaderSection = () => {
         'dark:bg-cs-black',
         'p-2',
         'mt-0',
-        checked ? 'fixed' : '',
+        'fixed',
+        'backdrop-blur',
         'w-full',
         'z-10',
         'top-0',
@@ -33,10 +39,16 @@ const HeaderSection = () => {
     >
       <div className="container mx-auto flex flex-wrap items-center">
         <div className="flex w-full md:w-1/3 justify-center md:justify-start text-white font-extrabold">
-          <a className="text-white no-underline hover:text-white hover:no-underline" href="/">
-            <span className="hidden lg:block text-cs-black dark:text-cs-white text-2xl pl-2">&#60;Cristian Sotomayor /&#62;</span>
-            <span className="block lg:hidden text-cs-black dark:text-cs-white text-2xl pl-2">&#60;Cristian S. /&#62;</span>
-
+          <a
+            className="text-white no-underline hover:text-white hover:no-underline"
+            href="/"
+          >
+            <span className="hidden lg:block text-cs-black dark:text-cs-white text-2xl pl-2">
+              &#60;Cristian Sotomayor /&#62;
+            </span>
+            <span className="block lg:hidden text-cs-black dark:text-cs-white text-2xl pl-2">
+              &#60;Cristian S. /&#62;
+            </span>
           </a>
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-center">
@@ -49,11 +61,25 @@ const HeaderSection = () => {
                     !checked ? 'sun-light' : 'dark:text-cs-black',
                   )}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
                   </svg>
                 </div>
-                <label htmlFor="toggleB" className="flex items-center cursor-pointer">
+                <label
+                  htmlFor="toggleB"
+                  className="flex items-center cursor-pointer"
+                >
                   <div className="relative">
                     <input
                       type="checkbox"
@@ -72,8 +98,19 @@ const HeaderSection = () => {
                     checked ? 'moon-dark' : 'text-cs-white',
                   )}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
                   </svg>
                 </div>
               </div>
@@ -81,7 +118,6 @@ const HeaderSection = () => {
           </ul>
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
-
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             <li className="mr-3">
               <a

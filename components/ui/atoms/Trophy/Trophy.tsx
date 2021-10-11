@@ -1,13 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 type TrophyProps = {
   row: number;
   col: number;
-}
+};
 
-const Trophy = ({
-  row, col,
-}: TrophyProps) => (
+const Trophy: FunctionComponent<TrophyProps> = ({ row, col }) => (
   <>
     <a href="https://github.com/ryo-ma/github-profile-trophy">
       <img

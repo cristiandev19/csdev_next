@@ -1,16 +1,11 @@
-import React from 'react';
-// import styles from './LinkButton.module.css';
+import React, { FunctionComponent } from 'react';
 
 type LinkButtonProps = {
   href: string;
-  children: any;
-}
+  children: React.ReactNode;
+};
 
-// type LinkTypes = 'primary-link' | 'secondary-link' | 'tertiary-link';
-
-// styles['primary-link']
-
-const LinkButton = ({ href, children }: LinkButtonProps) => (
+const LinkButton: FunctionComponent<LinkButtonProps> = ({ href, children }) => (
   <>
     <a
       href={href}
@@ -21,7 +16,7 @@ const LinkButton = ({ href, children }: LinkButtonProps) => (
       }}
       className="flex justify-center py-3 my-3 text-cs-white rounded-xl text-xl"
     >
-      { children }
+      {children}
     </a>
   </>
 );

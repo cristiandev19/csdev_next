@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { ReactElement } from 'react';
 import '../styles/globals.css';
-// import '../styles/button.css';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'tailwindcss/tailwind.css';
 
-function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
+import 'tailwindcss/tailwind.css';
+import { AppProps } from 'next/dist/shared/lib/router/router';
+
+const MyApp = ({ Component, pageProps }: AppProps): ReactElement => {
   return <Component {...pageProps} />;
-}
+};
 
 export default MyApp;

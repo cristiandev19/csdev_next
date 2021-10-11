@@ -1,11 +1,7 @@
-import React from 'react';
+import React, { VoidFunctionComponent } from 'react';
 
-function Home() {
-  return (
-    <div>
-      Home
-    </div>
-  );
-}
+const Home: VoidFunctionComponent = () => {
+  return <div>Home</div>;
+};
 
 export default Home;
