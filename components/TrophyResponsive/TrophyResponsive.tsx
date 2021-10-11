@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, VoidFunctionComponent } from 'react';
 import Trophy from '../ui/atoms/Trophy/Trophy';
 import useWindowSize, { WidthSizesProps } from '../../hooks/useWindowSize';
 
@@ -10,7 +10,7 @@ const rowColPerSize: WidthSizesProps<{ row: number; col: number }> = {
   extralarge: { row: 2, col: 6 },
 };
 
-const TrophyResponsive = () => {
+const TrophyResponsive: VoidFunctionComponent = () => {
   const [size, widthStates] = useWindowSize();
   const [rowAndCol, setRowAndCol] = useState({ row: 2, col: 4 });
 

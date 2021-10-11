@@ -4,8 +4,9 @@ import SkillSection from '../components/ui/organisms/SkillSection/SkillSection';
 import TrophySection from '../components/ui/organisms/TrophySection/TrophySection';
 import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSection';
 import PageTemplate from '../components/ui/templates/PageTemplate';
+import { NextPage } from 'next';
 
-const Home = () => (
+const Home: NextPage = () => (
   <PageTemplate title="Inicio | Cristian Sotomayor">
     <HeaderSection />
 

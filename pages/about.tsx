@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { VoidFunctionComponent } from 'react';
 import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSection';
 import PageTemplate from '../components/ui/templates/PageTemplate';
 
-const Aboutme = () => (
+const Aboutme: VoidFunctionComponent = () => (
   <PageTemplate title="Acerca de mi | Cristian Sotomayor">
     <HeaderSection />
 
     <div className="container mx-auto sm:px-0 px-8 pt-40">
-      <h1>
-        ACERCA DE MI
-      </h1>
+      <h1>ACERCA DE MI</h1>
     </div>
   </PageTemplate>
 );

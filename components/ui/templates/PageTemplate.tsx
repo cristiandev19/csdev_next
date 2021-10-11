@@ -1,8 +1,13 @@
 import React, {
-  FunctionComponent, useEffect, useReducer, useState,
+  FunctionComponent,
+  useEffect,
+  useReducer,
+  useState,
 } from 'react';
 import Head from 'next/head';
-import ThemeReducer, { ThemeActionTypes } from '../../../contexts/theme/theme.reducer';
+import ThemeReducer, {
+  ThemeActionTypes,
+} from '../../../contexts/theme/theme.reducer';
 import ThemeContext from '../../../contexts/theme/theme.context';
 
 type PageTemplateProps = {
@@ -21,13 +26,13 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
     setInitialState({ theme });
   }, []);
 
-  const [themeState, themeDispatch] = useReducer(
-    ThemeReducer,
-    initialState,
-  );
+  const [themeState, themeDispatch] = useReducer(ThemeReducer, initialState);
 
   useEffect(() => {
-    themeDispatch({ type: ThemeActionTypes.setTheme, payload: initialState?.theme });
+    themeDispatch({
+      type: ThemeActionTypes.setTheme,
+      payload: initialState?.theme,
+    });
   }, [initialState]);
 
   useEffect(() => {
@@ -37,7 +42,8 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
   return (
     <ThemeContext.Provider
       value={{
-        themeState, themeDispatch,
+        themeState,
+        themeDispatch,
       }}
     >
       <div className={themeState?.theme}>
