@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import CheckIcon from '../../../Icons/CheckIcon';
 import { DataSkill } from '../../organisms/SkillSection/SkillSection';
 
 const SkillCard = ({
@@ -9,7 +10,8 @@ const SkillCard = ({
   <div
     className={clsx(
       'rounded-2xl',
-      'w-4/5',
+      'w-full',
+      'lg:w-4/5',
       'm-auto',
       'p-5',
       'relative',
@@ -32,10 +34,15 @@ const SkillCard = ({
     <figure>
       <img className="m-auto" src={data.image} alt="" />
     </figure>
-    <ul>
+    <ul className="relative space-y-3 mt-8">
       {
         data.skills.map((skill) => (
-          <li key={skill}>{skill}</li>
+          <li className="flex items-center space-x-2" key={skill}>
+            <div style={{ color: data.color }}>
+              <CheckIcon height={20} width={20} />
+            </div>
+            <span className="w-full">{skill}</span>
+          </li>
         ))
       }
     </ul>
