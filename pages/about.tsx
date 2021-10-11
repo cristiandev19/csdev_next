@@ -6,7 +6,7 @@ const Aboutme = () => (
   <PageTemplate title="Acerca de mi | Cristian Sotomayor">
     <HeaderSection />
 
-    <div className="container mx-auto sm:px-0 px-8">
+    <div className="container mx-auto sm:px-0 px-8 pt-40">
       <h1>
         ACERCA DE MI
       </h1>
