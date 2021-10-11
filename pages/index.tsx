@@ -9,7 +9,7 @@ const Home = () => (
   <PageTemplate title="Inicio | Cristian Sotomayor">
     <HeaderSection />
 
-    <div className="container mx-auto sm:px-0 px-8">
+    <div className="container mx-auto sm:px-0 px-8 pt-40 md:pt-0">
       <MainSection />
 
       <SkillSection />
