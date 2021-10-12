@@ -51,6 +51,10 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
           <title>{title}</title>
           <meta name="description" content="Personal web made with next" />
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="google-site-verification"
+            content="SaLWWG_X7F-2w-dvQKuG1paAgqxczjU91YaIkci0tQY"
+          />
         </Head>
 
         <main className="min-h-screen dark:bg-cs-black dark:text-white">
