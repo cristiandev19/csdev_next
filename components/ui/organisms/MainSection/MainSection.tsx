@@ -56,7 +56,7 @@ const MainSection: VoidFunctionComponent = () => {
 
         <div className="flex">
           <div className="typing-effect">
-            <h1 className="my-4 text-2xl lg:text-2xl">
+            <h1 className="my-4 text-2xl lg:text-2xl font-bold">
               &#60;
               {devName}
               /&#62;
