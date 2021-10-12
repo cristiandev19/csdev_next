@@ -27,6 +27,7 @@ const HeaderSection: VoidFunctionComponent = () => {
   return (
     <nav
       className={clsx(
+        'bg-gray-50',
         'dark:bg-cs-black',
         'p-2',
         'mt-0',
