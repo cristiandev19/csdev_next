@@ -1,16 +1,7 @@
 import React, { FunctionComponent } from 'react';
+import { BaseIconProps } from '../../helpers/interfaces/icon.interfaces';
 
-interface GmailIconProps {
-  width?: number;
-  height?: number;
-}
-
-const defaultProps: GmailIconProps = {
-  width: 24,
-  height: 24,
-};
-
-const GmailIcon: FunctionComponent<GmailIconProps> = ({
+const GmailIcon: FunctionComponent<BaseIconProps> = ({
   width = 24,
   height = 24,
 }) => (
@@ -32,7 +23,5 @@ const GmailIcon: FunctionComponent<GmailIconProps> = ({
     </svg>
   </>
 );
-
-GmailIcon.defaultProps = defaultProps;
 
 export default GmailIcon;

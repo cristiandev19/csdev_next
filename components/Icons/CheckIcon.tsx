@@ -1,16 +1,7 @@
 import React, { FunctionComponent } from 'react';
+import { BaseIconProps } from '../../helpers/interfaces/icon.interfaces';
 
-type CheckIconProps = {
-  width?: number;
-  height?: number;
-};
-
-const defaultProps: CheckIconProps = {
-  width: 24,
-  height: 24,
-};
-
-const CheckIcon: FunctionComponent<CheckIconProps> = ({
+const CheckIcon: FunctionComponent<BaseIconProps> = ({
   width = '24',
   height = '24',
 }) => (
@@ -30,7 +21,5 @@ const CheckIcon: FunctionComponent<CheckIconProps> = ({
     </svg>
   </>
 );
-
-CheckIcon.defaultProps = defaultProps;
 
 export default CheckIcon;
