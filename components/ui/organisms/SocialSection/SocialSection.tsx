@@ -1,6 +1,7 @@
 import React, { VoidFunctionComponent } from 'react';
 import GithubIcon from '../../../Icons/GithubIcon';
 import LinkedinIcon from '../../../Icons/LinkedinIcon';
+import TwitterIcon from '../../../Icons/TwitterIcon';
 import YoutubeIcon from '../../../Icons/YoutubeIcon';
 
 const SocialSection: VoidFunctionComponent = () => (
@@ -34,6 +35,16 @@ const SocialSection: VoidFunctionComponent = () => (
     >
       <YoutubeIcon width={40} height={40} />
       <div className="ml-4 text-cs-white">Youtube</div>
+    </a>
+    <a
+      target="_blank"
+      href="https://twitter.com/csdev19"
+      className="flex w-full items-center justify-center rounded-xl my-2 py-2"
+      rel="noreferrer"
+      style={{ backgroundColor: '#319bf0' }}
+    >
+      <TwitterIcon width={40} height={40} />
+      <div className="ml-4 text-cs-white">Twitter</div>
     </a>
   </div>
 );
