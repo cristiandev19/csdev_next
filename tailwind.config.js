@@ -23,6 +23,7 @@ module.exports = {
         'cs-hard-black': '#080c10',
         'cs-rose': '#FF338F',
         'cs-yellow': '#F6AE13',
+        'cs-pink': '#E91E63',
       },
       fontFamily: {
         title: ['Poppins', 'sans-serif'],
