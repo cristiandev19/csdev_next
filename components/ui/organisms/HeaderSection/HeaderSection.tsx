@@ -7,6 +7,7 @@ import React, {
 } from 'react';
 import ThemeContext from '../../../../contexts/theme/theme.context';
 import { ThemeActionTypes } from '../../../../contexts/theme/theme.reducer';
+import Link from 'next/link';
 
 const HeaderSection: VoidFunctionComponent = () => {
   const { themeState, themeDispatch } = useContext(ThemeContext);
@@ -121,36 +122,38 @@ const HeaderSection: VoidFunctionComponent = () => {
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             <li className="mr-3">
-              <a
-                className={clsx(
-                  'inline-block',
-                  'text-gray-600',
-                  'dark:text-cs-white',
-                  'no-underline',
-                  // 'hover:text-gray-200',
-                  'py-2',
-                  'px-4',
-                )}
-                href="/"
-              >
-                Inicio
-              </a>
+              <Link href="/">
+                <a
+                  className={clsx(
+                    'inline-block',
+                    'text-gray-600',
+                    'dark:text-cs-white',
+                    'no-underline',
+                    // 'hover:text-gray-200',
+                    'py-2',
+                    'px-4',
+                  )}
+                >
+                  Inicio
+                </a>
+              </Link>
             </li>
             <li className="mr-3">
-              <a
-                className={clsx(
-                  'inline-block',
-                  'text-gray-600',
-                  'dark:text-cs-white',
-                  'no-underline',
-                  // 'hover:text-gray-200',
-                  'py-2',
-                  'px-4',
-                )}
-                href="/contact"
-              >
-                Contacto
-              </a>
+              <Link href="/contact">
+                <a
+                  className={clsx(
+                    'inline-block',
+                    'text-gray-600',
+                    'dark:text-cs-white',
+                    'no-underline',
+                    // 'hover:text-gray-200',
+                    'py-2',
+                    'px-4',
+                  )}
+                >
+                  Contacto
+                </a>
+              </Link>
             </li>
           </ul>
         </div>

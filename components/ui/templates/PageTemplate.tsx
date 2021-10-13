@@ -9,6 +9,7 @@ import ThemeReducer, {
   ThemeActionTypes,
 } from '../../../contexts/theme/theme.reducer';
 import ThemeContext from '../../../contexts/theme/theme.context';
+import FooterSection from '../organisms/FooterSection';
 
 type PageTemplateProps = {
   children: React.ReactNode;
@@ -57,9 +58,9 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
           />
         </Head>
 
-        <main className="min-h-screen dark:bg-cs-black dark:text-white">
-          {children}
-        </main>
+        <main className="dark:bg-cs-black dark:text-white">{children}</main>
+
+        <FooterSection />
       </div>
     </ThemeContext.Provider>
   );

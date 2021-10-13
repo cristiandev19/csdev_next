@@ -25,7 +25,7 @@ const SkillCard: FunctionComponent<SkillCardProps> = ({
       border: `4px ${data.color} solid`,
     }}
   >
-    <h3 className="text-center">{data.title}</h3>
+    <h3 className="text-center text-xl my-8">{data.title}</h3>
     <button
       className="border-none absolute"
       onClick={handleClose}
