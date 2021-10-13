@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const plugin = require('tailwindcss/plugin');
 
 const focusedSiblingPlugin = plugin(({ addVariant }) => {
@@ -21,6 +20,7 @@ module.exports = {
         'cs-red': '#B6B6B6',
         'cs-white': '#FFFFFF',
         'cs-black': '#0E151D',
+        'cs-hard-black': '#080c10',
         'cs-rose': '#FF338F',
         'cs-yellow': '#F6AE13',
       },
