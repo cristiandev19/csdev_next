@@ -54,7 +54,7 @@ const MainSection: VoidFunctionComponent = () => {
             <img src={urlLogo} alt="" className="w-full" />
           </figure>
           <div className="flex flex-col justify-center">
-            <div className="text-lg">¡Hola! Yo soy </div>
+            <div className="text-lg">¡Hola! Yo soysss </div>
 
             <div className="flex">
               <div className="typing-effect">
