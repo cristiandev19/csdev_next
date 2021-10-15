@@ -15,7 +15,11 @@ const ButtonIcon: FunctionComponent<ButtonBaseProps> = ({
   onClick,
 }) => {
   return (
-    <button onClick={onClick} type="button">
+    <button
+      onClick={onClick}
+      type="button"
+      className="p-1 bg-cs-pink text-white rounded-full"
+    >
       {children}
     </button>
   );
