@@ -24,6 +24,9 @@ module.exports = {
         'cs-rose': '#FF338F',
         'cs-yellow': '#F6AE13',
         'cs-pink': '#E91E63',
+        'cs-orange': '#E91E63',
+        'cs-pink': '#E91E63',
+        'cs-pink': '#E91E63',
       },
       fontFamily: {
         title: ['Poppins', 'sans-serif'],
