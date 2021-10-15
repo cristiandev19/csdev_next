@@ -1,6 +1,11 @@
 import { Transition } from '@headlessui/react';
 import clsx from 'clsx';
-import React, { Fragment, FunctionComponent, ReactNode } from 'react';
+import React, {
+  Fragment,
+  FunctionComponent,
+  ReactNode,
+  useEffect,
+} from 'react';
 import CloseIcon from '../../../Icons/CloseIcon';
 import Button from '../Button/Button';
 
@@ -14,6 +19,14 @@ interface ModalProps extends ModalBaseProps {
 }
 
 const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }, [open]);
+
   return (
     <Transition appear show={open} as={Fragment}>
       <div>
@@ -34,8 +47,6 @@ const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
               'flex',
               'justify-center',
               'min-h-screen',
-              'lg:pt-4',
-              'lg:px-4',
               'items-center',
               'text-center',
               'sm:block',
@@ -82,13 +93,13 @@ const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
                   'relative',
                 )}
               >
-                <div className="h-screen sm:h-full dark:bg-cs-black sm:rounded-lg bg-white p-4 md:px-8 md:pt-8 md:pb-4 sm:p-6 sm:pb-4">
+                <div className="min-h-screen sm:h-full dark:bg-cs-black sm:rounded-lg bg-white p-4 md:px-8 md:pt-8 md:pb-4 sm:p-6 sm:pb-4">
                   <div>{children}</div>
                 </div>
                 <div
                   style={{ top: '26px', right: '31px', position: 'absolute' }}
                 >
-                  <Button onClick={onClose}>
+                  <Button mode="icon" onClick={onClose}>
                     <CloseIcon />
                   </Button>
                 </div>
