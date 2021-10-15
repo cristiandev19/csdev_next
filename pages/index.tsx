@@ -6,7 +6,7 @@ import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSectio
 import PageTemplate from '../components/ui/templates/PageTemplate';
 import { NextPage } from 'next';
 import ShortInformation from '../components/ui/organisms/ShortInformation';
-import PresentationSection from '../components/ui/organisms/PresentationSection';
+// import PresentationSection from '../components/ui/organisms/PresentationSection';
 
 const Home: NextPage = () => (
   <PageTemplate title="Inicio | Cristian Sotomayor">
