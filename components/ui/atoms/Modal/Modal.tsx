@@ -93,7 +93,7 @@ const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
                   'relative',
                 )}
               >
-                <div className="min-h-screen sm:h-full dark:bg-cs-black sm:rounded-lg bg-white p-4 md:px-8 md:pt-8 md:pb-4 sm:p-6 sm:pb-4">
+                <div className="h-screen sm:h-full dark:bg-cs-black sm:rounded-lg bg-white p-4 md:px-8 md:pt-8 md:pb-4 sm:p-6 sm:pb-4">
                   <div>{children}</div>
                 </div>
                 <div
