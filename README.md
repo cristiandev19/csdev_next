@@ -8,6 +8,9 @@ https://notiz.dev/blog/floating-form-field-with-tailwindcss
 ## Features
 
 
+## URL Utiles
+
+- https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f3eb
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).

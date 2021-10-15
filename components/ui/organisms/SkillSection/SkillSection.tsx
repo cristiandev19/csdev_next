@@ -1,7 +1,7 @@
 import React, { useState, VoidFunctionComponent } from 'react';
 import { mockData } from '../../../../helpers/mock/skills.mock';
 import ProgressImg from '../../molecules/ProgressImg/ProgressImg';
-import SkillCard from '../../molecules/SkillCard/SkillCard';
+import SkillModal from '../../molecules/SkillModal/SkillModal';
 import styles from './SkillSection.module.css';
 
 export type DataSkill = {
@@ -16,39 +16,38 @@ export type DataSkill = {
 
 const SkillSection: VoidFunctionComponent = () => {
   const [skillSelected, setSkillSelected] = useState(null);
-
   const dataSkills: DataSkill[] = mockData;
+
+  const [opened, setOpened] = useState(false);
 
   const handleClick = (data) => {
     setSkillSelected(data);
+    setOpened(true);
   };
 
   const handleClose = () => {
     setSkillSelected(null);
+    setOpened(false);
   };
 
   return (
-    <section className={styles.skillSection}>
+    <section className="py-12 relative">
       <h2 className="text-center text-2xl my-8">Habilidades</h2>
 
-      {!skillSelected && (
-        <div className={styles.list}>
-          {dataSkills.map((data) => (
-            <ProgressImg
-              radius={data.radius}
-              stroke={data.stroke}
-              color={data.color}
-              image={data.image}
-              percent={data.percent}
-              key={data.image}
-              onClick={() => handleClick(data)}
-            />
-          ))}
-        </div>
-      )}
-      {skillSelected && (
-        <SkillCard data={skillSelected} handleClose={handleClose} />
-      )}
+      <div className="grid grid-cols-1	sm:grid-cols-2 md:grid-cols-5">
+        {dataSkills.map((data) => (
+          <ProgressImg
+            radius={data.radius}
+            stroke={data.stroke}
+            color={data.color}
+            image={data.image}
+            percent={data.percent}
+            key={data.image}
+            onClick={() => handleClick(data)}
+          />
+        ))}
+      </div>
+      <SkillModal data={skillSelected} onClose={handleClose} open={opened} />
     </section>
   );
 };

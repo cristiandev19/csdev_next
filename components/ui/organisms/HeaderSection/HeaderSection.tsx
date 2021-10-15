@@ -28,16 +28,17 @@ const HeaderSection: VoidFunctionComponent = () => {
   return (
     <nav
       className={clsx(
-        'bg-gray-50',
         'dark:bg-cs-black',
         'p-2',
         'mt-0',
         'fixed',
         'backdrop-blur',
         'w-full',
-        'z-10',
         'top-0',
       )}
+      style={{
+        zIndex: 20,
+      }}
     >
       <div className="container mx-auto flex flex-wrap items-center">
         <div className="flex w-full md:w-1/3 justify-center md:justify-start text-white font-extrabold">

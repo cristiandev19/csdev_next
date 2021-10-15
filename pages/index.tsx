@@ -5,13 +5,19 @@ import TrophySection from '../components/ui/organisms/TrophySection/TrophySectio
 import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSection';
 import PageTemplate from '../components/ui/templates/PageTemplate';
 import { NextPage } from 'next';
+import ShortInformation from '../components/ui/organisms/ShortInformation';
+// import PresentationSection from '../components/ui/organisms/PresentationSection';
 
 const Home: NextPage = () => (
   <PageTemplate title="Inicio | Cristian Sotomayor">
     <HeaderSection />
 
-    <div className="container mx-auto sm:px-0 px-8 pt-40 md:pt-0">
+    <div className="pt-40 md:pt-0">
       <MainSection />
+
+      <ShortInformation />
+
+      {/* <PresentationSection /> */}
 
       <SkillSection />
 

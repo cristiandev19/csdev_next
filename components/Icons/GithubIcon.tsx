@@ -1,16 +1,7 @@
 import React, { FunctionComponent } from 'react';
+import { BaseIconProps } from '../../helpers/interfaces/icon.interfaces';
 
-interface GithubIconProps {
-  width?: number;
-  height?: number;
-}
-
-const defaultProps: GithubIconProps = {
-  width: 24,
-  height: 24,
-};
-
-const GithubIcon: FunctionComponent<GithubIconProps> = ({
+const GithubIcon: FunctionComponent<BaseIconProps> = ({
   width = 24,
   height = 24,
 }) => (
@@ -25,7 +16,5 @@ const GithubIcon: FunctionComponent<GithubIconProps> = ({
     </svg>
   </>
 );
-
-GithubIcon.defaultProps = defaultProps;
 
 export default GithubIcon;

@@ -1,16 +1,7 @@
 import React, { FunctionComponent } from 'react';
+import { BaseIconProps } from '../../helpers/interfaces/icon.interfaces';
 
-interface LinkedinIconProps {
-  width?: number;
-  height?: number;
-}
-
-const defaultProps: LinkedinIconProps = {
-  width: 24,
-  height: 24,
-};
-
-const LinkedinIcon: FunctionComponent<LinkedinIconProps> = ({
+const LinkedinIcon: FunctionComponent<BaseIconProps> = ({
   width = 24,
   height = 24,
 }) => (
@@ -58,7 +49,5 @@ const LinkedinIcon: FunctionComponent<LinkedinIconProps> = ({
     </svg>
   </>
 );
-
-LinkedinIcon.defaultProps = defaultProps;
 
 export default LinkedinIcon;
