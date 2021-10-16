@@ -1,16 +1,6 @@
 import React, { VoidFunctionComponent } from 'react';
-import HeaderSection from '../components/ui/organisms/HeaderSection/HeaderSection';
-import SocialSection from '../components/ui/organisms/SocialSection/SocialSection';
-import PageTemplate from '../components/ui/templates/PageTemplate';
+import ContactLayout from 'modules/contact/layout';
 
-const ContactPage: VoidFunctionComponent = () => (
-  <PageTemplate title="Contacto | Cristian Sotomayor">
-    <HeaderSection />
-
-    <div className="container mx-auto sm:px-0 px-8 pb-40 pt-40">
-      <SocialSection />
-    </div>
-  </PageTemplate>
-);
+const ContactPage: VoidFunctionComponent = () => <ContactLayout />;
 
 export default ContactPage;
