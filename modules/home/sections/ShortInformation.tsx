@@ -68,8 +68,8 @@ const ShortInformation: VoidFunctionComponent = () => {
               y2="-651.238"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF338F" />
-              <stop offset="1" stop-color="#F6AE13" />
+              <stop stopColor="#FF338F" />
+              <stop offset="1" stopColor="#F6AE13" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_113:35"
@@ -79,8 +79,8 @@ const ShortInformation: VoidFunctionComponent = () => {
               y2="-651.238"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF338F" />
-              <stop offset="1" stop-color="#F6AE13" />
+              <stop stopColor="#FF338F" />
+              <stop offset="1" stopColor="#F6AE13" />
             </linearGradient>
           </defs>
         </svg>
