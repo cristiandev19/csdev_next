@@ -10,6 +10,7 @@ export const mockData = [
       'Implemente un sistema de versionamiento (semver) para que las subidas y el uso de git tags para que los cambios a producción sean mas simples de encontrar y que sean cambiables en caso de problemas.',
       'Cree scripts de automatizacion con git para hacer cambios sobre multiples ramas, por ejemplo borrar multiples ramas que estaban en un repositorio remoto.',
       'Monitorear las ramas y ultimos cambios dentro de un repositorio.',
+      'Implemente rutinas de ejecucion con Github Actions para hacer pruebas automatizadas, para construir y deployar containers a un servicio de AWS',
     ],
   },
   {
@@ -36,6 +37,7 @@ export const mockData = [
       'He trabajado en proyectos de frontend con VanillaJs de los cuales implemente animaciones, validaciones e integraciones con API’s para posteriormente hacer un updgrade progresivo a una libreria como Vue para que sea mas interactivo.',
       'He creado y mantenido proyectos con librerias de JS como Vue y React, de este ultimo implementando librerias como MaterialUI y hooks para formularios con validaciones.',
       'Hice mantenimiento de proyectos backend con Nodejs, tanto un monolito alojado en un servidor en la nube como de un proyecto usando microservicios (lambda) en la nube alojados en AWS.',
+      'Realice integraciones de diferentes frameworks backend como Express y Nestjs.',
     ],
   },
   {
@@ -47,7 +49,9 @@ export const mockData = [
     title: 'Typescript Skills',
     technologies: [
       'He trabajado en proyectos de frontend con Typescript usando el framework Angular.',
+      'Implemente typescript en proyectos de frontend usando la libreria React.',
       'He creado y mantenido proyectos backend con Nodejs usando Typescript como lenguaje de desarrollo para implementar conceptos de SOLID y DDD dentro de un servidor. ',
+      'Colabore con la creacion de un CLI usando typescript. ',
     ],
   },
   {
@@ -98,10 +102,11 @@ export const mockData = [
     percent: 60,
     title: 'React Skills',
     technologies: [
-      'Implemente librerias como MaterialUI, React Router DOM y React Hook Form para hacer una interfaz mas usable, dinamica y mantenible.',
+      'Implemente librerias como MaterialUI, React Router DOM, TailwindUI, React Hook Form y Storybook para hacer una interfaz mas usable, dinamica y mantenible.',
       'Cree hooks personalizados para trabajos especificos en la UI como hover y decomponiendo hooks de librerias como React Form Hook para entender mejor su funcionamiento',
       'Use hooks propios del lenguaje como useState, useEffect, useContext y demas propios de la libreria.',
       'Hice prueba unitarias con testing library y jest',
+      'Use una arquitectura Clean Code en un proyecto a gran escala usando Nextjs',
     ],
   },
   {
@@ -142,7 +147,8 @@ export const mockData = [
     technologies: [
       'Use servicios de AWS como: Lambda, Cloudwatch, S3, RDS, entre otros.',
       'Hice monitoreo a los servicios que usabamos con Cloudwatch y programe crons desde la API.',
-      'Me certifique en fundamentos de AWS desde migracion de un on-premise hasta aplicaciones serverless. ',
+      'Me certifique en fundamentos de AWS desde migracion de un on-premise hasta aplicaciones serverless.',
+      'Use AWS CDK para crear una rutina practica de provision de arquitectura en la nube reutilizable, mantenible y predecible',
     ],
   },
   {
@@ -164,7 +170,7 @@ export const mockData = [
     image: '/images/figma.png',
     color: '#A259FF',
     percent: 25,
-    title: 'Git Skills',
+    title: 'Figma Skills',
     technologies: [
       'Uso Figma como herramienta de maquetado de pantallas, imagenes, logos, etc.',
       'Y uso Invision como herramienta de maquetado rapido cuando necesito plasmar ideas de una reunion en un wireframe mas visual para darle una idea al stakeholder de como quedaria.',
