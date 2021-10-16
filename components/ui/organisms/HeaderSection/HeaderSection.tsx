@@ -8,6 +8,8 @@ import React, {
 import ThemeContext from '../../../../contexts/theme/theme.context';
 import { ThemeActionTypes } from '../../../../contexts/theme/theme.reducer';
 import Link from 'next/link';
+import { checkBrowser } from '../../../../helpers/functions/browser';
+import { Browser } from '../../../../helpers/types/browser.type';
 
 const HeaderSection: VoidFunctionComponent = () => {
   const { themeState, themeDispatch } = useContext(ThemeContext);
@@ -25,14 +27,22 @@ const HeaderSection: VoidFunctionComponent = () => {
     setChecked(!checked);
   };
 
+  const [browser, setBrowser] = useState<Browser>('NaB');
+
+  useEffect(() => {
+    if (window) {
+      setBrowser(checkBrowser(window.navigator));
+    }
+  }, []);
+
   return (
     <nav
       className={clsx(
-        'dark:bg-cs-black',
+        'dark:bg-cs-hard-black',
         'p-2',
         'mt-0',
         'fixed',
-        'backdrop-blur',
+        browser === 'Firefox' ? 'bg-white' : 'backdrop-blur',
         'w-full',
         'top-0',
       )}
