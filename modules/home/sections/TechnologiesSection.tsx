@@ -31,10 +31,10 @@ const TechnologiesSection: VoidFunctionComponent = () => {
 
   return (
     <section className="py-12 md:py-0 relative md:h-screen flex">
-      <div className="m-auto">
+      <div className="m-auto w-3/4">
         <h2 className="text-center text-2xl my-8">Tecnologías</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {dataTechnologies.map((data) => (
             <ProgressImg
               radius={data.radius}
