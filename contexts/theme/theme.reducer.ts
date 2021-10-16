@@ -5,10 +5,7 @@ export const ThemeActionTypes = {
   changeTheme: '[schedule-data] change theme',
 };
 
-const ThemeReducer = (
-  state: ThemeState,
-  action: ThemeAction,
-): ThemeState => {
+const ThemeReducer = (state: ThemeState, action: ThemeAction): ThemeState => {
   switch (action.type) {
     case ThemeActionTypes.setTheme:
       return {
