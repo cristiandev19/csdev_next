@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Container from 'components/ui/atoms/Container';
 import LinkButton from 'components/ui/atoms/LinkButton/LinkButton';
 import useWindowSize, { WidthSizesProps } from 'hooks/useWindowSize';
+import CsdevIcon from 'components/Icons/CsdevIcon';
 
 const devNamePerSize: WidthSizesProps<string> = {
   extrasmall: 'Cristian S.',
@@ -39,7 +40,7 @@ const MainSection: VoidFunctionComponent = () => {
             'md:h-screen',
           )}
         >
-          <figure
+          <div
             className={clsx(
               'w-4/5',
               'flex',
@@ -49,8 +50,8 @@ const MainSection: VoidFunctionComponent = () => {
               'sm:ml-0',
             )}
           >
-            <img src={urlLogo} alt="" className="w-full" />
-          </figure>
+            <CsdevIcon width="100%" height="100%" />
+          </div>
           <div className="flex flex-col justify-center">
             <div className="text-lg">¡Saludos! Yo soy </div>
 
@@ -73,7 +74,9 @@ const MainSection: VoidFunctionComponent = () => {
               </span>
             </p>
 
-            <LinkButton href={urlCV}>Descargar CV</LinkButton>
+            <LinkButton type="external" href={urlCV}>
+              Descargar CV
+            </LinkButton>
           </div>
         </div>
       </Container>
