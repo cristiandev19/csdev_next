@@ -1,5 +1,5 @@
+import Progress from 'components/ui/atoms/Progress/Progress';
 import React, { FunctionComponent, useState } from 'react';
-import Progress from '../../atoms/Progress/Progress';
 import styles from './ProgressImg.module.css';
 
 type ProgressImgProps = {
@@ -9,7 +9,7 @@ type ProgressImgProps = {
   color: string;
   percent: number;
   onClick: () => void;
-  showPercent: boolean;
+  showPercent?: boolean;
 };
 
 const ProgressImg: FunctionComponent<ProgressImgProps> = ({
