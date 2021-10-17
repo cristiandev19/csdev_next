@@ -1,10 +1,8 @@
-import clsx from 'clsx';
 import React, { useEffect, useState, VoidFunctionComponent } from 'react';
-import useWindowSize, {
-  WidthSizesProps,
-} from '../../../../hooks/useWindowSize';
-import Container from '../../atoms/Container';
-import LinkButton from '../../atoms/LinkButton/LinkButton';
+import clsx from 'clsx';
+import Container from 'components/ui/atoms/Container';
+import LinkButton from 'components/ui/atoms/LinkButton/LinkButton';
+import useWindowSize, { WidthSizesProps } from 'hooks/useWindowSize';
 
 const devNamePerSize: WidthSizesProps<string> = {
   extrasmall: 'Cristian S.',

@@ -6,10 +6,11 @@ export const mockData = [
     color: '#F05133',
     percent: 80,
     title: 'Git Skills',
-    skills: [
+    technologies: [
       'Implemente un sistema de versionamiento (semver) para que las subidas y el uso de git tags para que los cambios a producción sean mas simples de encontrar y que sean cambiables en caso de problemas.',
       'Cree scripts de automatizacion con git para hacer cambios sobre multiples ramas, por ejemplo borrar multiples ramas que estaban en un repositorio remoto.',
       'Monitorear las ramas y ultimos cambios dentro de un repositorio.',
+      'Implemente rutinas de ejecucion con Github Actions para hacer pruebas automatizadas, para construir y deployar containers a un servicio de AWS',
     ],
   },
   {
@@ -19,7 +20,7 @@ export const mockData = [
     color: '#70B35E',
     percent: 70,
     title: 'Mongo Skills',
-    skills: [
+    technologies: [
       'Uso de todas las funciones de MongoDB para filtrar, modificar y tratar la data.',
       'Crear una copia de la información para crear un ambiente de pruebas funcional dentro del mismo cluster.',
       'Optimizar el modelado de la informacion dentro de las colecciones.',
@@ -32,10 +33,11 @@ export const mockData = [
     color: '#83CD29',
     percent: 90,
     title: 'Node Skills',
-    skills: [
+    technologies: [
       'He trabajado en proyectos de frontend con VanillaJs de los cuales implemente animaciones, validaciones e integraciones con API’s para posteriormente hacer un updgrade progresivo a una libreria como Vue para que sea mas interactivo.',
       'He creado y mantenido proyectos con librerias de JS como Vue y React, de este ultimo implementando librerias como MaterialUI y hooks para formularios con validaciones.',
       'Hice mantenimiento de proyectos backend con Nodejs, tanto un monolito alojado en un servidor en la nube como de un proyecto usando microservicios (lambda) en la nube alojados en AWS.',
+      'Realice integraciones de diferentes frameworks backend como Express y Nestjs.',
     ],
   },
   {
@@ -45,9 +47,11 @@ export const mockData = [
     color: '#007ACD',
     percent: 90,
     title: 'Typescript Skills',
-    skills: [
+    technologies: [
       'He trabajado en proyectos de frontend con Typescript usando el framework Angular.',
+      'Implemente typescript en proyectos de frontend usando la libreria React.',
       'He creado y mantenido proyectos backend con Nodejs usando Typescript como lenguaje de desarrollo para implementar conceptos de SOLID y DDD dentro de un servidor. ',
+      'Colabore con la creacion de un CLI usando typescript. ',
     ],
   },
   {
@@ -57,7 +61,7 @@ export const mockData = [
     color: '#2965F1',
     percent: 70,
     title: 'CSS Skills',
-    skills: [
+    technologies: [
       'Hice maquetaciones de interfaces con Sass usando Angular, y adaptando diseños al estandar de material.',
       'Con CSS adapte una guia de estilos para que su aplicacion a distintos componentes y reutilización sea mas simple.',
       'Hice animaciones tanto en Sass como en CSS para darle mas fluidez a interfaces. En un proyecto usando las animaciones de Angular y en otro usando directivas nativas de CSS.',
@@ -70,7 +74,7 @@ export const mockData = [
     color: '#CD6799',
     percent: 70,
     title: 'SASS Skills',
-    skills: [
+    technologies: [
       'Hice maquetaciones de interfaces con Sass usando Angular, y adaptando diseños al estandar de material.',
       'Con CSS adapte una guia de estilos para que su aplicacion a distintos componentes y reutilización sea mas simple.',
       'Hice animaciones tanto en Sass como en CSS para darle mas fluidez a interfaces. En un proyecto usando las animaciones de Angular y en otro usando directivas nativas de CSS.',
@@ -83,7 +87,7 @@ export const mockData = [
     color: '#157EFB',
     percent: 80,
     title: 'SQL Skills',
-    skills: [
+    technologies: [
       'Manejo avanzado de bases de datos SQL, principalmente en PostgreSQL. Uso de funciones, triggers, indexes, tablas temporales, etc.',
       'Uso de bases de datos de replica (maestro-esclavo) para un sistema altamente concurrente.',
       'Optimización de querys tanto en legibilidad como en rendimiento. Pase reportes de un año que tardaba mas de 30 segundos a que para la misma información tarde 2 a 3 segundos.',
@@ -97,11 +101,12 @@ export const mockData = [
     color: '#00D8FF',
     percent: 60,
     title: 'React Skills',
-    skills: [
-      'Implemente librerias como MaterialUI, React Router DOM y React Hook Form para hacer una interfaz mas usable, dinamica y mantenible.',
+    technologies: [
+      'Implemente librerias como MaterialUI, React Router DOM, TailwindUI, React Hook Form y Storybook para hacer una interfaz mas usable, dinamica y mantenible.',
       'Cree hooks personalizados para trabajos especificos en la UI como hover y decomponiendo hooks de librerias como React Form Hook para entender mejor su funcionamiento',
       'Use hooks propios del lenguaje como useState, useEffect, useContext y demas propios de la libreria.',
       'Hice prueba unitarias con testing library y jest',
+      'Use una arquitectura Clean Code en un proyecto a gran escala usando Nextjs',
     ],
   },
   {
@@ -111,7 +116,7 @@ export const mockData = [
     color: '#00C887',
     percent: 60,
     title: 'Vue Skills',
-    skills: [
+    technologies: [
       'Hice una implementación de esta libreria en proyectos legacy que renderizaban pug, para hacerlo mas dinamico y que respondiera a las necesidades del los usuarios de manera mas fluida',
       'Implemente componentes reutilizables a la par de VanillaJs para hacer mejoras continuas',
     ],
@@ -123,7 +128,7 @@ export const mockData = [
     color: '#DD0031',
     percent: 80,
     title: 'Angular Skills',
-    skills: [
+    technologies: [
       'Implemente librerias como RXJS y NGRX para mejorar el rendimiento y la mantenibilidad del proyecto.',
       'Asi mismo trabaje con interceptores para trabajar con autenticación.',
       'Hice mantenimiento de un proyecto con LazyLoading para mejorar la carga y experiencia de usuario.',
@@ -139,10 +144,11 @@ export const mockData = [
     color: '#FF9900',
     percent: 50,
     title: 'AWS Skills',
-    skills: [
+    technologies: [
       'Use servicios de AWS como: Lambda, Cloudwatch, S3, RDS, entre otros.',
       'Hice monitoreo a los servicios que usabamos con Cloudwatch y programe crons desde la API.',
-      'Me certifique en fundamentos de AWS desde migracion de un on-premise hasta aplicaciones serverless. ',
+      'Me certifique en fundamentos de AWS desde migracion de un on-premise hasta aplicaciones serverless.',
+      'Use AWS CDK para crear una rutina practica de provision de arquitectura en la nube reutilizable, mantenible y predecible',
     ],
   },
   {
@@ -152,7 +158,7 @@ export const mockData = [
     color: '#FF3366',
     percent: 24,
     title: 'Invision Skills',
-    skills: [
+    technologies: [
       'Uso Figma como herramienta de maquetado de pantallas, imagenes, logos, etc.',
       'Y uso Invision como herramienta de maquetado rapido cuando necesito plasmar ideas de una reunion en un wireframe mas visual para darle una idea al stakeholder de como quedaria.',
       'Este curriculum fue hecho en figma asi como todos los demas componentes visualies exceptuando imagenes ',
@@ -164,8 +170,8 @@ export const mockData = [
     image: '/images/figma.png',
     color: '#A259FF',
     percent: 25,
-    title: 'Git Skills',
-    skills: [
+    title: 'Figma Skills',
+    technologies: [
       'Uso Figma como herramienta de maquetado de pantallas, imagenes, logos, etc.',
       'Y uso Invision como herramienta de maquetado rapido cuando necesito plasmar ideas de una reunion en un wireframe mas visual para darle una idea al stakeholder de como quedaria.',
       'Este curriculum fue hecho en figma asi como todos los demas componentes visualies exceptuando imagenes ',

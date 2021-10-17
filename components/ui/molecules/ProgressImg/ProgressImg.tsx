@@ -1,5 +1,5 @@
+import Progress from 'components/ui/atoms/Progress/Progress';
 import React, { FunctionComponent, useState } from 'react';
-import Progress from '../../atoms/Progress/Progress';
 import styles from './ProgressImg.module.css';
 
 type ProgressImgProps = {
@@ -9,6 +9,7 @@ type ProgressImgProps = {
   color: string;
   percent: number;
   onClick: () => void;
+  showPercent?: boolean;
 };
 
 const ProgressImg: FunctionComponent<ProgressImgProps> = ({
@@ -18,6 +19,7 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
   color,
   percent,
   onClick,
+  showPercent = false,
 }) => {
   const handleKeyDown = (e) => {
     if (e.keyCode === 27) {
@@ -48,10 +50,12 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
         percent={progressProperties.percent}
       />
       <img src={image} alt="" className={styles['progress-image']} />
-      <text
-        style={{ color }}
-        className={styles['progress-percent']}
-      >{`${percent}%`}</text>
+      {showPercent && (
+        <text
+          style={{ color }}
+          className={styles['progress-percent']}
+        >{`${percent}%`}</text>
+      )}
     </div>
   );
 };

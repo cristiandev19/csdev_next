@@ -1,8 +1,8 @@
+import GithubIcon from 'components/Icons/GithubIcon';
+import LinkedinIcon from 'components/Icons/LinkedinIcon';
+import TwitterIcon from 'components/Icons/TwitterIcon';
+import YoutubeIcon from 'components/Icons/YoutubeIcon';
 import React, { VoidFunctionComponent } from 'react';
-import GithubIcon from '../../../Icons/GithubIcon';
-import LinkedinIcon from '../../../Icons/LinkedinIcon';
-import TwitterIcon from '../../../Icons/TwitterIcon';
-import YoutubeIcon from '../../../Icons/YoutubeIcon';
 
 const SocialSection: VoidFunctionComponent = () => (
   <div>

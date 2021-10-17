@@ -1,9 +1,9 @@
+import Container from 'components/ui/atoms/Container';
 import React, { VoidFunctionComponent } from 'react';
-import Container from '../atoms/Container';
 
-const ShortExperience: VoidFunctionComponent = () => {
+const ShortInformation: VoidFunctionComponent = () => {
   return (
-    <section className="relative flex" style={{ height: '800px' }}>
+    <section className="relative flex h-screen">
       <Container className="m-auto z-10">
         <div className="shadow-2xl p-3 rounded-xl	relative flex justify-center items-center bg-white dark:bg-cs-black">
           <h2 className="rotating-headline">
@@ -56,31 +56,31 @@ const ShortExperience: VoidFunctionComponent = () => {
             fill="url(#paint0_linear_113:35)"
           />
           <path
-            d="M0.113281 229L0.120544 0L1405.95 751.414L1303.84 942.457L0.113281 229Z"
+            d="M0.113281 229L0.120544 0L1405.95 751.414L1306.49 942.391L0.113281 229Z"
             fill="url(#paint1_linear_113:35)"
           />
           <defs>
             <linearGradient
               id="paint0_linear_113:35"
               x1="0.11324"
-              y1="724.339"
-              x2="779.846"
-              y2="-651.237"
+              y1="724.288"
+              x2="779.763"
+              y2="-651.238"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF338F" />
-              <stop offset="1" stop-color="#F6AE13" />
+              <stop stopColor="#FF338F" />
+              <stop offset="1" stopColor="#F6AE13" />
             </linearGradient>
             <linearGradient
               id="paint1_linear_113:35"
               x1="0.11324"
-              y1="724.339"
-              x2="779.846"
-              y2="-651.237"
+              y1="724.288"
+              x2="779.763"
+              y2="-651.238"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stop-color="#FF338F" />
-              <stop offset="1" stop-color="#F6AE13" />
+              <stop stopColor="#FF338F" />
+              <stop offset="1" stopColor="#F6AE13" />
             </linearGradient>
           </defs>
         </svg>
@@ -89,4 +89,4 @@ const ShortExperience: VoidFunctionComponent = () => {
   );
 };
 
-export default ShortExperience;
+export default ShortInformation;
