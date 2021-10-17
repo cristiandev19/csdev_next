@@ -14,7 +14,9 @@ const FooterSection: VoidFunctionComponent = () => {
     <footer className="w-full min-h-screen flex items-center justify-center bg-cs-hard-black dark:bg-cs-hard-black">
       <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
         <div className="w-full text-6xl font-bold">
-          <h2 className="w-full md:w-2/3">Como te puedo ayudar? Contactame!</h2>
+          <h2 className="w-full md:w-2/3 break-words">
+            Como te puedo ayudar? Contactame!
+          </h2>
         </div>
         <div className="flex mt-8 flex-col md:flex-row md:justify-between">
           <p className="w-full md:w-2/3 text-gray-400">
