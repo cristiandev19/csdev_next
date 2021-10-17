@@ -1,23 +1,72 @@
+import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
+import Link from 'next/link';
 
 type LinkButtonProps = {
-  href: string;
+  href?: string;
+  className?: string;
   children: React.ReactNode;
+  type?: LinkType;
 };
 
-const LinkButton: FunctionComponent<LinkButtonProps> = ({ href, children }) => (
+type LinkType = 'internal' | 'external';
+
+const LinkButton: FunctionComponent<LinkButtonProps> = ({
+  href = '',
+  children,
+  className = '',
+  type = 'internal',
+}) => (
   <>
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      style={{
-        background: 'linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%)',
-      }}
-      className="flex justify-center py-3 my-3 text-cs-white rounded-xl text-xl"
-    >
-      {children}
-    </a>
+    {
+      {
+        internal: (
+          <Link href={href}>
+            <a
+              style={{
+                background:
+                  'linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%)',
+              }}
+              className={clsx(
+                'flex',
+                'justify-center',
+                'py-3',
+                'my-3',
+                'text-cs-white',
+                'rounded-xl',
+                'text-xl',
+                className,
+              )}
+            >
+              {children}
+            </a>
+          </Link>
+        ),
+        external: (
+          <a
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              background:
+                'linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%)',
+            }}
+            className={clsx(
+              'flex',
+              'justify-center',
+              'py-3',
+              'my-3',
+              'text-cs-white',
+              'rounded-xl',
+              'text-xl',
+              className,
+            )}
+          >
+            {children}
+          </a>
+        ),
+      }[type]
+    }
   </>
 );
 
