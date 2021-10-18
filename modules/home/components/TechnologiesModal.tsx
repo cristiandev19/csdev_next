@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import CheckIcon from 'components/Icons/CheckIcon';
 import Modal, { ModalBaseProps } from 'components/ui/atoms/Modal/Modal';
 import { DataTechnologie } from 'modules/home/sections/TechnologiesSection';
@@ -13,20 +14,22 @@ const TechnologiesModal: FunctionComponent<TechnologiesModalProps> = ({
   onClose,
 }) => (
   <Modal onClose={onClose} open={open}>
-    <h3 className="text-center text-xl my-8">{data?.title}</h3>
-    <figure>
-      <img className="m-auto" src={data?.image} alt="" />
-    </figure>
-    <ul className="relative space-y-3 mt-8">
-      {data?.technologies.map((skill) => (
-        <li className="flex items-center space-x-2" key={skill}>
-          <div style={{ color: data?.color }}>
-            <CheckIcon height={20} width={20} />
-          </div>
-          <span className="w-full">{skill}</span>
-        </li>
-      ))}
-    </ul>
+    <h3 className="text-center text-xl mb-8 mt-8 md:mt-0">{data?.title}</h3>
+    <div className="flex flex-col md:flex-row">
+      <figure className="md:flex w-full md:w-5/12">
+        <img className="m-auto" src={data?.image} alt="" />
+      </figure>
+      <ul className="relative space-y-3 mt-8 md:mt-0 w-full md:w-7/12 m-auto">
+        {data?.technologies.map((skill) => (
+          <li className="flex items-center space-x-2" key={skill}>
+            <div style={{ color: data?.color }}>
+              <CheckIcon height={20} width={20} />
+            </div>
+            <span className="w-full">{skill}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   </Modal>
 );
 
