@@ -5,7 +5,7 @@ import ShortInformation from 'modules/home/sections/ShortInformation';
 import TrophySection from 'modules/home/sections/TrophySection';
 import MainSection from 'modules/home/sections/MainSection';
 import TechnologiesSection from 'modules/home/sections/TechnologiesSection';
-import ExperienceSection from 'modules/home/sections/ExperienceSection';
+import ShortExperienceSection from 'modules/home/sections/ShortExperienceSection';
 
 const HomeLayout: VoidFunctionComponent = () => {
   return (
@@ -17,7 +17,7 @@ const HomeLayout: VoidFunctionComponent = () => {
 
         <ShortInformation />
 
-        <ExperienceSection />
+        <ShortExperienceSection />
 
         <TechnologiesSection />
 

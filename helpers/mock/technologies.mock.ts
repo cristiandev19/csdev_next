@@ -1,4 +1,4 @@
-export const mockData = [
+export const technologiesMock = [
   {
     radius: 60,
     stroke: 8,
@@ -34,7 +34,7 @@ export const mockData = [
     percent: 90,
     title: 'Node Skills',
     technologies: [
-      'He trabajado en proyectos de frontend con VanillaJs de los cuales implemente animaciones, validaciones e integraciones con API’s para posteriormente hacer un updgrade progresivo a una libreria como Vue para que sea mas interactivo.',
+      'He trabajado en proyectos de frontend con VanillaJs de los cuales implemente animaciones, validaciones e integraciones con API’s para posteriormente hacer mejoras progresivas.',
       'He creado y mantenido proyectos con librerias de JS como Vue y React, de este ultimo implementando librerias como MaterialUI y hooks para formularios con validaciones.',
       'Hice mantenimiento de proyectos backend con Nodejs, tanto un monolito alojado en un servidor en la nube como de un proyecto usando microservicios (lambda) en la nube alojados en AWS.',
       'Realice integraciones de diferentes frameworks backend como Express y Nestjs.',
@@ -130,7 +130,6 @@ export const mockData = [
     title: 'Angular Skills',
     technologies: [
       'Implemente librerias como RXJS y NGRX para mejorar el rendimiento y la mantenibilidad del proyecto.',
-      'Asi mismo trabaje con interceptores para trabajar con autenticación.',
       'Hice mantenimiento de un proyecto con LazyLoading para mejorar la carga y experiencia de usuario.',
       'Trabaje con librerias como Angular Material y Highcharts para la interfaz de usuario.',
       'Realice optimizaciones en logica de componentes usando mecanismos propios de Angular como pipes, change detections strategies y demas.',

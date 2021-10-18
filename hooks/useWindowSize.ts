@@ -1,3 +1,7 @@
+import {
+  UseWindowSizeResponse,
+  WindowSize,
+} from 'helpers/interfaces/utils.interfaces';
 import { useEffect, useState } from 'react';
 
 export interface WidthSizesProps<T> {
@@ -8,7 +12,7 @@ export interface WidthSizesProps<T> {
   extralarge: T;
 }
 
-const useWindowSize = () => {
+const useWindowSize = (): UseWindowSizeResponse => {
   const widthSizes: WidthSizesProps<number> = {
     extrasmall: 200,
     small: 400,
@@ -17,7 +21,8 @@ const useWindowSize = () => {
     extralarge: 1400,
   };
 
-  const getKeyByValue = (object, value) => Object.keys(object).find((key) => object[key] === value);
+  const getKeyByValue = (object, value) =>
+    Object.keys(object).find((key) => object[key] === value);
 
   const getStateByWith = (width) => {
     let value;
@@ -39,11 +44,13 @@ const useWindowSize = () => {
 
   // Initialize state with undefined width/height so server and client renders match
   // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState({
+  const [windowSize, setWindowSize] = useState<WindowSize>({
     width: undefined,
     height: undefined,
   });
-  const [widthState, setWidthState] = useState(getStateByWith(windowSize.width));
+  const [widthState, setWidthState] = useState(
+    getStateByWith(windowSize.width),
+  );
 
   useEffect(() => {
     // Handler to call on window resize

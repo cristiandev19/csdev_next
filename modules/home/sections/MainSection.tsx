@@ -6,8 +6,8 @@ import useWindowSize, { WidthSizesProps } from 'hooks/useWindowSize';
 import CsdevIcon from 'components/Icons/CsdevIcon';
 
 const devNamePerSize: WidthSizesProps<string> = {
-  extrasmall: 'Cristian S.',
-  small: 'Cristian S.',
+  extrasmall: 'Cristian',
+  small: 'Cristian',
   medium: 'Cristian Sotomayor',
   large: 'Cristian Sotomayor',
   extralarge: 'Cristian Sotomayor',
@@ -16,8 +16,6 @@ const devNamePerSize: WidthSizesProps<string> = {
 const MainSection: VoidFunctionComponent = () => {
   const urlCV =
     'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
-  const urlLogo =
-    'https://s3.us-east-2.amazonaws.com/csdev19.personal/logo.png';
 
   const [devName, setDevName] = useState('Cristian Sotomayor');
 
@@ -44,7 +42,7 @@ const MainSection: VoidFunctionComponent = () => {
             className={clsx(
               'w-4/5',
               'flex',
-              'xl:w-4/5',
+              'xl:w-3/5',
               'm-auto',
               'sm:my-auto',
               'sm:ml-0',
@@ -52,12 +50,12 @@ const MainSection: VoidFunctionComponent = () => {
           >
             <CsdevIcon width="100%" height="100%" />
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center mt-8 md:mt-0">
             <div className="text-lg">¡Saludos! Yo soy </div>
 
             <div className="flex">
               <div className="typing-effect">
-                <h1 className="my-4 text-2xl lg:text-2xl font-bold">
+                <h1 className="my-4 text-2xl lg:text-2xl font-bold word-break">
                   &#60;
                   {devName}
                   /&#62;
@@ -65,7 +63,7 @@ const MainSection: VoidFunctionComponent = () => {
               </div>
             </div>
 
-            <p className="text-lg	">
+            <p className="text-lg">
               <span>
                 Fullstack Developer con mas de 3 años de experiencia
                 desarrollando software, liderando equipos de desarrollo,
