@@ -4,3 +4,9 @@ export interface WindowSize {
 }
 
 export type UseWindowSizeResponse = [WindowSize, string];
+
+export interface NavigationItem {
+  path: string;
+  name: string;
+  active: boolean;
+}
