@@ -9,10 +9,10 @@ const ShortExperienceCard: FunctionComponent<ShortExperience> = ({
 }) => {
   return (
     <>
-      <div className="w-full md:w-10/12 m-auto shadow-2xl dark:shadow-none dark:bg-cs-black bg-white rounded-2xl my-12 overflow-auto">
+      <div className="w-full md:w-10/12 m-auto shadow-2xl dark:shadow-none dark:bg-cs-hard-black bg-white rounded-2xl my-12 overflow-auto">
         <div className="p-4 md:p-8">
           <div className="flex items-center flex-col md:flex-row">
-            <div className="h-14 w-14">
+            <div className="h-14 w-14 mb-4 md:mb-0 rounded-full overflow-auto">
               <img src={image} alt="pamer" />
             </div>
             <div className="flex flex-col">
