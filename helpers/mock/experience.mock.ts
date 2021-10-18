@@ -4,12 +4,12 @@ export const experienceMock: ShortExperience[] = [
   {
     title: 'Software Developer at Pamer',
     description: `
-    Desarrollador de software parte del laboratorio de innovación CREEK12 en Pamer. Usando tecnologias como:
-    - NestJS
-    - NextJS + Tailwind + TS + ESlint + Prettier + Jest
-    - AWS CDK
-    - Amazon AppRunner
-    - Github + Github Actions`,
+    Como parte del laboratorio de innovación CREEK12 en Pamer. Uso tecnologias como:
+    - NestJS en el Backend
+    - NextJS + Tailwind + TS en el Frontend
+    - ESlint + Prettier + Jest + Cypress en el Testing
+    - AWS CDK + AWS App Runner + AWS S3
+    - Github + Github Actions para el manejo de versiones y CI/CD`,
     endStart: new Date(),
     startDate: new Date(),
     image:
@@ -19,10 +19,17 @@ export const experienceMock: ShortExperience[] = [
   {
     title: 'Tech Lead at Cedhinfo',
     description: `
-    Estuve encargado de:
+    Como lider de tecnologia en Cedhinfo. Estuve encargado de:
     - Traducir los requerimientos del stakeholder hacia el equipo de desarrollo
     - Dar guia tecnica en cuanto a practicas de desarrollo para un mejor producto
-    - Mentoria y capacitacion al equipo de desarrollo tanto front como backend`,
+    - Mentoria y capacitacion al equipo de desarrollo tanto front como backend
+    - Revision continua del producto
+    - Y dar reportes del avance de los proyectos
+
+    Todo manejado con un stack de:
+    - Express
+    - Vue
+    - Github`,
     endStart: new Date(),
     startDate: new Date(),
     image:
@@ -32,14 +39,18 @@ export const experienceMock: ShortExperience[] = [
   {
     title: 'Fullstack Developer at Smiledu',
     description: `
-    Me desempeñé como desarrollador fullstack con un stack conformado por:
+    Como parte del equipo de desarrollo de Smiledu. Estuve encargado de:
+    - Liderar de uno de los módulos principales del proyecto
+    - Gestionar a un grupo de personas para llegar a metas establecidas
+    - Contribuir a definir los estandares de codigo tanto el Frontend como Backend.
+    - Tambien me vi involucrado en el proceso de prueba, selección, capacitación e inducción de los nuevos integrantes que entrarian a mi area
+
+    Con un stack conformado por:
     - Angular + Angular Material
     - Express
     - PostgreSQL
     - AWS Lambda
-
-    A su vez me desemepeñé como líder de uno de los módulos principales encargándome de gestionar a un grupo de personas para llegar a metas establecidas y liderar los estandares de codigo.
-    Tambien me vi involucrado en el proceso de prueba, selección, capacitación e inducción de los nuevos integrantes que entrarian a mi area`,
+    `,
     endStart: new Date(),
     startDate: new Date(),
     image:
