@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-type ProgressProps = {
+export type ProgressProps = {
   radius: number;
   stroke: number;
   color: string;
