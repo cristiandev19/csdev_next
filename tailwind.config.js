@@ -21,6 +21,7 @@ module.exports = {
     extend: {
       colors: {
         'cs-gray': '#B6B6B6',
+        'cs-soft-gray': '#f2f2f2',
         'cs-red': '#B6B6B6',
         'cs-white': '#FFFFFF',
         'cs-black': '#0E151D',
