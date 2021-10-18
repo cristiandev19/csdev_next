@@ -23,10 +23,6 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
         internal: (
           <Link href={href}>
             <a
-              style={{
-                background:
-                  'linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%)',
-              }}
               className={clsx(
                 'flex',
                 'justify-center',
@@ -35,6 +31,7 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
                 'text-cs-white',
                 'rounded-xl',
                 'text-xl',
+                'gradient-1',
                 className,
               )}
             >
@@ -59,6 +56,7 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
               'text-cs-white',
               'rounded-xl',
               'text-xl',
+              'word-break',
               className,
             )}
           >
