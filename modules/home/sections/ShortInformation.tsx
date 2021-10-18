@@ -5,7 +5,7 @@ const ShortInformation: VoidFunctionComponent = () => {
   return (
     <section className="relative flex h-screen">
       <Container className="m-auto z-10">
-        <div className="shadow-2xl p-3 rounded-xl	relative flex justify-center items-center bg-white dark:bg-cs-black">
+        <div className="shadow-2xl p-3 rounded-xl	relative flex justify-center items-center bg-white dark:bg-cs-hard-black">
           <h2 className="rotating-headline">
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128640;</span>
