@@ -5,13 +5,19 @@ import React, {
   useState,
   VoidFunctionComponent,
 } from 'react';
-import ThemeContext from '../../../../contexts/theme/theme.context';
-import { ThemeActionTypes } from '../../../../contexts/theme/theme.reducer';
+import { NavigationItem } from 'helpers/interfaces/utils.interfaces';
+import { useRouter } from 'next/router';
+import SunIcon from 'components/Icons/SunIcon';
+import MoonIcon from 'components/Icons/MoonIcon';
+import ThemeContext from 'contexts/theme/theme.context';
+import { ThemeActionTypes } from 'contexts/theme/theme.reducer';
+import { Browser } from 'helpers/types/browser.type';
+import { checkBrowser } from 'helpers/functions/browser';
 import Link from 'next/link';
-import { checkBrowser } from '../../../../helpers/functions/browser';
-import { Browser } from '../../../../helpers/types/browser.type';
 
 const HeaderSection: VoidFunctionComponent = () => {
+  const router = useRouter();
+
   const { themeState, themeDispatch } = useContext(ThemeContext);
 
   const [checked, setChecked] = useState(themeState?.theme === 'dark');
@@ -26,6 +32,19 @@ const HeaderSection: VoidFunctionComponent = () => {
     themeDispatch({ type: ThemeActionTypes.changeTheme, payload: null });
     setChecked(!checked);
   };
+
+  const [navigationUrls] = useState<NavigationItem[]>([
+    {
+      path: '/',
+      name: 'Inicio',
+      active: false,
+    },
+    {
+      path: '/contact',
+      name: 'Contacto',
+      active: false,
+    },
+  ]);
 
   const [browser, setBrowser] = useState<Browser>('NaB');
 
@@ -52,17 +71,16 @@ const HeaderSection: VoidFunctionComponent = () => {
     >
       <div className="container mx-auto flex flex-wrap items-center">
         <div className="flex w-full md:w-1/3 justify-center md:justify-start text-white font-extrabold">
-          <a
-            className="text-white no-underline hover:text-white hover:no-underline"
-            href="/"
-          >
-            <span className="hidden lg:block text-cs-black dark:text-cs-white text-2xl pl-2">
-              &#60;Cristian Sotomayor /&#62;
-            </span>
-            <span className="block lg:hidden text-cs-black dark:text-cs-white text-2xl pl-2">
-              &#60;Cristian S. /&#62;
-            </span>
-          </a>
+          <Link href="/">
+            <a className="text-white no-underline hover:text-white hover:no-underline">
+              <span className="hidden lg:block text-cs-black dark:text-cs-white text-2xl pl-2">
+                &#60;Cristian Sotomayor /&#62;
+              </span>
+              <span className="block lg:hidden text-cs-black dark:text-cs-white text-2xl pl-2">
+                &#60;Cristian /&#62;
+              </span>
+            </a>
+          </Link>
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-center">
           <ul className="list-reset flex justify-center flex-1 md:flex-none items-center">
@@ -74,20 +92,7 @@ const HeaderSection: VoidFunctionComponent = () => {
                     !checked ? 'sun-light' : 'dark:text-cs-black',
                   )}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    />
-                  </svg>
+                  <SunIcon />
                 </div>
                 <label
                   htmlFor="toggleB"
@@ -111,20 +116,7 @@ const HeaderSection: VoidFunctionComponent = () => {
                     checked ? 'moon-dark' : 'text-cs-white',
                   )}
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                    />
-                  </svg>
+                  <MoonIcon />
                 </div>
               </div>
             </li>
@@ -132,40 +124,26 @@ const HeaderSection: VoidFunctionComponent = () => {
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-            <li className="mr-3">
-              <Link href="/">
-                <a
-                  className={clsx(
-                    'inline-block',
-                    'text-gray-600',
-                    'dark:text-cs-white',
-                    'no-underline',
-                    // 'hover:text-gray-200',
-                    'py-2',
-                    'px-4',
-                  )}
-                >
-                  Inicio
-                </a>
-              </Link>
-            </li>
-            <li className="mr-3">
-              <Link href="/contact">
-                <a
-                  className={clsx(
-                    'inline-block',
-                    'text-gray-600',
-                    'dark:text-cs-white',
-                    'no-underline',
-                    // 'hover:text-gray-200',
-                    'py-2',
-                    'px-4',
-                  )}
-                >
-                  Contacto
-                </a>
-              </Link>
-            </li>
+            {navigationUrls.map((item, idx) => (
+              <li className="mr-3 " key={idx}>
+                <Link href={item.path}>
+                  <a
+                    className={clsx(
+                      'inline-block',
+                      'text-gray-600',
+                      'dark:text-cs-white',
+                      'no-underline',
+                      item.path === router.asPath && 'gradient-1',
+                      'rounded-full',
+                      'py-2',
+                      'px-4',
+                    )}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
