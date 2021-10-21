@@ -130,7 +130,9 @@ const HeaderSection: VoidFunctionComponent = () => {
                   <a
                     className={clsx(
                       'inline-block',
-                      'text-gray-600',
+                      item.path === router.asPath
+                        ? 'text-cs-white'
+                        : 'text-gray-600',
                       'dark:text-cs-white',
                       'no-underline',
                       item.path === router.asPath && 'gradient-1',
