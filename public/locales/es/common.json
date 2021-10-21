@@ -1,0 +1,21 @@
+{
+  "main-introduction": "Un fullstack Developer con mas de 3 años de experiencia desarrollando software, liderando equipos de desarrollo, implementando nuevas tecnologias y dando asesoramiento tecnico a equipos de TI",
+  "main-greeting": "¡Hola! Yo soy",
+  "main-button-cv": "Descargar CV",
+  "header-link-home": "Inicio",
+  "header-link-contact": "Contacto",
+  "short-information-1": "Soy un desarrollador de software por pasión, vocación y profesión",
+  "short-information-2": "Me encanta aprender y me gusta compartir conocimiento",
+  "short-information-3": "Amo trabajar en ambientes agiles donde puedo crecer junto al equipo",
+  "short-information-4": "Me gusta ayudar a las personas a entrar al mundo del desarrollo",
+  "short-information-5": "Suelo escribir y hacer videos sobre tecnología en mi tiempo libre",
+  "short-experience-pamer-desc": "\nComo lider de tecnologia en Cedhinfo. Estuve encargado de:\n      - Traducir los requerimientos del stakeholder hacia el equipo de desarrollo\n      - Dar guia tecnica en cuanto a practicas de desarrollo para un mejor producto\n      - Mentoria y capacitacion al equipo de desarrollo tanto front como backend\n      - Revision continua del producto\n      - Y dar reportes del avance de los proyectos\n\n      Todo manejado con un stack de:\n      - Express\n      - Vue\n      - Github",
+  "short-experience-pamer-title": "Desarrollador de software en Pamer",
+  "short-experience-pamer-date": "Jul 2021 - Actualidad (4 meses)",
+  "short-experience-cedhinfo-desc": "\nComo lider de tecnologia en Cedhinfo. Estuve encargado de:\n      - Traducir los requerimientos del stakeholder hacia el equipo de desarrollo\n      - Dar guia tecnica en cuanto a practicas de desarrollo para un mejor producto\n      - Mentoria y capacitacion al equipo de desarrollo tanto front como backend\n      - Revision continua del producto\n      - Y dar reportes del avance de los proyectos\n\n      Todo manejado con un stack de:\n      - Express\n      - Vue\n      - Github",
+  "short-experience-cedhinfo-title": "Lider de tecnologia en Cedhinfo",
+  "short-experience-cedhinfo-date": "Ene 2021 - Jul 2021 (7 meses)",
+  "short-experience-smiledu-desc": "'\nComo parte del equipo de desarrollo de Smiledu. Estuve encargado de:\n      - Liderar de uno de los módulos principales del proyecto\n      - Gestionar a un grupo de personas para llegar a metas establecidas\n      - Contribuir a definir los estandares de codigo tanto el Frontend como Backend.\n      - Tambien me vi involucrado en el proceso de prueba, selección, capacitación e inducción de los nuevos integrantes que entrarian a mi area\n\n      Con un stack conformado por:\n      - Angular + Angular Material\n      - Express\n      - PostgreSQL\n      - AWS Lambda",
+  "short-experience-smiledu-title": "Desarrollador de fullstack en Smiledu",
+  "short-experience-smiledu-date": "Dic 2018 - Dic 2020 (2 años y 1 mes)"
+}
