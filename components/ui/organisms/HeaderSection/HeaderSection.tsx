@@ -14,8 +14,15 @@ import { ThemeActionTypes } from 'contexts/theme/theme.reducer';
 import { Browser } from 'helpers/types/browser.type';
 import { checkBrowser } from 'helpers/functions/browser';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+const lngs = {
+  en: { nativeName: 'English' },
+  es: { nativeName: 'Español' },
+};
 
 const HeaderSection: VoidFunctionComponent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { themeState, themeDispatch } = useContext(ThemeContext);
@@ -35,13 +42,13 @@ const HeaderSection: VoidFunctionComponent = () => {
 
   const [navigationUrls] = useState<NavigationItem[]>([
     {
-      path: '/',
-      name: 'Inicio',
+      path: `${router.locale ? '/' + router.locale : ''}/`,
+      name: t('header-link-home'),
       active: false,
     },
     {
-      path: '/contact',
-      name: 'Contacto',
+      path: `${router.locale ? '/' + router.locale : ''}/contact`,
+      name: t('header-link-contact'),
       active: false,
     },
   ]);
@@ -124,6 +131,18 @@ const HeaderSection: VoidFunctionComponent = () => {
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
+            <li className="mr-3">
+              <Link
+                href={`/${router.basePath}${
+                  router.locale == 'en' ? 'es' : 'en'
+                }${router.pathname}`}
+                locale={router.locale == 'en' ? 'es' : 'en'}
+              >
+                <a className="text-gray-600">
+                  {lngs[router.locale].nativeName}
+                </a>
+              </Link>
+            </li>
             {navigationUrls.map((item, idx) => (
               <li className="mr-3 " key={idx}>
                 <Link href={item.path}>
