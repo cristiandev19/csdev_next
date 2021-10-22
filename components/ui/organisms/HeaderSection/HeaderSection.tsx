@@ -43,12 +43,12 @@ const HeaderSection: VoidFunctionComponent = () => {
   const [navigationUrls] = useState<NavigationItem[]>([
     {
       path: `${router.locale ? '/' + router.locale : ''}/`,
-      name: t('header-link-home'),
+      name: t('link.home'),
       active: false,
     },
     {
       path: `${router.locale ? '/' + router.locale : ''}/contact`,
-      name: t('header-link-contact'),
+      name: t('link.contact'),
       active: false,
     },
   ]);
@@ -127,10 +127,6 @@ const HeaderSection: VoidFunctionComponent = () => {
                 </div>
               </div>
             </li>
-          </ul>
-        </div>
-        <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
-          <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             <li className="mr-3">
               <Link
                 href={`/${router.basePath}${
@@ -138,11 +134,26 @@ const HeaderSection: VoidFunctionComponent = () => {
                 }${router.pathname}`}
                 locale={router.locale == 'en' ? 'es' : 'en'}
               >
-                <a className="text-gray-600">
+                <a
+                  className={clsx(
+                    'inline-block',
+                    'no-underline',
+                    'rounded-full',
+                    'py-2',
+                    'px-4',
+                    'border-2',
+                    router.locale == 'en' ? 'border-cs-blue' : 'border-red-500',
+                    router.locale == 'en' ? 'text-cs-blue' : 'text-red-500',
+                  )}
+                >
                   {lngs[router.locale].nativeName}
                 </a>
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
+          <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             {navigationUrls.map((item, idx) => (
               <li className="mr-3 " key={idx}>
                 <Link href={item.path}>
