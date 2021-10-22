@@ -1,6 +1,14 @@
 import React, { VoidFunctionComponent } from 'react';
 import ContactLayout from 'modules/contact/layout';
+import { withTranslation } from 'react-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const ContactPage: VoidFunctionComponent = () => <ContactLayout />;
 
-export default ContactPage;
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['common'])),
+  },
+});
+
+export default withTranslation()(ContactPage);

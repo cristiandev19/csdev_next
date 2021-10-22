@@ -1,7 +1,10 @@
 import Container from 'components/ui/atoms/Container';
 import React, { VoidFunctionComponent } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ShortInformation: VoidFunctionComponent = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative flex h-screen">
       <Container className="m-auto z-10">
@@ -9,36 +12,23 @@ const ShortInformation: VoidFunctionComponent = () => {
           <h2 className="rotating-headline">
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128640;</span>
-              <span className="pl-3">
-                Soy un desarrollador de software por pasión, vocación y
-                profesión
-              </span>
+              <span className="pl-3">{t('short.information.1')}</span>
             </p>
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128588;</span>
-              <span className="pl-3">
-                Me encanta aprender y me gusta compartir conocimiento
-              </span>
+              <span className="pl-3">{t('short.information.2')}</span>
             </p>
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#127939;</span>
-              <span className="pl-3">
-                Amo trabajar en ambientes agiles donde puedo crecer junto al
-                equipo
-              </span>
+              <span className="pl-3">{t('short.information.3')}</span>
             </p>
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128170;</span>
-              <span className="pl-3">
-                Me gusta ayudar a las personas a entrar al mundo del desarrollo
-              </span>
+              <span className="pl-3">{t('short.information.4')}</span>
             </p>
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#129331;</span>
-              <span className="pl-3">
-                Suelo escribir y hacer videos sobre tecnología en mi tiempo
-                libre
-              </span>
+              <span className="pl-3">{t('short.information.5')}</span>
             </p>
           </h2>
         </div>

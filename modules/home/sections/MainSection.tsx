@@ -4,6 +4,7 @@ import Container from 'components/ui/atoms/Container';
 import LinkButton from 'components/ui/atoms/LinkButton/LinkButton';
 import useWindowSize, { WidthSizesProps } from 'hooks/useWindowSize';
 import CsdevIcon from 'components/Icons/CsdevIcon';
+import { useTranslation } from 'react-i18next';
 
 const devNamePerSize: WidthSizesProps<string> = {
   extrasmall: 'Cristian',
@@ -14,6 +15,8 @@ const devNamePerSize: WidthSizesProps<string> = {
 };
 
 const MainSection: VoidFunctionComponent = () => {
+  const { t } = useTranslation();
+
   const urlCV =
     'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
 
@@ -51,7 +54,7 @@ const MainSection: VoidFunctionComponent = () => {
             <CsdevIcon width="100%" height="100%" />
           </div>
           <div className="flex flex-col justify-center mt-8 md:mt-0">
-            <div className="text-lg">¡Saludos! Yo soy </div>
+            <div className="text-lg">{t('main.greeting')}</div>
 
             <div className="flex">
               <div className="typing-effect">
@@ -64,16 +67,11 @@ const MainSection: VoidFunctionComponent = () => {
             </div>
 
             <p className="text-lg">
-              <span>
-                Fullstack Developer con mas de 3 años de experiencia
-                desarrollando software, liderando equipos de desarrollo,
-                implementando nuevas tecnologias y dando asesoramiento tecnico a
-                equipos de TI &#128293;
-              </span>
+              <span>{t('main.introduction')} &#128293;</span>
             </p>
 
             <LinkButton type="external" href={urlCV}>
-              Descargar CV
+              {t('main.button')}
             </LinkButton>
           </div>
         </div>
