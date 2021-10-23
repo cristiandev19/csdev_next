@@ -42,12 +42,12 @@ const HeaderSection: VoidFunctionComponent = () => {
 
   const [navigationUrls] = useState<NavigationItem[]>([
     {
-      path: `${router.locale ? '/' + router.locale : ''}/`,
+      path: '/',
       name: t('link.home'),
       active: false,
     },
     {
-      path: `${router.locale ? '/' + router.locale : ''}/contact`,
+      path: '/contact',
       name: t('link.contact'),
       active: false,
     },
@@ -156,7 +156,9 @@ const HeaderSection: VoidFunctionComponent = () => {
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             {navigationUrls.map((item, idx) => (
               <li className="mr-3 " key={idx}>
-                <Link href={item.path}>
+                <Link
+                  href={`${router.locale && '/' + router.locale}${item.path}`}
+                >
                   <a
                     className={clsx(
                       'inline-block',
