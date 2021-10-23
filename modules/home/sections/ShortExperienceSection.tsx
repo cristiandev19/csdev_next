@@ -46,6 +46,10 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
   return (
     <section className="relative flex">
       <Container className="z-10">
+        <h2 className="text-center text-2xl my-8">
+          {t('short.experience.title')}
+        </h2>
+
         {experienceData.map((experience, index) => (
           <ShortExperienceCard
             description={experience.description}
