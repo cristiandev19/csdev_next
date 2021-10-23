@@ -14,11 +14,11 @@ const FooterSection: VoidFunctionComponent = () => {
 
   return (
     <footer className="w-full min-h-screen flex items-center justify-center bg-cs-hard-black dark:bg-cs-hard-black">
-      <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
+      <div className="container mx-auto flex-wrap items-center text-white flex flex-col w-full">
         <div className="w-full text-6xl font-bold mt-8">
           <h2 className="w-full md:w-2/3 break-words">{t('footer.contact')}</h2>
         </div>
-        <div className="flex mt-8 flex-col md:flex-row md:justify-between">
+        <div className="w-full flex mt-8 flex-col md:flex-row md:justify-between">
           <p className="w-full md:w-2/3 text-gray-400">
             {t('footer.contact.text')}
             <br />
@@ -30,8 +30,8 @@ const FooterSection: VoidFunctionComponent = () => {
             </LinkButton>
           </div>
         </div>
-        <div className="flex flex-col">
-          <div className="flex mt-24 mb-12 flex-row justify-between">
+        <div className="flex flex-col w-full">
+          <div className="flex mt-24 mb-12 flex-row justify-between items-center">
             <div className="">
               <CsdevIcon height={40} width={40} />
             </div>
