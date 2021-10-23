@@ -33,11 +33,10 @@ const HeadeLinkList: VoidFunctionComponent = () => {
               <a
                 className={clsx(
                   'inline-block',
-                  item.path === asPath && 'text-cs-white',
-                  item.path === asPath && 'gradient-1',
                   'dark:text-cs-white',
                   'no-underline',
-                  gradient === 100 ? 'text-cs-white' : 'text-gray-600',
+                  gradient === 100 ? 'text-white' : 'text-gray-600',
+                  item.path === asPath && 'text-white gradient-1',
                   'rounded-full',
                   'py-2',
                   'px-4',
