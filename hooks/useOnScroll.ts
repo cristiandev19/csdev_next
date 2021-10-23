@@ -1,21 +1,25 @@
 import { useEffect, useState } from 'react';
 
-const useOnScroll = () => {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowScroll, setWindowScroll] = useState(0);
+const useOnScroll = (): number => {
+  const [percentage, setPercentage] = useState(0);
 
-  const listenToScroll = () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    setWindowScroll(winScroll);
+  const listener = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.offsetHeight;
+    const winHeight = window.innerHeight;
+    const scrollPercent = scrollTop / (docHeight - winHeight);
+    const scrollPercentRounded = Math.round(scrollPercent * 100);
+    setPercentage(scrollPercentRounded);
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', listenToScroll);
-    return () => window.removeEventListener('scroll', listenToScroll);
+    window.addEventListener('scroll', listener);
+    return () => {
+      window.removeEventListener('scroll', listener);
+    };
   }, []);
 
-  return windowScroll;
+  return percentage;
 };
 
 export default useOnScroll;
