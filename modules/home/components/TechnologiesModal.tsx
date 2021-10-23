@@ -20,7 +20,7 @@ const TechnologiesModal: FunctionComponent<TechnologiesModalProps> = ({
         <img className="m-auto" src={data?.image} alt="" />
       </figure>
       <ul className="relative space-y-3 mt-8 md:mt-0 w-full md:w-7/12 m-auto">
-        {data?.technologies.map((skill) => (
+        {data?.technologies.split('\n').map((skill) => (
           <li className="flex items-center space-x-2" key={skill}>
             <div style={{ color: data?.color }}>
               <CheckIcon height={20} width={20} />

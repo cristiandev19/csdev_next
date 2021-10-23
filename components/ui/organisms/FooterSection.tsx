@@ -5,8 +5,10 @@ import LinkedinIcon from '../../Icons/LinkedinIcon';
 import YoutubeIcon from '../../Icons/YoutubeIcon';
 import LinkButton from '../atoms/LinkButton/LinkButton';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const FooterSection: VoidFunctionComponent = () => {
+  const { t } = useTranslation();
   const urlCV =
     'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
 
@@ -14,20 +16,17 @@ const FooterSection: VoidFunctionComponent = () => {
     <footer className="w-full min-h-screen flex items-center justify-center bg-cs-hard-black dark:bg-cs-hard-black">
       <div className="md:w-2/3 w-full px-4 text-white flex flex-col">
         <div className="w-full text-6xl font-bold mt-8">
-          <h2 className="w-full md:w-2/3 break-words">
-            Como te puedo ayudar? Contactame!
-          </h2>
+          <h2 className="w-full md:w-2/3 break-words">{t('footer.contact')}</h2>
         </div>
         <div className="flex mt-8 flex-col md:flex-row md:justify-between">
           <p className="w-full md:w-2/3 text-gray-400">
-            Tienes algun proyecto en mente? Quieres hablar de tecnologia?
-            Quieres una mentoria?
+            {t('footer.contact.text')}
             <br />
-            Contactame!
+            {t('footer.contact.text2')}
           </p>
           <div className="w-44 pt-6 md:pt-0">
             <LinkButton type="external" href={urlCV}>
-              Descargar CV
+              {t('main.button')}
             </LinkButton>
           </div>
         </div>
@@ -38,12 +37,12 @@ const FooterSection: VoidFunctionComponent = () => {
             </div>
             <Link href="/">
               <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Inicio
+                {t('link.home')}
               </a>
             </Link>
             <Link href="/contact">
               <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Contacto
+                {t('link.contact')}
               </a>
             </Link>
 

@@ -7,17 +7,32 @@ https://notiz.dev/blog/floating-form-field-with-tailwindcss
 
 ## Features
 
+  - [x] [Nextjs](https://nextjs.org/)
+  - [x] [TypeScript](https://www.typescriptlang.org/)
+  - [x] [ESLint](https://eslint.org/)
+  - [x] [Prettier](https://prettier.io/)
+  - [x] [Tailwind CSS](https://tailwindcss.com/)
+  - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
+  - [ ] [Jest](https://facebook.github.io/jest/)
+  - [ ] [Docker](https://www.docker.com/)
+
+
 
 ## URL Utiles
 
 - https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f3eb
 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+
+First, install dependencyes:
+
+```bash
+npm i
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev

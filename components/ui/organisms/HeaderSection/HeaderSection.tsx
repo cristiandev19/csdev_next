@@ -14,8 +14,15 @@ import { ThemeActionTypes } from 'contexts/theme/theme.reducer';
 import { Browser } from 'helpers/types/browser.type';
 import { checkBrowser } from 'helpers/functions/browser';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+
+const lngs = {
+  en: { nativeName: 'English' },
+  es: { nativeName: 'Español' },
+};
 
 const HeaderSection: VoidFunctionComponent = () => {
+  const { t } = useTranslation();
   const router = useRouter();
 
   const { themeState, themeDispatch } = useContext(ThemeContext);
@@ -36,12 +43,12 @@ const HeaderSection: VoidFunctionComponent = () => {
   const [navigationUrls] = useState<NavigationItem[]>([
     {
       path: '/',
-      name: 'Inicio',
+      name: t('link.home'),
       active: false,
     },
     {
       path: '/contact',
-      name: 'Contacto',
+      name: t('link.contact'),
       active: false,
     },
   ]);
@@ -120,17 +127,44 @@ const HeaderSection: VoidFunctionComponent = () => {
                 </div>
               </div>
             </li>
+            <li className="mr-3">
+              <Link
+                href={`/${router.basePath}${
+                  router.locale == 'en' ? 'es' : 'en'
+                }${router.pathname}`}
+                locale={router.locale == 'en' ? 'es' : 'en'}
+              >
+                <a
+                  className={clsx(
+                    'inline-block',
+                    'no-underline',
+                    'rounded-full',
+                    'py-2',
+                    'px-4',
+                    'border-2',
+                    router.locale == 'en' ? 'border-cs-blue' : 'border-red-500',
+                    router.locale == 'en' ? 'text-cs-blue' : 'text-red-500',
+                  )}
+                >
+                  {lngs[router.locale].nativeName}
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
           <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
             {navigationUrls.map((item, idx) => (
               <li className="mr-3 " key={idx}>
-                <Link href={item.path}>
+                <Link
+                  href={`${router.locale && '/' + router.locale}${item.path}`}
+                >
                   <a
                     className={clsx(
                       'inline-block',
-                      'text-gray-600',
+                      item.path === router.asPath
+                        ? 'text-cs-white'
+                        : 'text-gray-600',
                       'dark:text-cs-white',
                       'no-underline',
                       item.path === router.asPath && 'gradient-1',

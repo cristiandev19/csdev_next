@@ -22,7 +22,8 @@ module.exports = {
       colors: {
         'cs-gray': '#B6B6B6',
         'cs-soft-gray': '#f2f2f2',
-        'cs-red': '#B6B6B6',
+        'cs-red': '#B6B6B6', 
+        'cs-blue': '#157FFF',
         'cs-white': '#FFFFFF',
         'cs-black': '#001226',
         'cs-hard-black': '#000E1F',
@@ -30,8 +31,6 @@ module.exports = {
         'cs-yellow': '#F6AE13',
         'cs-pink': '#E91E63',
         'cs-orange': '#E91E63',
-        'cs-pink': '#E91E63',
-        'cs-pink': '#E91E63',
       },
       fontFamily: {
         title: ['Poppins', 'sans-serif'],
