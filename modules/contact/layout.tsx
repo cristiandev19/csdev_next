@@ -5,7 +5,7 @@ import React, { VoidFunctionComponent } from 'react';
 
 const ContactLayout: VoidFunctionComponent = () => {
   return (
-    <PageTemplate title="Contacto | Cristian Sotomayor">
+    <PageTemplate title="Contact | Cristian Sotomayor">
       <HeaderSection />
 
       <div className="container mx-auto sm:px-0 px-8 pb-40 pt-40">
