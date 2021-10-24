@@ -15,6 +15,7 @@ https://notiz.dev/blog/floating-form-field-with-tailwindcss
   - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
   - [ ] [Jest](https://facebook.github.io/jest/)
   - [ ] [Docker](https://www.docker.com/)
+  - [ ] [Storybook](https://storybook.js.org/)
 
 
 
