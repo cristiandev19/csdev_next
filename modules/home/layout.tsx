@@ -9,7 +9,7 @@ import ShortExperienceSection from 'modules/home/sections/ShortExperienceSection
 
 const HomeLayout: VoidFunctionComponent = () => {
   return (
-    <PageTemplate title="Inicio | Cristian Sotomayor">
+    <PageTemplate title="Home | Cristian Sotomayor">
       <HeaderSection />
 
       <div className="pt-40 md:pt-0">
