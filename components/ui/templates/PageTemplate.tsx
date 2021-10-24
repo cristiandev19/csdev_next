@@ -49,8 +49,17 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
     >
       <div className={themeState?.theme}>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
           <title>{title}</title>
-          <meta name="description" content="Personal web made with next" />
+          <meta name="author" content="Cristian Sotomayor" />
+          <meta
+            name="description"
+            content="I'm Cristian Sotomayor a fullstack Developer with more than 3 years of experience developing software, leading development teams, implementing new fancy technologies and giving techinal advice to IT teams"
+          />
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="google-site-verification"
