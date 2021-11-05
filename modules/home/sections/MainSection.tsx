@@ -35,25 +35,13 @@ const MainSection: VoidFunctionComponent = () => {
           className={clsx(
             'grid',
             'grid-cols-1',
-            'md:grid-cols-2',
+            'md:grid-cols-12',
             'sm:mt-0',
             'xl:mt-4',
             'md:h-screen',
           )}
         >
-          <div
-            className={clsx(
-              'w-4/5',
-              'flex',
-              'xl:w-3/5',
-              'm-auto',
-              'sm:my-auto',
-              'sm:ml-0',
-            )}
-          >
-            <CsdevIcon width="100%" height="100%" />
-          </div>
-          <div className="flex flex-col justify-center mt-8 md:mt-0">
+          <div className="flex flex-col justify-center mt-8 md:mt-0 order-last md:order-first md:col-span-7">
             <div className="text-lg">{t('main.greeting')}</div>
 
             <div className="flex">
@@ -73,6 +61,19 @@ const MainSection: VoidFunctionComponent = () => {
             <LinkButton type="external" href={urlCV}>
               {t('main.button')}
             </LinkButton>
+          </div>
+          <div
+            className={clsx(
+              'w-4/5',
+              'flex',
+              'xl:w-4/5',
+              'm-auto',
+              'sm:my-auto',
+              'md:mr-0',
+              'md:col-span-5',
+            )}
+          >
+            <CsdevIcon width="100%" height="100%" />
           </div>
         </div>
       </Container>
