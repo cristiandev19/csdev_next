@@ -1,8 +1,4 @@
-# Sitio web
-
-## Por implementar
-
-https://notiz.dev/blog/floating-form-field-with-tailwindcss
+# Web site
 
 
 ## Features
@@ -19,8 +15,9 @@ https://notiz.dev/blog/floating-form-field-with-tailwindcss
 
 
 
-## URL Utiles
+## Notes
 
+- https://notiz.dev/blog/floating-form-field-with-tailwindcss
 - https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f3eb
 
 
