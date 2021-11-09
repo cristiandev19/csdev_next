@@ -8,7 +8,7 @@ const SocialSection: VoidFunctionComponent = () => (
   <div>
     <a
       target="_blank"
-      href="https://github.com/cristiandev19"
+      href="https://github.com/csdev19"
       className="flex w-full items-center justify-center rounded-xl my-2 py-2"
       style={{ backgroundColor: '#4078c0' }}
       rel="noreferrer"
