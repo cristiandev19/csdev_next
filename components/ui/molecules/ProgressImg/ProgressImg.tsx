@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import HoveredCard from 'components/ui/atoms/HoveredCard';
 import ProgressContainer from 'components/ui/molecules/ProgressContainer';
 import useWindowSize from 'hooks/useWindowSize';
 import React, { FunctionComponent, useEffect, useState } from 'react';
@@ -22,15 +23,6 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
   onClick,
   showPercent = false,
 }) => {
-  const [windowSize] = useWindowSize();
-
-  const handleKeyDown = (e) => {
-    if (e.keyCode === 27) {
-      // Do whatever when esc is pressed
-      onClick();
-    }
-  };
-
   const [hovered, setHovered] = useState(false);
 
   const [progressProperties] = useState({
@@ -40,31 +32,12 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
     percent,
   });
 
-  useEffect(() => {
-    if (windowSize.width < 600) {
-      setHovered(true);
-    } else {
-      setHovered(false);
-    }
-  }, [windowSize]);
+  const handleChanges = (hover: boolean) => {
+    setHovered(hover);
+  };
 
   return (
-    <div
-      className={clsx(
-        'm-auto',
-        'relative',
-        'rounded-xl',
-        'bg-cs-soft-gray',
-        'dark:bg-cs-hard-black',
-        hovered && 'shadow-pop-bl',
-      )}
-      onClick={onClick}
-      onKeyDown={handleKeyDown}
-      role="button"
-      tabIndex={0}
-      onMouseOver={() => setHovered(true)}
-      onMouseOut={() => setHovered(false)}
-    >
+    <HoveredCard onClick={onClick} emitChanges={handleChanges}>
       <ProgressContainer
         radius={progressProperties.radius}
         stroke={progressProperties.stroke}
@@ -95,7 +68,7 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
           className="absolute"
         >{`${percent}%`}</text>
       )}
-    </div>
+    </HoveredCard>
   );
 };
 
