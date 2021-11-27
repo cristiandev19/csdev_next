@@ -1,8 +1,4 @@
-# Sitio web
-
-## Por implementar
-
-https://notiz.dev/blog/floating-form-field-with-tailwindcss
+# Web site
 
 
 ## Features
@@ -15,11 +11,13 @@ https://notiz.dev/blog/floating-form-field-with-tailwindcss
   - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
   - [ ] [Jest](https://facebook.github.io/jest/)
   - [ ] [Docker](https://www.docker.com/)
+  - [ ] [Storybook](https://storybook.js.org/)
 
 
 
-## URL Utiles
+## Notes
 
+- https://notiz.dev/blog/floating-form-field-with-tailwindcss
 - https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f3eb
 
 
