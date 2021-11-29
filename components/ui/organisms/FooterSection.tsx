@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const FooterSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
   const urlCV =
-    'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
+    'https://drive.google.com/file/d/1E0d-lYcgep7aTTuixgdBh9ifwdqeX7KJ/view?usp=sharing';
 
   return (
     <footer className="w-full min-h-screen flex items-center justify-center bg-cs-hard-black dark:bg-cs-hard-black">
