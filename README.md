@@ -1,5 +1,9 @@
 # Web site
 
+## next steps
+
+- expand the skills section
+- add a text editor
 
 ## Features
 
