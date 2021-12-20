@@ -18,7 +18,7 @@ const MainSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
 
   const urlCV =
-    'https://drive.google.com/file/d/1Wy9OrjhQmzAfKWnj9tbkgcsPcuQAXsxa/view?usp=sharing';
+    'https://drive.google.com/file/d/1E0d-lYcgep7aTTuixgdBh9ifwdqeX7KJ/view?usp=sharing';
 
   const [devName, setDevName] = useState('Cristian Sotomayor');
 

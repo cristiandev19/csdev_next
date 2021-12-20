@@ -8,6 +8,14 @@ const Aboutme: VoidFunctionComponent = () => (
 
     <div className="container mx-auto sm:px-0 px-8 pt-40">
       <h1>ACERCA DE MI</h1>
+
+      <div>
+        <h3>Llevo desarrollando software profesionalmente hace 3 años</h3>
+      </div>
+
+      <div>
+        <h3>Me encanta investigar, implementar y enseñar nuevas tecnologias</h3>
+      </div>
     </div>
   </PageTemplate>
 );
