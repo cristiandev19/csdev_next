@@ -22,7 +22,7 @@ module.exports = {
       colors: {
         'cs-gray': '#B6B6B6',
         'cs-soft-gray': '#f2f2f2',
-        'cs-red': '#B6B6B6', 
+        'cs-red': '#B6B6B6',
         'cs-blue': '#157FFF',
         'cs-white': '#FFFFFF',
         'cs-black': '#001226',
