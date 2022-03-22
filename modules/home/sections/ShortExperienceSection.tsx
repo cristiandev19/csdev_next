@@ -11,12 +11,20 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
 
   const experienceMock: ShortExperience[] = [
     {
+      title: t('short.experience.globaltask.title'),
+      description: t('short.experience.globaltask.desc'),
+      endStart: new Date(),
+      startDate: new Date(),
+      image:
+        'https://s3.us-east-2.amazonaws.com/csdev19.personal/globaltask.jpg',
+      provisionalDate: t('short.experience.globaltask.date'),
+    },
+    {
       title: t('short.experience.pamer.title'),
       description: t('short.experience.pamer.desc'),
       endStart: new Date(),
       startDate: new Date(),
-      image:
-        'https://media-exp1.licdn.com/dms/image/C4E0BAQEcGrPK0CQBXg/company-logo_100_100/0/1620939348609?e=1642636800&v=beta&t=yHFJ4JCtYhorgBO-MzGWP6qRsw5ad_iC8VUPg4au4ak',
+      image: 'https://s3.us-east-2.amazonaws.com/csdev19.personal/pamer.jpg',
       provisionalDate: t('short.experience.pamer.date'),
     },
     {
@@ -24,8 +32,7 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
       description: t('short.experience.cedhinfo.desc'),
       endStart: new Date(),
       startDate: new Date(),
-      image:
-        'https://media-exp1.licdn.com/dms/image/C560BAQGfg6H64MDYTQ/company-logo_100_100/0/1631738746829?e=1642636800&v=beta&t=C_RbWjcoQg7lpAIHuS1-z2HkiPQlu5yio5cwEoMv9EE',
+      image: 'https://s3.us-east-2.amazonaws.com/csdev19.personal/cedhinfo.jpg',
       provisionalDate: t('short.experience.cedhinfo.date'),
     },
     {
@@ -33,8 +40,7 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
       description: t('short.experience.smiledu.desc'),
       endStart: new Date(),
       startDate: new Date(),
-      image:
-        'https://media-exp1.licdn.com/dms/image/C560BAQHOTJw5u64m3Q/company-logo_100_100/0/1619474234761?e=1642636800&v=beta&t=sG5JdnZEbArA5mPvJ2i3n54oNk2rUMh6CKDMoO_JDug',
+      image: 'https://s3.us-east-2.amazonaws.com/csdev19.personal/smiledu.jpg',
       provisionalDate: t('short.experience.smiledu.date'),
     },
   ];
@@ -60,15 +66,6 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
           />
         ))}
       </Container>
-      {/* // <div className="flex">
-        //   <LinkButton
-        //     href="/experience"
-        //     className="m-auto px-8"
-        //     type="internal"
-        //   >
-        //     Ver mas
-        //   </LinkButton>
-        // </div> */}
 
       <div className="absolute w-full h-full" style={{ top: 0 }}>
         <svg
