@@ -24,14 +24,7 @@ const ShortExperienceCard: FunctionComponent<ShortExperience> = ({
           </div>
 
           <div className="mt-8 md:mt-2 md:ml-16">
-            <div>
-              {description.split('\n').map((item, idx) => (
-                <span key={idx}>
-                  {item}
-                  <br />
-                </span>
-              ))}
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: description }}></div>
           </div>
         </div>
       </div>
