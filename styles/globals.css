@@ -114,6 +114,8 @@ input:checked ~ .container-dot {
 }
 
 .rotating-headline p{
+  padding-top: 10px;
+  padding-bottom: 10px;
 	position: absolute;
 	opacity: 0;
 	overflow: hidden;
