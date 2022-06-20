@@ -1,7 +1,7 @@
 {
   "main.introduction": "Un fullstack Developer con mas de 3 años de experiencia desarrollando software, liderando equipos de desarrollo, implementando nuevas tecnologias y dando asesoramiento tecnico a equipos de TI",
   "main.greeting": "¡Hola! Yo soy",
-  "main.button": "Descargar CV",
+  "main.button": "DESCARGAR CV",
   "link.home": "Inicio",
   "link.contact": "Contacto",
   "short.information.1": "Soy un desarrollador de software por pasión, vocación y profesión",
@@ -15,7 +15,7 @@
   "short.experience.globaltask.date": "Ene 2022 - Actualidad (3 meses)",
   "short.experience.pamer.desc": "<br />- Promover la creación de un sistema de diseño en el frontend para que sea sólido, reutilizable y mantenible. Reduciendo el tiempo para crear nuevas pantallas en un 50%. Usando el patrón de diseño atómico en Nextjs.</br>- Facilitar y mejorar la provisión de recursos. Ahorrando el tiempo que les tomó a los desarrolladores realizar estas configuraciones en un 90% y reduciendo el margen de error que podría incrementar la facturación mensual. Uso de AWS CDK para automatizar este proceso.<br />- Automatice las implementaciones de aplicaciones y las pruebas unitarias. Reduciendo el tiempo que les tomó a los desarrolladores hacer las cargas en un 100%. Uso de ganchos de acciones de GitHub.<br /><br /><b>Tech stack:</b> NestJS, NextJS, Tailwind, Typescript, ESLint, Prettier, Jest, Cypress, AWS RDS, AWS CDK, AWS App Runner, AWS ECR, AWS S3, GitHub, GitHub Actions, Docker, Node, MySQL.",
   "short.experience.pamer.title": "Desarrollador de software en Pamer (Lima, Peru)",
-  "short.experience.pamer.date": "Jul 2021 - Dic 2021 (4 meses)",
+  "short.experience.pamer.date": "Jul 2021 - Dic 2021 (6 meses)",
   "short.experience.cedhinfo.desc": "<br />- Ayude a desarrollar un producto más estable aumentando la cantidad de implementaciones de producción para duplicar la tasa normal a través de la administración y la capacitación que proporcioné al equipo de tecnología que dirigí.<br />- Consiga que el usuario tenga una mayor tasa de conversión aumentando las ventas mensuales en un 10% mediante la implementación de pasarelas de pago como CULQI y “Mercado Pago”.<br />- Cree y optimice consultas muy complejas reduciendo el tiempo de carga hasta en un 25% utilizando NoSQL como lenguaje de consulta en MongoDB.<br /><br /><b>Tech stack:</b> Express, Vue, JavaScript, Typescript, Pug, Git, GitHub, ESLint, Sass, Node.",
   "short.experience.cedhinfo.title": "Lider de tecnologia en Cedhinfo (Lima, Peru)",
   "short.experience.cedhinfo.date": "Ene 2021 - Jul 2021 (7 meses)",

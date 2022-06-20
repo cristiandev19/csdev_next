@@ -1,7 +1,7 @@
 {
   "main.introduction": "A fullstack Developer with more than 3 years of experience developing software, leading development teams, implementing new fancy technologies and giving techinal advice to IT teams",
   "main.greeting": "¡Hi! I'm",
-  "main.button": "Download CV",
+  "main.button": "DOWNLOAD CV",
   "link.home": "Home",
   "link.contact": "Contact",
   "short.information.1": "I am a software developer by passion, vocation and profession",
@@ -15,7 +15,7 @@
   "short.experience.globaltask.date": "Jan 2022 - Present (3 meses)",
   "short.experience.pamer.desc": "<br />- Promote the creation of a design system on the frontend so that it is solid, reusable and maintainable. Reducing the time to create new screens by 50%. Using Atomic Design pattern on Nextjs.<br />- Facilitate and improve the provision of resources. Saving the time it took developers to make these configurations by 90% and reducing the margin of error that could increase monthly billing. Using AWS CDK to automate this process.<br />- Automate application deployments and unit testing. Reducing the time it took developers to do the uploads by 100%. Using GitHub Actions hooks.<br /><br /><b>Tech stack:</b> NestJS, NextJS, Tailwind, Typescript, ESLint, Prettier, Jest, Cypress, AWS RDS, AWS CDK, AWS App Runner, AWS ECR, AWS S3, GitHub, GitHub Actions, Docker, Node, MySQL.",
   "short.experience.pamer.title": "Software developer at Pamer (Lima, Peru)",
-  "short.experience.pamer.date": "Jul 2021 - Dec 2021 (4 months)",
+  "short.experience.pamer.date": "Jul 2021 - Dec 2021 (6 months)",
   "short.experience.cedhinfo.desc": "<br />- Help develop a more stable product by increasing the number of production deployments to double the normal rate through the management and training I provided to the technology team I led.<br />- Get the user to have a higher conversion rate increasing sales per month by 10% by implementing payment gateways such as CULQI and “Mercado Pago”.<br />- Create and optimize highly complex queries reducing load time by up to 25% using NoSQL as the query language in MongoDB.<br /><br /><b>Tech stack:</b> Express, Vue, JavaScript, Typescript, Pug, Git, GitHub, ESLint, Sass, Node.",
   "short.experience.cedhinfo.title": "Tech lead at Cedhinfo (Lima, Peru)",
   "short.experience.cedhinfo.date": "Jan 2021 - Jul 2021 (7 months)",
