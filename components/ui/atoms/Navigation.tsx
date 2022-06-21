@@ -12,7 +12,10 @@ const Navigation: FunctionComponent<NavigationProps> = ({ children }) => {
   return (
     <nav
       className={clsx(
+        'transition duration-500 ease-linear',
         'dark:bg-cs-hard-black',
+        'bg-cs-white',
+        gradient <= 10 ? 'opacity-100' : 'opacity-95',
         'p-2',
         'md:p-4',
         'mt-0',
