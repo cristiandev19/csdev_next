@@ -67,7 +67,9 @@ const PageTemplate: FunctionComponent<PageTemplateProps> = ({
           />
         </Head>
 
-        <main className="dark:bg-cs-black dark:text-white">{children}</main>
+        <main className="dark:bg-cs-black dark:text-white bg-cs-white transition duration-500 ease-linear">
+          {children}
+        </main>
 
         <FooterSection />
       </div>

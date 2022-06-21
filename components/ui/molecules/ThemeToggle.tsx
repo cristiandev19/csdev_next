@@ -18,7 +18,8 @@ const ThemeToggle: FunctionComponent<ThemeToggleProps> = ({
         <div
           className={clsx(
             'mx-2',
-            !checked ? 'sun-light' : 'dark:text-cs-black',
+            'transition duration-500 ease-in-out rounded-full',
+            !checked ? 'sun-light' : 'scale-0	dark:text-cs-black',
           )}
         >
           <SunIcon />
@@ -32,11 +33,17 @@ const ThemeToggle: FunctionComponent<ThemeToggleProps> = ({
               checked={checked}
               onChange={() => onChange()}
             />
-            <div className="container-dot block bg-gray-600 w-14 h-8 rounded-full" />
-            <div className="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition" />
+            <div className="transition duration-500 ease-in-out container-dot block bg-gray-600 w-14 h-8 rounded-full" />
+            <div className="dot absolute left-1 top-1 bg-cs-yellow w-6 h-6 rounded-full transition duration-500" />
           </div>
         </label>
-        <div className={clsx('mx-2', checked ? 'moon-dark' : 'text-cs-white')}>
+        <div
+          className={clsx(
+            'mx-2',
+            'transition duration-500 ease-in-out rounded-full',
+            checked ? 'moon-dark' : 'scale-0 text-cs-white',
+          )}
+        >
           <MoonIcon />
         </div>
       </div>
