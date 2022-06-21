@@ -13,6 +13,7 @@ import ThemeToggle from 'components/ui/molecules/ThemeToggle';
 import HeadeLinkList from 'components/ui/molecules/HeadeLinkList';
 import Navigation from 'components/ui/atoms/Navigation';
 import useOnScroll from 'hooks/useOnScroll';
+import ProgressGradient from 'components/ui/atoms/ProgressGradient/ProgressGradient';
 
 const lngs = {
   en: { nativeName: 'English' },
@@ -71,7 +72,7 @@ const HeaderSection: VoidFunctionComponent = () => {
             </a>
           </Link>
         </div>
-        <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-center">
+        <div className="flex w-full content-center justify-between md:w-1/3 md:justify-center">
           <ul className="list-reset flex justify-center flex-1 md:flex-none items-center">
             <li className="mr-3">
               <ThemeToggle checked={checked} onChange={handleChange} />
@@ -101,19 +102,12 @@ const HeaderSection: VoidFunctionComponent = () => {
             </li>
           </ul>
         </div>
-        <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
+        <div className="flex w-full content-center justify-between md:w-1/3 md:justify-end">
           <HeadeLinkList />
         </div>
       </div>
 
-      <div
-        className="absolute gradient-1 h-4 md:h-1.5 -bottom-4	md:bottom-0 rounded-r-lg"
-        style={{
-          left: 0,
-          width: `${gradient}%`,
-          display: gradient === 100 && 'none',
-        }}
-      ></div>
+      <ProgressGradient />
     </Navigation>
   );
 };
