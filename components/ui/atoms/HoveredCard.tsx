@@ -37,7 +37,7 @@ const HoveredCard: FunctionComponent<HoveredCardProps> = ({
         'relative',
         'rounded-xl',
         'bg-cs-soft-gray',
-        'dark:bg-cs-hard-black',
+        'dark:bg-cs-black',
         hovered && 'shadow-pop-bl',
       )}
       onClick={onClick}
