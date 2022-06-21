@@ -24,6 +24,7 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
           <Link href={href}>
             <a
               className={clsx(
+                'transition duration-300 ease-in-out hover:scale-105',
                 'flex',
                 'justify-center',
                 'py-3',
@@ -44,11 +45,9 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
             href={href}
             target="_blank"
             rel="noreferrer"
-            style={{
-              background:
-                'linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%)',
-            }}
             className={clsx(
+              'transition duration-300 ease-in-out hover:scale-105',
+              'gradient-1',
               'flex',
               'justify-center',
               'py-3',
