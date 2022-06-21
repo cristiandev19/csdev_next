@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Container from 'components/ui/atoms/Container';
 import React, { VoidFunctionComponent } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -8,7 +9,20 @@ const ShortInformation: VoidFunctionComponent = () => {
   return (
     <section className="relative flex h-screen">
       <Container className="m-auto z-10">
-        <div className="shadow-2xl p-3 rounded-xl	relative flex justify-center items-center bg-white dark:bg-cs-hard-black">
+        <div
+          className={clsx(
+            'shadow-2xl',
+            'p-3',
+            'rounded-xl',
+            'relative',
+            'flex',
+            'justify-center',
+            'items-center',
+            'bg-white',
+            'dark:bg-cs-hard-black',
+            'opacity-95',
+          )}
+        >
           <h2 className="rotating-headline">
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128640;</span>

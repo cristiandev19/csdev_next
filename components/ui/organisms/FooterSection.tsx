@@ -6,6 +6,7 @@ import YoutubeIcon from '../../Icons/YoutubeIcon';
 import LinkButton from '../atoms/LinkButton/LinkButton';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
+import clsx from 'clsx';
 
 const FooterSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
@@ -13,7 +14,18 @@ const FooterSection: VoidFunctionComponent = () => {
     'https://drive.google.com/file/d/1E0d-lYcgep7aTTuixgdBh9ifwdqeX7KJ/view?usp=sharing';
 
   return (
-    <footer className="w-full min-h-screen flex items-center justify-center bg-cs-hard-black dark:bg-cs-hard-black">
+    <footer
+      className={clsx(
+        'w-full',
+        'min-h-screen',
+        'flex',
+        'items-center',
+        'justify-center',
+        'bg-cs-hard-black',
+        'dark:bg-cs-hard-black',
+        'w-full',
+      )}
+    >
       <div className="container mx-auto flex-wrap items-center text-white flex flex-col w-full">
         <div className="w-full text-6xl font-bold mt-8">
           <h2 className="w-full md:w-2/3 break-words">{t('footer.contact')}</h2>
@@ -25,7 +37,7 @@ const FooterSection: VoidFunctionComponent = () => {
             {t('footer.contact.text2')}
           </p>
           <div className="w-44 pt-6 md:pt-0">
-            <LinkButton type="external" href={urlCV}>
+            <LinkButton type="external" href={urlCV} className="text-lg w-full">
               {t('main.button')}
             </LinkButton>
           </div>
