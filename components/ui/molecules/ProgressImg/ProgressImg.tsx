@@ -48,7 +48,12 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
       <img
         src={image}
         alt=""
-        className={clsx('absolute')}
+        className={clsx(
+          'absolute',
+          'transition',
+          'duration-700',
+          'ease-in-out',
+        )}
         style={{
           filter: hovered ? 'grayscale(0)' : 'grayscale(100%)',
           width: '60px',
