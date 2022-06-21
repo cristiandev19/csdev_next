@@ -36,10 +36,10 @@ const HeadeLinkList: VoidFunctionComponent = () => {
                   'dark:text-cs-white',
                   'no-underline',
                   item.path === asPath
-                    ? 'text-white gradient-1'
+                    ? 'text-white bg-cs-rose'
                     : gradient === 100
-                    ? 'text-white'
-                    : 'text-gray-600',
+                    ? 'text-white hover:text-cs-rose'
+                    : 'text-gray-600 hover:text-cs-rose',
                   'rounded-full',
                   'py-2',
                   'px-4',
