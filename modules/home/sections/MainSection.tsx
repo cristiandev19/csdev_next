@@ -41,7 +41,19 @@ const MainSection: VoidFunctionComponent = () => {
             'md:h-screen',
           )}
         >
-          <div className="flex flex-col justify-center mt-8 md:mt-0 order-last md:order-first md:col-span-7">
+          <div
+            className={clsx(
+              'relative',
+              'flex',
+              'flex-col',
+              'justify-center',
+              'mt-8',
+              'md:mt-0',
+              'order-last',
+              'md:order-first',
+              'md:col-span-7',
+            )}
+          >
             <div className="text-lg">{t('main.greeting')}</div>
 
             <div className="flex">
@@ -54,7 +66,7 @@ const MainSection: VoidFunctionComponent = () => {
               </div>
             </div>
 
-            <p className="text-lg">
+            <p className="text-lg mb-2">
               <span>{t('main.introduction')} &#128293;</span>
             </p>
 
