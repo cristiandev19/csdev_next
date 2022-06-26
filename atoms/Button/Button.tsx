@@ -1,14 +1,5 @@
 import React, { FunctionComponent } from 'react';
-
-type ButtonBaseProps = {
-  children: React.ReactNode;
-  onClick: () => void;
-};
-interface ButtonProps extends ButtonBaseProps {
-  mode?: ButtonModes;
-}
-
-type ButtonModes = 'raised' | 'icon';
+import { ButtonBaseProps, ButtonProps } from './Button.types';
 
 const ButtonIcon: FunctionComponent<ButtonBaseProps> = ({
   children,
