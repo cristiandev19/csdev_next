@@ -18,7 +18,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "paths": {
+      "@atoms/*": ["./atoms/*"],
+      "@molecules/*": ["./molecules/*"],
+      "@organisms/*": ["./organisms/*"],
+      "@templates/*": ["./templates/*"],
+      "@shared/*": ["./shared/*"],
+      "@contexts/*": ["./contexts/*"],
+    },
   },
   "include": [
     "next-env.d.ts",
