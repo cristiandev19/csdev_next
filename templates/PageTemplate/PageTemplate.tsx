@@ -7,12 +7,8 @@ import React, {
 import Head from 'next/head';
 import ThemeReducer, { ThemeActionTypes } from '@contexts/theme/theme.reducer';
 import ThemeContext from '@contexts/theme/theme.context';
-import FooterSection from '@organisms/FooterSection/FooterSection';
-
-type PageTemplateProps = {
-  children: React.ReactNode;
-  title: string;
-};
+import FooterSection from '@organisms/FooterSection';
+import { PageTemplateProps } from './PageTemplate.types';
 
 const PageTemplate: FunctionComponent<PageTemplateProps> = ({
   children,
