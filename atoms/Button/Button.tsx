@@ -1,35 +1,7 @@
 import React, { FunctionComponent } from 'react';
-import { ButtonBaseProps, ButtonProps } from './Button.types';
-
-const ButtonIcon: FunctionComponent<ButtonBaseProps> = ({
-  children,
-  onClick,
-}) => {
-  return (
-    <button
-      onClick={onClick}
-      type="button"
-      className="p-1 bg-cs-pink text-white rounded-full"
-    >
-      {children}
-    </button>
-  );
-};
-
-const ButtonRaised: FunctionComponent<ButtonBaseProps> = ({
-  children,
-  onClick,
-}) => {
-  return (
-    <button
-      type="button"
-      className="py-3 px-7 bg-cs-pink text-white"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  );
-};
+import { ButtonProps } from './Button.types';
+import { ButtonIcon } from './ButtonIcon';
+import { ButtonRaised } from './ButtonRaised';
 
 const Button: FunctionComponent<ButtonProps> = ({
   children,
