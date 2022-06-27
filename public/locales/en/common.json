@@ -9,7 +9,7 @@
   "short.information.3": "I love working in agile environments where I can grow together with the team",
   "short.information.4": "I like to help people enter the world of development",
   "short.information.5": "I usually write and make videos about technology in my spare time",
-  "short.experience.title": "Experience",
+  "short.experience.title": "Experience Preview",
   "short.experience.globaltask.desc": "<br />- Accelerate development and improve confidence in development using the TDD methodology by doing e2e tests with Test Cafe.<br />- Facilitate and improve the development of a system for a fintech using Nextjs and MaterialUI.<br />- Code management using GIT as version controller in Gitlab and Azure<br /><br /><b>Tech stack:</b> NestJS, Angular, Azure, Test Cafe, NextJS, Tailwind, Typescript, ESLint, Prettier, Docker, Node, MySQL.",
   "short.experience.globaltask.title": "Fullstack software develop on GlobalTask (Remote)",
   "short.experience.globaltask.date": "Jan 2022 - Present (3 meses)",
