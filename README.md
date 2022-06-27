@@ -17,13 +17,40 @@
   - [ ] [Docker](https://www.docker.com/)
   - [ ] [Storybook](https://storybook.js.org/)
 
+## Architecture
 
+For this project I used the atomic design pattern (here is my [documentation](https://github.com/csdev19/front-research/blob/main/sections/atomic-design.md)). So I will structure the code in the following way:
+
+- Atoms
+- Molecules
+- Organisms
+- Templates
+- Pages
+
+## Component structure
+
+I made the component structure like:
+
+```
+project
+└─── <component>
+    │-  index.ts (required, the provider of the component utilities for the rest of the project)
+    │- <component>.tsx (required component file)
+    │- <component>.spec.ts (required, in the future)
+    │- <component>.module.css (optional)
+    │- <component>.types.ts (optional)
+    │- <component>.constants.ts (optional)
+```
 
 ## Notes
 
 - https://notiz.dev/blog/floating-form-field-with-tailwindcss
 - https://unicode.org/emoji/charts/full-emoji-list.html#1f468_200d_1f3eb
 
+## Things that I want to implement
+
+- Nextjs [built-is-css](https://nextjs.org/docs/basic-features/built-in-css-support)
+- [JSS](https://cssinjs.org/?v=v10.9.1-alpha.2)
 
 ## Getting Started
 
