@@ -1,23 +1,15 @@
 import React, { useState, VoidFunctionComponent } from 'react';
-import ProgressImg from 'molecules/ProgressImg/ProgressImg';
-import TechnologiesModal from 'molecules/TechnologiesModal/TechnologiesModal';
 import { useTranslation } from 'react-i18next';
-
-export type DataTechnologie = {
-  radius: number;
-  stroke: number;
-  image: string;
-  color: string;
-  percent: number;
-  title: string;
-  technologies: string;
-};
+import Section from '@atoms/Section';
+import { DataTechnology } from '@organisms/TechnologiesSection/TechnologiesSection.types';
+import ProgressImg from '@molecules/ProgressImg';
+import TechnologiesModal from '@molecules/TechnologiesModal/TechnologiesModal';
 
 const TechnologiesSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
 
   const [technologieSelected, settechnologieSelected] = useState(null);
-  const dataTechnologies: DataTechnologie[] = [
+  const dataTechnologies: DataTechnology[] = [
     {
       radius: 60,
       stroke: 8,
@@ -141,7 +133,7 @@ const TechnologiesSection: VoidFunctionComponent = () => {
   };
 
   return (
-    <section className="py-12 md:py-0 relative md:h-screen flex">
+    <Section className="py-12 md:py-0 relative md:h-screen flex">
       <div className="m-auto w-3/4 z-10">
         <h2 className="text-center text-2xl my-8">{t('tech.title')}</h2>
 
@@ -281,7 +273,7 @@ const TechnologiesSection: VoidFunctionComponent = () => {
           </defs>
         </svg>
       </div>
-    </section>
+    </Section>
   );
 };
 

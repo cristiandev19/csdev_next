@@ -1,17 +1,8 @@
-import HoveredCard from 'atoms/HoveredCard/HoveredCard';
-import clsx from 'clsx';
-import ProgressContainer from 'molecules/ProgressContainer/ProgressContainer';
 import React, { FunctionComponent, useState } from 'react';
-
-type ProgressImgProps = {
-  radius: number;
-  stroke: number;
-  image: string;
-  color: string;
-  percent: number;
-  onClick: () => void;
-  showPercent?: boolean;
-};
+import clsx from 'clsx';
+import { ProgressImgProps } from './ProgressImg.types';
+import ProgressContainer from '@molecules/ProgressContainer';
+import HoveredCard from '@atoms/HoveredCard';
 
 const ProgressImg: FunctionComponent<ProgressImgProps> = ({
   radius,

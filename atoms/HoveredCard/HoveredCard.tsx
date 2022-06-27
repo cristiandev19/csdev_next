@@ -1,12 +1,8 @@
-import useWindowSize from '@shared/hooks/useWindowSize';
-import clsx from 'clsx';
 import React, { FunctionComponent, useEffect, useState } from 'react';
-
-type HoveredCardProps = {
-  children: React.ReactNode;
-  onClick?: () => void;
-  emitChanges?: (hovered: boolean) => void;
-};
+import clsx from 'clsx';
+import useWindowSize from '@shared/hooks/useWindowSize';
+import { HoveredCardProps } from './Hovered.types';
+import styles from './HoveredCard.module.css';
 
 const HoveredCard: FunctionComponent<HoveredCardProps> = ({
   children,
@@ -14,7 +10,6 @@ const HoveredCard: FunctionComponent<HoveredCardProps> = ({
   emitChanges,
 }) => {
   const [windowSize] = useWindowSize();
-
   const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
@@ -38,7 +33,7 @@ const HoveredCard: FunctionComponent<HoveredCardProps> = ({
         'rounded-xl',
         'bg-cs-soft-gray',
         'dark:bg-cs-black',
-        hovered && 'shadow-pop-bl',
+        hovered && styles.shadowPopBl,
       )}
       onClick={onClick}
       onMouseOver={() => setHovered(true)}

@@ -1,9 +1,9 @@
 import React, { VoidFunctionComponent } from 'react';
-import ContactLayout from 'modules/contact/layout';
 import { withTranslation } from 'react-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import ContactTemplate from '@templates/ContactTemplate';
 
-const ContactPage: VoidFunctionComponent = () => <ContactLayout />;
+const ContactPage: VoidFunctionComponent = () => <ContactTemplate />;
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {

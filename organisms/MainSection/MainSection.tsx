@@ -1,35 +1,27 @@
 import React, { useEffect, useState, VoidFunctionComponent } from 'react';
 import clsx from 'clsx';
-import useWindowSize, { WidthSizesProps } from 'shared/hooks/useWindowSize';
-import CsdevIcon from 'shared/Icons/CsdevIcon';
 import { useTranslation } from 'react-i18next';
-import LinkButton from 'atoms/LinkButton/LinkButton';
-import Container from 'atoms/Container/Container';
-
-const devNamePerSize: WidthSizesProps<string> = {
-  extrasmall: 'Cristian',
-  small: 'Cristian',
-  medium: 'Cristian Sotomayor',
-  large: 'Cristian Sotomayor',
-  extralarge: 'Cristian Sotomayor',
-};
+import { CsdevIcon } from '@shared/Icons';
+import useWindowSize from '@shared/hooks/useWindowSize';
+import { URL_CV } from '@shared/constants';
+import Section from '@atoms/Section';
+import Container from '@atoms/Container/Container';
+import LinkButton from '@atoms/LinkButton/LinkButton';
+import styles from './MainSection.module.css';
+import { DEV_NAME_PER_SIZE } from './MainSection.constants';
 
 const MainSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
 
-  const urlCV =
-    'https://drive.google.com/file/d/1E0d-lYcgep7aTTuixgdBh9ifwdqeX7KJ/view?usp=sharing';
-
   const [devName, setDevName] = useState('Cristian Sotomayor');
-
   const [size, widthStates] = useWindowSize();
 
   useEffect(() => {
-    setDevName(devNamePerSize[widthStates]);
+    setDevName(DEV_NAME_PER_SIZE[widthStates]);
   }, [size]);
 
   return (
-    <section>
+    <Section>
       <Container>
         <div
           className={clsx(
@@ -57,7 +49,7 @@ const MainSection: VoidFunctionComponent = () => {
             <div className="text-lg">{t('main.greeting')}</div>
 
             <div className="flex">
-              <div className="typing-effect">
+              <div className={styles.typingEffect}>
                 <h1 className="my-4 text-2xl lg:text-2xl font-bold word-break">
                   &#60;
                   {devName}
@@ -70,7 +62,7 @@ const MainSection: VoidFunctionComponent = () => {
               <span>{t('main.introduction')} &#128293;</span>
             </p>
 
-            <LinkButton type="external" href={urlCV}>
+            <LinkButton type="external" href={URL_CV}>
               {t('main.button')}
             </LinkButton>
           </div>
@@ -89,7 +81,7 @@ const MainSection: VoidFunctionComponent = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 

@@ -1,16 +1,15 @@
-import clsx from 'clsx';
-import { NavigationItem } from 'shared/interfaces/utils.interfaces';
-import useOnScroll from 'shared/hooks/useOnScroll';
-import { useTranslation } from 'next-i18next';
+import React, { useState, VoidFunctionComponent } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import React, { useState, VoidFunctionComponent } from 'react';
+import { useTranslation } from 'next-i18next';
+import clsx from 'clsx';
+import useOnScroll from '@shared/hooks/useOnScroll';
+import { NavigationItem } from '@shared/interfaces/utils.interfaces';
 
 const HeadeLinkList: VoidFunctionComponent = () => {
   const { t } = useTranslation();
   const { locale, asPath } = useRouter();
   const gradient = useOnScroll();
-
   const [navigationUrls] = useState<NavigationItem[]>([
     {
       path: '/',

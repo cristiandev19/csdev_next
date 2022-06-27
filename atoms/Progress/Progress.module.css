@@ -2,11 +2,6 @@
   position: relative;
 }
 
-/* .progress-container  circle { */
-  /* transform: rotate(-90deg); */
-  /* transform: rotate(0.5turn); */
-/* } */
-
 .progress-image {
   width: 60px;
   position: absolute;
@@ -20,4 +15,8 @@
   left: 115px;
   font-weight: 900;
   line-height: 20px;
+}
+
+.circle {
+  transition: all 0.7s ease-in-out;
 }

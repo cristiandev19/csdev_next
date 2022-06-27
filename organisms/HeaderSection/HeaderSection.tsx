@@ -5,26 +5,22 @@ import React, {
   useState,
   VoidFunctionComponent,
 } from 'react';
-import { useRouter } from 'next/router';
-import ThemeContext from 'contexts/theme/theme.context';
-import { ThemeActionTypes } from 'contexts/theme/theme.reducer';
 import Link from 'next/link';
-import ThemeToggler from 'molecules/ThemeToggler/ThemeToggler';
-import HeadeLinkList from 'molecules/HeaderLinkList/HeadeLinkList';
-import useOnScroll from 'shared/hooks/useOnScroll';
-import Navigation from 'atoms/Navigation/Navigation';
-import ProgressGradient from 'atoms/ProgressGradient/ProgressGradient';
-
-const lngs = {
-  en: { nativeName: 'English' },
-  es: { nativeName: 'Español' },
-};
+import { useRouter } from 'next/router';
+import ThemeContext from '@contexts/theme/theme.context';
+import { ThemeActionTypes } from '@contexts/theme/theme.reducer';
+import useOnScroll from '@shared/hooks/useOnScroll';
+import { LANGUAGES } from '@organisms/HeaderSection/Header.constants';
+import Navigation from '@atoms/Navigation';
+import HeadeLinkList from '@molecules/HeaderLinkList/HeadeLinkList';
+import ThemeToggler from '@molecules/ThemeToggler/ThemeToggler';
+import ProgressGradient from '@atoms/ProgressGradient';
 
 const HeaderSection: VoidFunctionComponent = () => {
   const router = useRouter();
   const { themeState, themeDispatch } = useContext(ThemeContext);
-
   const [checked, setChecked] = useState(themeState?.theme === 'dark');
+  const gradient = useOnScroll();
 
   useEffect(() => {
     if (themeState) {
@@ -36,8 +32,6 @@ const HeaderSection: VoidFunctionComponent = () => {
     themeDispatch({ type: ThemeActionTypes.changeTheme, payload: null });
     setChecked(!checked);
   };
-
-  const gradient = useOnScroll();
 
   return (
     <Navigation>
@@ -92,11 +86,12 @@ const HeaderSection: VoidFunctionComponent = () => {
                     'py-2',
                     'px-4',
                     'border-2',
-                    router.locale == 'en' ? 'border-cs-blue' : 'border-red-500',
-                    router.locale == 'en' ? 'text-cs-blue' : 'text-red-500',
+                    router.locale == 'en'
+                      ? 'border-cs-blue text-cs-blue'
+                      : 'border-red-500 text-red-500',
                   )}
                 >
-                  {lngs[router.locale].nativeName}
+                  {LANGUAGES[router.locale].nativeName}
                 </a>
               </Link>
             </li>
@@ -106,7 +101,6 @@ const HeaderSection: VoidFunctionComponent = () => {
           <HeadeLinkList />
         </div>
       </div>
-
       <ProgressGradient />
     </Navigation>
   );

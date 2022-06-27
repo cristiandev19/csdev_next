@@ -1,11 +1,6 @@
 import React, { FunctionComponent } from 'react';
-
-export type ProgressProps = {
-  radius: number;
-  stroke: number;
-  color: string;
-  percent: number;
-};
+import { ProgressProps } from './Progress.types';
+import styles from './Progress.module.css';
 
 const Progress: FunctionComponent<ProgressProps> = ({
   radius,
@@ -20,6 +15,7 @@ const Progress: FunctionComponent<ProgressProps> = ({
   return (
     <svg height={radius * 2} width={radius * 2}>
       <circle
+        className={styles.circle}
         stroke={color}
         fill="transparent"
         strokeWidth={stroke}

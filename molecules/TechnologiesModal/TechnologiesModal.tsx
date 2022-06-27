@@ -1,11 +1,7 @@
-import Modal, { ModalBaseProps } from 'atoms/Modal/Modal';
-import CheckIcon from 'shared/Icons/CheckIcon';
-import { DataTechnologie } from 'organisms/TechnologiesSection/TechnologiesSection';
 import React, { FunctionComponent } from 'react';
-
-interface TechnologiesModalProps extends ModalBaseProps {
-  data: DataTechnologie;
-}
+import Modal from '@atoms/Modal';
+import CheckIcon from '@shared/Icons/CheckIcon';
+import { TechnologiesModalProps } from './TechnologiesModal.types';
 
 const TechnologiesModal: FunctionComponent<TechnologiesModalProps> = ({
   data,

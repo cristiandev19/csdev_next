@@ -1,22 +1,10 @@
-import Button from '@atoms/Button/Button';
-import { Transition } from '@headlessui/react';
+import React, { Fragment, FunctionComponent, useEffect } from 'react';
 import clsx from 'clsx';
-import React, {
-  Fragment,
-  FunctionComponent,
-  ReactNode,
-  useEffect,
-} from 'react';
-import CloseIcon from 'shared/Icons/CloseIcon';
-
-export interface ModalBaseProps {
-  open: boolean;
-  onClose: () => void;
-}
-
-interface ModalProps extends ModalBaseProps {
-  children: ReactNode;
-}
+import { Transition } from '@headlessui/react';
+import CloseIcon from '@shared/Icons/CloseIcon';
+import Button from '@atoms/Button';
+import { ModalProps } from './Modal.types';
+import styles from './Modal.module.css';
 
 const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
   useEffect(() => {
@@ -96,9 +84,7 @@ const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
                 <div className="sm:h-5/6 dark:bg-cs-black sm:rounded-lg bg-white p-4 md:px-8 md:pt-8 md:pb-4 sm:p-6 sm:pb-4">
                   <div>{children}</div>
                 </div>
-                <div
-                  style={{ top: '26px', right: '31px', position: 'absolute' }}
-                >
+                <div className={styles.close}>
                   <Button mode="icon" onClick={onClose}>
                     <CloseIcon />
                   </Button>

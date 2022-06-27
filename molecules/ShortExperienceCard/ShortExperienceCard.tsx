@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import { ShortExperience } from 'shared/interfaces/experience.interfaces';
 import React, { FunctionComponent } from 'react';
+import clsx from 'clsx';
+import { IShortExperience } from './ShortExperienceCard.types';
 
-const ShortExperienceCard: FunctionComponent<ShortExperience> = ({
+const ShortExperienceCard: FunctionComponent<IShortExperience> = ({
   description,
   image,
   provisionalDate,

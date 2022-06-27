@@ -9,3 +9,7 @@
   color: white;
   text-align: center;
 }
+
+.gradient1 {
+  background: linear-gradient(55.58deg, #FF338F 9.41%, #F6AE13 87.82%);
+}

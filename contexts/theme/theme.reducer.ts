@@ -1,4 +1,4 @@
-import { ThemeAction, ThemeState } from './theme.types';
+import { ThemeAction, ThemeState } from '@contexts/theme/theme.types';
 
 export const ThemeActionTypes = {
   setTheme: '[schedule-data] set theme',

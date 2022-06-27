@@ -2,16 +2,17 @@ import React, { VoidFunctionComponent } from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import clsx from 'clsx';
-import LinkButton from 'atoms/LinkButton/LinkButton';
-import CsdevIcon from 'shared/Icons/CsdevIcon';
-import GithubIcon from 'shared/Icons/GithubIcon';
-import LinkedinIcon from 'shared/Icons/LinkedinIcon';
-import YoutubeIcon from 'shared/Icons/YoutubeIcon';
+import {
+  YoutubeIcon,
+  CsdevIcon,
+  GithubIcon,
+  LinkedinIcon,
+} from '@shared/Icons';
+import LinkButton from '@atoms/LinkButton';
+import { URL_CV } from '@shared/constants';
 
 const FooterSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
-  const urlCV =
-    'https://drive.google.com/file/d/1E0d-lYcgep7aTTuixgdBh9ifwdqeX7KJ/view?usp=sharing';
 
   return (
     <footer
@@ -37,7 +38,11 @@ const FooterSection: VoidFunctionComponent = () => {
             {t('footer.contact.text2')}
           </p>
           <div className="w-44 pt-6 md:pt-0">
-            <LinkButton type="external" href={urlCV} className="text-lg w-full">
+            <LinkButton
+              type="external"
+              href={URL_CV}
+              className="text-lg w-full"
+            >
               {t('main.button')}
             </LinkButton>
           </div>

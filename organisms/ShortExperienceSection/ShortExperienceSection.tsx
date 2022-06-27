@@ -1,14 +1,16 @@
 import React, { useEffect, useState, VoidFunctionComponent } from 'react';
-import ShortExperienceCard from 'molecules/ShortExperienceCard/ShortExperienceCard';
-import { ShortExperience } from 'shared/interfaces/experience.interfaces';
 import { useTranslation } from 'react-i18next';
-import Container from 'atoms/Container/Container';
+import Container from '@atoms/Container/Container';
+import Section from '@atoms/Section';
+import ShortExperienceCard, {
+  IShortExperience,
+} from '@molecules/ShortExperienceCard';
 
 const ShortExperienceSection: VoidFunctionComponent = () => {
+  const [experienceData, setExperienceData] = useState<IShortExperience[]>([]);
   const { t } = useTranslation();
-  const [experienceData, setExperienceData] = useState<ShortExperience[]>([]);
 
-  const experienceMock: ShortExperience[] = [
+  const experienceMock: IShortExperience[] = [
     {
       title: t('short.experience.globaltask.title'),
       description: t('short.experience.globaltask.desc'),
@@ -49,7 +51,7 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
   }, []);
 
   return (
-    <section className="relative flex">
+    <Section className="relative flex">
       <Container className="z-10">
         <h2 className="text-center text-2xl my-8">
           {t('short.experience.title')}
@@ -93,7 +95,7 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
           </defs>
         </svg>
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,11 +1,11 @@
 import React, { VoidFunctionComponent } from 'react';
+import Section from '@atoms/Section';
 import styles from './MilestoneSection.module.css';
+import { URL_GNOME } from './MilestionSection.constants';
 
 const MilestoneSection: VoidFunctionComponent = () => {
-  const urlGnome = 'https://wiki.gnome.org/Hackfests/PeruRumboGSoC2018';
-
   return (
-    <section className={styles.milestoneSection}>
+    <Section className={styles.milestoneSection}>
       <div>
         <p>
           Empece mi carrera como desarrollador de software en un programa
@@ -18,10 +18,10 @@ const MilestoneSection: VoidFunctionComponent = () => {
           title="PeruRumboGSoC2018"
           height="500"
           width="80%"
-          src={urlGnome}
+          src={URL_GNOME}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { NextPage } from 'next';
-import HomeLayout from 'modules/home/layout';
 import { withTranslation } from 'react-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import HomeTemplate from '@templates/HomeTemplate';
 
-const Home: NextPage = () => <HomeLayout />;
+const Home: NextPage = () => <HomeTemplate />;
 
 export const getServerSideProps = async ({ locale }) => ({
   props: {

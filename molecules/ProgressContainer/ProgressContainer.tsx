@@ -1,9 +1,6 @@
-import Progress, { ProgressProps } from 'atoms/Progress/Progress';
 import React, { FunctionComponent, useEffect, useState } from 'react';
-
-interface ProgressContainerProps extends ProgressProps {
-  animate: boolean;
-}
+import Progress from '@atoms/Progress';
+import { ProgressContainerProps } from '@molecules/ProgressContainer/ProgressContainer.types';
 
 const ProgressContainer: FunctionComponent<ProgressContainerProps> = ({
   radius,

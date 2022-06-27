@@ -1,12 +1,9 @@
-import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
-import MoonIcon from 'shared/Icons/MoonIcon';
-import SunIcon from 'shared/Icons/SunIcon';
-
-type ThemeTogglerProps = {
-  checked: boolean;
-  onChange: () => void;
-};
+import clsx from 'clsx';
+import MoonIcon from '@shared/Icons/MoonIcon';
+import SunIcon from '@shared/Icons/SunIcon';
+import styles from './ThemeToggler.module.css';
+import { ThemeTogglerProps } from './ThemeToggler.types';
 
 const ThemeToggler: FunctionComponent<ThemeTogglerProps> = ({
   checked,
@@ -19,7 +16,7 @@ const ThemeToggler: FunctionComponent<ThemeTogglerProps> = ({
           className={clsx(
             'mx-2',
             'transition duration-500 ease-in-out rounded-full',
-            !checked ? 'sun-light' : 'scale-0	dark:text-cs-black',
+            !checked ? `${styles.sunLight}` : 'scale-0	dark:text-cs-black',
           )}
         >
           <SunIcon />
@@ -33,15 +30,19 @@ const ThemeToggler: FunctionComponent<ThemeTogglerProps> = ({
               checked={checked}
               onChange={() => onChange()}
             />
-            <div className="transition duration-500 ease-in-out container-dot block bg-gray-600 w-14 h-8 rounded-full" />
-            <div className="dot absolute left-1 top-1 bg-cs-yellow w-6 h-6 rounded-full transition duration-500" />
+            <div
+              className={`transition duration-500 ease-in-out block bg-gray-600 w-14 h-8 rounded-full ${styles.containerDot}`}
+            />
+            <div
+              className={`${styles.dot} absolute left-1 top-1 bg-cs-yellow w-6 h-6 rounded-full transition duration-500`}
+            />
           </div>
         </label>
         <div
           className={clsx(
             'mx-2',
             'transition duration-500 ease-in-out rounded-full',
-            checked ? 'moon-dark' : 'scale-0 text-cs-white',
+            checked ? `${styles.moonDark}` : 'scale-0 text-cs-white',
           )}
         >
           <MoonIcon />

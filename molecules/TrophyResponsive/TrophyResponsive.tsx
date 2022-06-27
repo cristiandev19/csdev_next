@@ -1,23 +1,14 @@
-import Trophy from 'atoms/Trophy/Trophy';
 import React, { useEffect, useState, VoidFunctionComponent } from 'react';
-import useWindowSize, {
-  WidthSizesProps,
-} from '../../shared/hooks/useWindowSize';
-
-const rowColPerSize: WidthSizesProps<{ row: number; col: number }> = {
-  extrasmall: { row: 3, col: 2 },
-  small: { row: 5, col: 1 },
-  medium: { row: 3, col: 3 },
-  large: { row: 2, col: 3 },
-  extralarge: { row: 2, col: 6 },
-};
+import Trophy from '@atoms/Trophy/Trophy';
+import useWindowSize from '@shared/hooks/useWindowSize';
+import { ROW_COL_PER_SIZE } from '@molecules/TrophyResponsive/TrophyResponsive.constants';
 
 const TrophyResponsive: VoidFunctionComponent = () => {
   const [size, widthStates] = useWindowSize();
   const [rowAndCol, setRowAndCol] = useState({ row: 2, col: 4 });
 
   useEffect(() => {
-    setRowAndCol(rowColPerSize[widthStates]);
+    setRowAndCol(ROW_COL_PER_SIZE[widthStates]);
   }, [size, widthStates]);
 
   return (

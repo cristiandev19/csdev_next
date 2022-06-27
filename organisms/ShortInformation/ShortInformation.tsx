@@ -1,13 +1,15 @@
-import Container from 'atoms/Container/Container';
-import clsx from 'clsx';
 import React, { VoidFunctionComponent } from 'react';
+import clsx from 'clsx';
 import { useTranslation } from 'react-i18next';
+import Container from '@atoms/Container/Container';
+import styles from './ShortInformation.module.css';
+import Section from '@atoms/Section';
 
 const ShortInformation: VoidFunctionComponent = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex h-screen">
+    <Section className="relative flex h-screen">
       <Container className="m-auto z-10">
         <div
           className={clsx(
@@ -23,7 +25,7 @@ const ShortInformation: VoidFunctionComponent = () => {
             'opacity-95',
           )}
         >
-          <h2 className="rotating-headline">
+          <h2 className={styles.rotatingHeadline}>
             <p className="text-lg rotating-headline-span flex items-center">
               <span style={{ fontSize: '50px' }}>&#128640;</span>
               <span className="pl-3">{t('short.information.1')}</span>
@@ -89,7 +91,7 @@ const ShortInformation: VoidFunctionComponent = () => {
           </defs>
         </svg>
       </div>
-    </section>
+    </Section>
   );
 };
 

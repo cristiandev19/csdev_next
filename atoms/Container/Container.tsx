@@ -1,13 +1,6 @@
+import React, { FunctionComponent } from 'react';
 import clsx from 'clsx';
-import React, { FunctionComponent, ReactNode } from 'react';
-
-type ContainerProps = {
-  children: ReactNode;
-  className?: string;
-  mode?: ContainerModes;
-};
-
-type ContainerModes = 'normal' | 'plain';
+import { ContainerProps } from './Container.types';
 
 const Container: FunctionComponent<ContainerProps> = ({
   children,

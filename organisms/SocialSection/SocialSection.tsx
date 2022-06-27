@@ -1,9 +1,11 @@
-import GithubIcon from 'shared/Icons/GithubIcon';
-import LinkedinIcon from 'shared/Icons/LinkedinIcon';
-import TwitterIcon from 'shared/Icons/TwitterIcon';
-import YoutubeIcon from 'shared/Icons/YoutubeIcon';
 import React, { VoidFunctionComponent } from 'react';
 import HoveredCard from 'atoms/HoveredCard/HoveredCard';
+import {
+  GithubIcon,
+  LinkedinIcon,
+  YoutubeIcon,
+  TwitterIcon,
+} from '@shared/Icons';
 
 const SocialSection: VoidFunctionComponent = () => {
   const handleClick = (url): void => {

@@ -1,10 +1,7 @@
-import clsx from 'clsx';
-import useOnScroll from 'shared/hooks/useOnScroll';
 import React, { FunctionComponent } from 'react';
-
-type NavigationProps = {
-  children: React.ReactNode;
-};
+import clsx from 'clsx';
+import useOnScroll from '@shared/hooks/useOnScroll';
+import { NavigationProps } from './Navigation.types';
 
 const Navigation: FunctionComponent<NavigationProps> = ({ children }) => {
   const gradient = useOnScroll();

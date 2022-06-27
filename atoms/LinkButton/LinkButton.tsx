@@ -1,15 +1,8 @@
 import clsx from 'clsx';
 import React, { FunctionComponent } from 'react';
 import Link from 'next/link';
-
-type LinkButtonProps = {
-  href?: string;
-  className?: string;
-  children: React.ReactNode;
-  type?: LinkType;
-};
-
-type LinkType = 'internal' | 'external';
+import styles from './LinkButton.module.css';
+import { LinkButtonProps } from './LinkButton.types';
 
 const LinkButton: FunctionComponent<LinkButtonProps> = ({
   href = '',
@@ -32,7 +25,7 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
                 'text-cs-white',
                 'rounded-xl',
                 'text-xl',
-                'gradient-1',
+                styles.gradient1,
                 className,
               )}
             >
@@ -47,7 +40,8 @@ const LinkButton: FunctionComponent<LinkButtonProps> = ({
             rel="noreferrer"
             className={clsx(
               'transition duration-300 ease-in-out hover:scale-105',
-              'gradient-1',
+              // 'gradient-1',
+              styles.gradient1,
               'flex',
               'justify-center',
               'py-3',
