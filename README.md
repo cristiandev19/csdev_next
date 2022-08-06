@@ -14,6 +14,7 @@
   - [x] [Tailwind CSS](https://tailwindcss.com/)
   - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
   - [ ] [Jest](https://facebook.github.io/jest/)
+  - [] [React Testing Library](https://testing-library.com/react/)
   - [ ] [Docker](https://www.docker.com/)
   - [ ] [Storybook](https://storybook.js.org/)
 
@@ -54,19 +55,18 @@ project
 
 ## Getting Started
 
-
 First, install dependencyes:
 
 ```bash
 npm i
 ```
 
-Second, run the development server:
+Second, run the docker development server:
 
 ```bash
-npm run dev
+npm run start:dev
 # or
-yarn dev
+yarn start:dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -77,14 +77,18 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
+## Documentation
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [God like Docker tutorial](https://youtu.be/9zUHg7xjIqQ)
+- [Docker images article: Talk about hot reloading](https://medium.com/nerd-for-tech/bigger-dockerignore-smaller-docker-images-49fa22e51c7)
+- [Docker documentation multiple compose files](https://docs.docker.com/compose/reference/#specifying-multiple-compose-files)
+- [Docker compose file](https://docs.docker.com/compose/compose-file/#compose-file)
+- [Docker compose useful commands](https://medium.com/bb-tutorials-and-thoughts/next-js-local-development-with-docker-compose-7b1954292a1f)
+- [Setting up Jest (with the Rust Compiler) on Next.js](https://nextjs.org/docs/testing#setting-up-jest-with-the-rust-compiler)
+- [Upgrade React to v18](https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html): Because I get some problems installing the `@testing-library/react` package.
+- [Update Next.js to v12](https://nextjs.org/docs/upgrading): Because I get some problems installing the `react@18.2.0` package.
 
 ## Deploy on Vercel
 
