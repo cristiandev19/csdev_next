@@ -18,6 +18,7 @@ const LinkedinIcon: FunctionComponent<BaseIconProps> = ({
       viewBox="0 0 382 382"
       // style={{ enableBackground: 'new 0 0 382 382' }}
       xmlSpace="preserve"
+      data-testid="linkedin-icon"
     >
       <path
         style={{ fill: '#0077B7' }}

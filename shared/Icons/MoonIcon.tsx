@@ -8,6 +8,7 @@ const MoonIcon: VoidFunctionComponent = () => {
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
+      data-testid="moon-icon"
     >
       <path
         strokeLinecap="round"

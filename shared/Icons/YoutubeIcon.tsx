@@ -20,6 +20,7 @@ const YoutubeIcon: FunctionComponent<YoutubeIconProps> = ({
       viewBox="0 0 48 48"
       width={width}
       height={height}
+      data-testid="youtube-icon"
     >
       <linearGradient
         id="3hXF6bmA1hdaWqDtRL46ua"

@@ -12,6 +12,7 @@ const CheckIcon: FunctionComponent<BaseIconProps> = ({
       height={height}
       viewBox="0 0 20 20"
       fill="currentColor"
+      data-testid="check-icon"
     >
       <path
         fillRule="evenodd"
