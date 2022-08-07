@@ -89,6 +89,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - [Setting up Jest (with the Rust Compiler) on Next.js](https://nextjs.org/docs/testing#setting-up-jest-with-the-rust-compiler)
 - [Upgrade React to v18](https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html): Because I get some problems installing the `@testing-library/react` package.
 - [Update Next.js to v12](https://nextjs.org/docs/upgrading): Because I get some problems installing the `react@18.2.0` package.
+- [Test with i18next and Jest](https://react.i18next.com/misc/testing): Because I get some problems with the translation instance.
+- [Getting started](https://jestjs.io/docs/getting-started#using-typescript)
 
 ## Deploy on Vercel
 
