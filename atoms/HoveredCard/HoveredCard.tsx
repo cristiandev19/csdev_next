@@ -1,7 +1,7 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import clsx from 'clsx';
 import useWindowSize from '@shared/hooks/useWindowSize';
-import { HoveredCardProps } from './Hovered.types';
+import { HoveredCardProps } from './HoveredCard.types';
 import styles from './HoveredCard.module.css';
 
 const HoveredCard: FunctionComponent<HoveredCardProps> = ({
