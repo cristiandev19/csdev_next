@@ -3,7 +3,7 @@ export type ProgressImgProps = {
   stroke: number;
   image: string;
   color: string;
-  percent: number;
+  // percent: number;
   onClick: () => void;
   showPercent?: boolean;
 };

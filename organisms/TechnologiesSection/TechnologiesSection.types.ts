@@ -3,7 +3,6 @@ export type DataTechnology = {
   stroke: number;
   image: string;
   color: string;
-  percent: number;
   title: string;
   technologies: string;
 };

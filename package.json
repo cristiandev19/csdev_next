@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "start:dev": "docker-compose up frontend",
+    "dev": "docker-compose up frontend",
+    "start:local": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
