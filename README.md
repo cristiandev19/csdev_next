@@ -13,9 +13,9 @@
   - [x] [Prettier](https://prettier.io/)
   - [x] [Tailwind CSS](https://tailwindcss.com/)
   - [x] [next-i18next](https://github.com/isaachinman/next-i18next)
-  - [ ] [Jest](https://facebook.github.io/jest/)
-  - [] [React Testing Library](https://testing-library.com/react/)
-  - [ ] [Docker](https://www.docker.com/)
+  - [x] [Jest](https://facebook.github.io/jest/)
+  - [x] [React Testing Library](https://testing-library.com/react/)
+  - [x] [Docker](https://www.docker.com/)
   - [ ] [Storybook](https://storybook.js.org/)
 
 ## Architecture
