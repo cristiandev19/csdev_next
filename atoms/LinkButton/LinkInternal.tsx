@@ -10,6 +10,9 @@ const LinkInternal: FunctionComponent<LinkBaseProps> = ({
   children,
   className = '',
 }) => {
+  if (href.includes('http')) {
+    throw new Error('The href must be an internal link');
+  }
   const baseStyles = BASE_STYLES;
   return (
     <Link href={href}>

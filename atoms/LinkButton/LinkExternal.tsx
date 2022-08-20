@@ -10,6 +10,9 @@ const LinkExternal: FunctionComponent<LinkBaseProps> = ({
   className = '',
 }) => {
   const baseStyles = BASE_STYLES;
+  if (!href.includes('http')) {
+    throw new Error('The href must be an external link');
+  }
   return (
     <a
       href={href}
