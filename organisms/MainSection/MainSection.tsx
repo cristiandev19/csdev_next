@@ -59,7 +59,11 @@ const MainSection: VoidFunctionComponent = () => {
             </div>
 
             <p className="text-lg mb-2">
-              <span>{t('main.introduction')} &#128293;</span>
+              <span
+                className={styles.introduction}
+                dangerouslySetInnerHTML={{ __html: t('main.introduction') }}
+              ></span>
+              <span>&#128293;</span>
             </p>
 
             <LinkButton type="external" href={URL_CV}>
