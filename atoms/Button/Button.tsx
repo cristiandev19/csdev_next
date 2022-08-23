@@ -7,12 +7,22 @@ const Button: FunctionComponent<ButtonProps> = ({
   children,
   onClick,
   mode = 'raised',
+  classNames = '',
+  ...props
 }) => (
   <>
     {
       {
-        icon: <ButtonIcon onClick={onClick}>{children}</ButtonIcon>,
-        raised: <ButtonRaised onClick={onClick}>{children}</ButtonRaised>,
+        icon: (
+          <ButtonIcon {...props} classNames={classNames} onClick={onClick}>
+            {children}
+          </ButtonIcon>
+        ),
+        raised: (
+          <ButtonRaised {...props} classNames={classNames} onClick={onClick}>
+            {children}
+          </ButtonRaised>
+        ),
       }[mode]
     }
   </>

@@ -85,7 +85,11 @@ const Modal: FunctionComponent<ModalProps> = ({ open, onClose, children }) => {
                   <div>{children}</div>
                 </div>
                 <div className={styles.close}>
-                  <Button mode="icon" onClick={onClose}>
+                  <Button
+                    data-testid="close-button"
+                    mode="icon"
+                    onClick={onClose}
+                  >
                     <CloseIcon />
                   </Button>
                 </div>

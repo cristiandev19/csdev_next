@@ -13,7 +13,7 @@ const Progress: FunctionComponent<ProgressProps> = ({
   const strokeDashoffset = ((100 - percent) * circumference) / 100;
 
   return (
-    <svg height={radius * 2} width={radius * 2}>
+    <svg height={radius * 2} width={radius * 2} data-testid="progress">
       <circle
         className={styles.circle}
         stroke={color}
