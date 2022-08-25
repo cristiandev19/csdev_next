@@ -24,16 +24,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'cs-primary-color': 'var(--primary-color)',
+        'cs-secondary-color': 'var(--secondary-color)',
+        'cs-tertiary-color': 'var(--tertiary-color)',
+        'cs-quaternary-color': 'var(--quaternary-color)',
+        'cs-background': 'var(--background-color)',
+        'cs-text': 'var(--text-color)',
         'cs-gray': '#B6B6B6',
         'cs-soft-gray': '#f2f2f2',
         'cs-red': '#B6B6B6',
         'cs-blue': '#157FFF',
-        'cs-black': '#001226',
+        'cs-black': 'var(--black-color)',
         'cs-hard-black': '#000E1F',
-        'cs-rose': '#FF338F',
+        'cs-rose': 'var(--primary-color)', // '#FF338F',
         'cs-white': '#F2F2F7',
         'cs-yellow': '#F6AE13',
-        'cs-pink': '#E91E63',
+        'cs-pink': 'var(--primary-color)', //'#E91E63',
         'cs-orange': '#E91E63',
       },
       fontFamily: {

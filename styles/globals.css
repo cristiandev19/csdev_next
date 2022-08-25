@@ -1,13 +1,15 @@
 :root {
+  /* colors */
   --primary-color: #E91E63;
   --secondary-color: #FF9C00;
   --tertiary-color: #157FFF;
   --quaternary-color: #97FF00;
-  --font-regular: 'inter';
-  --font-bold: 'interbold';
   --text-color: black;
   --white-color: white;
-  --black-color: black;
+  --black-color: #001226;
+  /* fonts */
+  --font-regular: 'inter';
+  --font-bold: 'interbold';
 }
 
 html,
@@ -34,4 +36,14 @@ a {
 *::-moz-selection {
   background: var(--primary-color);
   color: var(--white-color);
+}
+
+.theme-light {
+  --background-color: #fff;
+  --font-color: #0000;
+}
+
+.theme-dark {
+  --background-color: #0e141b;
+  --font-color: #fff;
 }
