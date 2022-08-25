@@ -9,7 +9,13 @@ import {
   LinkedinIcon,
 } from '@shared/Icons';
 import LinkButton from '@atoms/LinkButton';
-import { URL_CV } from '@shared/constants';
+import {
+  GITHUB_URL,
+  LINKEDIN_URL,
+  URL_CV,
+  YOUTUBE_URL,
+} from '@shared/constants';
+import styles from './FooterSection.module.css';
 
 const FooterSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
@@ -29,13 +35,14 @@ const FooterSection: VoidFunctionComponent = () => {
     >
       <div className="container mx-auto flex-wrap items-center text-white flex flex-col w-full">
         <div className="w-full text-6xl font-bold mt-8">
-          <h2 className="w-full md:w-2/3 break-words">{t('footer.contact')}</h2>
+          <h2
+            className={clsx('w-full md:w-2/3 break-words', styles.contact)}
+            dangerouslySetInnerHTML={{ __html: t('footer.contact') }}
+          ></h2>
         </div>
         <div className="w-full flex mt-8 flex-col md:flex-row md:justify-between">
           <p className="w-full md:w-2/3 text-gray-400">
             {t('footer.contact.text')}
-            <br />
-            {t('footer.contact.text2')}
           </p>
           <div className="w-44 pt-6 md:pt-0">
             <LinkButton
@@ -66,21 +73,15 @@ const FooterSection: VoidFunctionComponent = () => {
             <div className="flex flex-row space-x-8 items-center justify-between">
               <a
                 target="_blank"
-                href="https://github.com/cristiandev19"
+                href={GITHUB_URL}
                 className="bg-white border rounded"
               >
                 <GithubIcon />
               </a>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/cristian-sotomayor19/"
-              >
+              <a target="_blank" href={LINKEDIN_URL}>
                 <LinkedinIcon />
               </a>
-              <a
-                target="_blank"
-                href="https://www.youtube.com/channel/UCbcKdTfx7bE4bim6yynimZw"
-              >
+              <a target="_blank" href={YOUTUBE_URL}>
                 <YoutubeIcon />
               </a>
             </div>
