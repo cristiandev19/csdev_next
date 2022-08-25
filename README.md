@@ -55,7 +55,7 @@ project
 
 ## Getting Started
 
-First, install dependencyes:
+First, install dependencies:
 
 ```bash
 npm i
@@ -64,9 +64,9 @@ npm i
 Second, run the docker development server:
 
 ```bash
-npm run start:dev
+npm run dev
 # or
-yarn start:dev
+yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
