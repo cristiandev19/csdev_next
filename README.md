@@ -1,9 +1,10 @@
-# Web site
+# Personal Web site
 
 ## next steps
 
 - expand the skills section
 - add a text editor
+- implement SWR and a service layer to fetch the data
 
 ## Features
 
@@ -17,6 +18,7 @@
   - [x] [React Testing Library](https://testing-library.com/react/)
   - [x] [Docker](https://www.docker.com/)
   - [ ] [Storybook](https://storybook.js.org/)
+  - [ ] [SWR](https://swr.vercel.app)
 
 ## Architecture
 
