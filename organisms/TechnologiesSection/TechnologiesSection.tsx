@@ -5,6 +5,8 @@ import { DataTechnology } from '@organisms/TechnologiesSection/TechnologiesSecti
 import ProgressImg from '@molecules/ProgressImg';
 import TechnologiesModal from '@molecules/TechnologiesModal/TechnologiesModal';
 import Background1 from '@shared/svg/Background1';
+import styles from './TechnologiesSection.module.css';
+import clsx from 'clsx';
 
 const TechnologiesSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
@@ -124,7 +126,11 @@ const TechnologiesSection: VoidFunctionComponent = () => {
   return (
     <Section className="py-12 md:py-0 relative md:h-screen flex">
       <div className="m-auto w-3/4 z-10">
-        <h2 className="text-center text-2xl my-8">{t('tech.title')}</h2>
+        <h2
+          className={clsx('text-center text-2xl my-8 relative', styles.title)}
+        >
+          {t('tech.title')}
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
           {dataTechnologies.map((data) => (

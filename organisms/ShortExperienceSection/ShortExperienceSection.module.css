@@ -1,0 +1,12 @@
+
+.title::before {
+  background: var(--primary-color);
+  content: '';
+  width: 19rem;
+  height: 3rem;
+  position: absolute;
+  z-index: -1;
+  border-radius: 3px;
+  top: -6px;
+  left: 38%;
+}
