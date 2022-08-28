@@ -5,6 +5,8 @@ import Section from '@atoms/Section';
 import ShortExperienceCard, {
   IShortExperience,
 } from '@molecules/ShortExperienceCard';
+import styles from './ShortExperienceSection.module.css';
+import clsx from 'clsx';
 
 const ShortExperienceSection: VoidFunctionComponent = () => {
   const [experienceData, setExperienceData] = useState<IShortExperience[]>([]);
@@ -53,7 +55,9 @@ const ShortExperienceSection: VoidFunctionComponent = () => {
   return (
     <Section className="relative flex">
       <Container className="z-10">
-        <h2 className="text-center text-2xl my-8">
+        <h2
+          className={clsx('text-center text-2xl my-8 relative', styles.title)}
+        >
           {t('short.experience.title')}
         </h2>
 
