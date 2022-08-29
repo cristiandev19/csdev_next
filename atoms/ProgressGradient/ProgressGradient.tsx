@@ -1,14 +1,18 @@
-import React, { VoidFunctionComponent } from 'react';
-import useOnScroll from '@shared/hooks/useOnScroll';
+import React, { FunctionComponent, VoidFunctionComponent } from 'react';
 import styles from './ProgressGradient.module.css';
+import clsx from 'clsx';
+import { ProgressGradientProps } from '@atoms/ProgressGradient/ProgressGradient.types';
 
-const ProgressGradient: VoidFunctionComponent = () => {
-  const gradient = useOnScroll();
-
+const ProgressGradient: FunctionComponent<ProgressGradientProps> = ({
+  gradient,
+}) => {
   return (
     <>
       <div
-        className={`${styles.gradient1} absolute gradient-1 h-4 md:h-1.5 -bottom-4	md:bottom-0 rounded-r-lg`}
+        className={clsx([
+          styles.gradient1,
+          'absolute gradient-1 h-4 md:h-1.5 -bottom-4	md:bottom-0 rounded-r-lg',
+        ])}
         style={{
           left: 0,
           width: `${gradient}%`,
