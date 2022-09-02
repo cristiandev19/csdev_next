@@ -35,5 +35,6 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+    'max-lines': ['error', 200],
   },
 };
