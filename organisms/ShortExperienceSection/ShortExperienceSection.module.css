@@ -1,12 +1,8 @@
-
-.title::before {
+.title {
   background: var(--primary-color);
   content: '';
-  width: 19rem;
-  height: 3rem;
-  position: absolute;
-  z-index: -1;
+  width: 85%;
+  padding: 0.5rem 0;
   border-radius: 3px;
-  top: -6px;
-  left: 38%;
+  margin: auto;
 }

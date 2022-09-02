@@ -12,9 +12,9 @@ import { ThemeActionTypes } from '@contexts/theme/theme.reducer';
 import useOnScroll from '@shared/hooks/useOnScroll';
 import { LANGUAGES } from '@organisms/HeaderSection/Header.constants';
 import Navigation from '@atoms/Navigation';
-import HeadeLinkList from '@molecules/HeaderLinkList/HeadeLinkList';
-import ThemeToggler from '@molecules/ThemeToggler/ThemeToggler';
+import ThemeToggler from '@molecules/ThemeToggler';
 import ProgressGradient from '@atoms/ProgressGradient';
+import HeaderLinkList from '@molecules/HeaderLinkList';
 
 const HeaderSection: VoidFunctionComponent = () => {
   const router = useRouter();
@@ -35,7 +35,7 @@ const HeaderSection: VoidFunctionComponent = () => {
 
   return (
     <Navigation>
-      <div className="container mx-auto flex flex-wrap items-center">
+      <div className="container mx-auto flex flex-wrap items-center mb-4 md:mb-0">
         <div className="flex w-full md:w-1/3 justify-center md:justify-start text-white font-extrabold">
           <Link href="/">
             <a className="text-white no-underline hover:text-white hover:no-underline">
@@ -98,10 +98,10 @@ const HeaderSection: VoidFunctionComponent = () => {
           </ul>
         </div>
         <div className="flex w-full content-center justify-between md:w-1/3 md:justify-end">
-          <HeadeLinkList />
+          <HeaderLinkList />
         </div>
       </div>
-      <ProgressGradient />
+      <ProgressGradient gradient={gradient} />
     </Navigation>
   );
 };

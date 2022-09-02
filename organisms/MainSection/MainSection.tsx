@@ -9,6 +9,7 @@ import Container from '@atoms/Container/Container';
 import LinkButton from '@atoms/LinkButton/LinkButton';
 import styles from './MainSection.module.css';
 import { DEV_NAME_PER_SIZE } from './MainSection.constants';
+import Button from '@atoms/Button';
 
 const MainSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
