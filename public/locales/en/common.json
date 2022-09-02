@@ -1,5 +1,5 @@
 {
-  "main.introduction": "A <b>Fullstack Developer</b> with more than 4 years of experience developing software, leading development teams, implementing new fancy technologies and giving techinal advice to IT teams",
+  "main.introduction": "A <b>Fullstack Developer</b> with more than 4 years of experience developing software, leading development teams, implementing new fancy technologies and giving technical advice to IT teams",
   "main.greeting": "¡Hi! I'm",
   "main.button": "DOWNLOAD CV",
   "link.home": "Home",
@@ -12,7 +12,7 @@
   "short.experience.title": "Experience Preview",
   "short.experience.globaltask.desc": "<br />- Accelerate development and improve confidence in development using the TDD methodology by doing e2e tests with Test Cafe.<br />- Facilitate and improve the development of a system for a fintech using Nextjs and MaterialUI.<br />- Code management using GIT as version controller in Gitlab and Azure<br /><br /><b>Tech stack:</b> NestJS, Angular, Azure, Test Cafe, NextJS, Tailwind, Typescript, ESLint, Prettier, Docker, Node, MySQL.",
   "short.experience.globaltask.title": "Fullstack software develop on GlobalTask (Remote)",
-  "short.experience.globaltask.date": "Jan 2022 - Present (3 meses)",
+  "short.experience.globaltask.date": "Jan 2022 - Present (9 months)",
   "short.experience.pamer.desc": "<br />- Promote the creation of a design system on the frontend so that it is solid, reusable and maintainable. Reducing the time to create new screens by 50%. Using Atomic Design pattern on Nextjs.<br />- Facilitate and improve the provision of resources. Saving the time it took developers to make these configurations by 90% and reducing the margin of error that could increase monthly billing. Using AWS CDK to automate this process.<br />- Automate application deployments and unit testing. Reducing the time it took developers to do the uploads by 100%. Using GitHub Actions hooks.<br /><br /><b>Tech stack:</b> NestJS, NextJS, Tailwind, Typescript, ESLint, Prettier, Jest, Cypress, AWS RDS, AWS CDK, AWS App Runner, AWS ECR, AWS S3, GitHub, GitHub Actions, Docker, Node, MySQL.",
   "short.experience.pamer.title": "Software developer at Pamer (Lima, Peru)",
   "short.experience.pamer.date": "Jul 2021 - Dec 2021 (6 months)",
