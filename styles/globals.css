@@ -1,16 +1,3 @@
-:root {
-  /* colors */
-  --primary-color: #E91E63;
-  --secondary-color: #FF9C00;
-  --tertiary-color: #157FFF;
-  --quaternary-color: #97FF00;
-  --text-color: black;
-  --white-color: white;
-  --black-color: #001226;
-  /* fonts */
-  --font-regular: 'inter';
-  --font-bold: 'interbold';
-}
 
 html,
 body {
