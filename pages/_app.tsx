@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react';
+import '../styles/variables.css';
 import '../styles/globals.css';
 
 import 'tailwindcss/tailwind.css';
