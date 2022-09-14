@@ -17,8 +17,8 @@
   - [x] [Jest](https://facebook.github.io/jest/)
   - [x] [React Testing Library](https://testing-library.com/react/)
   - [x] [Docker](https://www.docker.com/)
-  - [ ] [Storybook](https://storybook.js.org/)
-  - [ ] [SWR](https://swr.vercel.app)
+  - [x] [Storybook](https://storybook.js.org/)
+  - [] [SWR](https://swr.vercel.app)
 
 ## Architecture
 
