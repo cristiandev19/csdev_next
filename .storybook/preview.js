@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-import "../styles/globals.css";
+import '../styles/globals.css';
 import '../styles/variables.css';
 
 export const parameters = {
@@ -10,10 +10,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  // i18n,
-  // locale: 'en',
-  // locales: {
-  //   en: 'English',
-  //   es: 'Español',
-  // },
 }
