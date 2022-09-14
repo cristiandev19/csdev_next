@@ -11,7 +11,8 @@ const ProgressGradient: FunctionComponent<ProgressGradientProps> = ({
       <div
         className={clsx([
           styles.gradient1,
-          'absolute gradient-1 h-4 md:h-1.5 -bottom-4	md:bottom-0 rounded-r-lg',
+          'absolute gradient-1 h-2 md:h-1.5	md:bottom-0',
+          gradient !== 100 && 'rounded-r-lg',
         ])}
         style={{
           left: 0,
