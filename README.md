@@ -95,6 +95,9 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 - [Getting started](https://jestjs.io/docs/getting-started#using-typescript)
 - [tailwind and css variables](https://levelup.gitconnected.com/tailwindcss-with-css-variables-513abe2e9a5)
 - [css variable using js](https://davidwalsh.name/css-variables-javascript#:~:text=Setting%20a%20CSS%20Variable's%20Value,style%20)
+- [Adding stortbook on nextjs](https://storybook.js.org/blog/get-started-with-storybook-and-next-js/)
+- [Nextjs, tailwind and storybook](https://theodorusclarence.com/blog/nextjs-storybook-tailwind)
+- [Storybook addon to nextjs](https://storybook.js.org/addons/storybook-addon-next#csssassscss-modules)
 
 ## Deploy on Vercel
 
