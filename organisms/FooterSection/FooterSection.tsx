@@ -16,6 +16,7 @@ import {
   YOUTUBE_URL,
 } from '@shared/constants';
 import styles from './FooterSection.module.css';
+import Container from '@atoms/Container';
 
 const FooterSection: VoidFunctionComponent = () => {
   const { t } = useTranslation();
@@ -33,18 +34,22 @@ const FooterSection: VoidFunctionComponent = () => {
         'w-full',
       )}
     >
-      <div className="container mx-auto flex-wrap items-center text-white flex flex-col w-full">
-        <div className="w-full text-6xl font-bold mt-8">
-          <h2
-            className={clsx('w-full md:w-2/3 break-words', styles.contact)}
-            dangerouslySetInnerHTML={{ __html: t('footer.contact') }}
-          ></h2>
-        </div>
-        <div className="w-full flex mt-8 flex-col md:flex-row md:justify-between">
-          <p className="w-full md:w-2/3 text-gray-400">
-            {t('footer.contact.text')}
-          </p>
-          <div className="w-44 pt-6 md:pt-0">
+      <Container className="flex-wrap items-center text-white flex flex-col w-full">
+        <div className="md:flex w-full">
+          <div className="w-full">
+            <div className="w-full text-6xl font-bold mt-8">
+              <h2
+                className={clsx('w-full md:w-2/3 break-words', styles.contact)}
+                dangerouslySetInnerHTML={{ __html: t('footer.contact') }}
+              ></h2>
+            </div>
+            <div className="w-full flex mt-8 flex-col md:flex-row md:justify-between">
+              <p className="w-full md:w-2/3 text-gray-400">
+                {t('footer.contact.text')}
+              </p>
+            </div>
+          </div>
+          <div className="w-full md:w-44 pt-6 md:pt-0 m-auto">
             <LinkButton
               type="external"
               href={URL_CV}
@@ -91,7 +96,7 @@ const FooterSection: VoidFunctionComponent = () => {
             Copyright © 2021 Cristian Sotomayor
           </p>
         </div>
-      </div>
+      </Container>
     </footer>
   );
 };

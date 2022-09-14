@@ -9,9 +9,7 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
   stroke,
   image,
   color,
-  // percent,
   onClick,
-  showPercent = false,
 }) => {
   const [hovered, setHovered] = useState(false);
 
@@ -19,7 +17,6 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
     radius,
     stroke,
     color,
-    // percent,
   });
 
   const handleChanges = (hover: boolean) => {
@@ -51,18 +48,6 @@ const ProgressImg: FunctionComponent<ProgressImgProps> = ({
           left: '30px',
         }}
       />
-      {/* {showPercent && (
-        <text
-          style={{
-            color,
-            top: '50px',
-            left: '115px',
-            fontWeight: 900,
-            lineHeight: '20px',
-          }}
-          className="absolute"
-        >{`${100}%`}</text>
-      )} */}
     </HoveredCard>
   );
 };

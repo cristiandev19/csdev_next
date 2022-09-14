@@ -128,7 +128,10 @@ const TechnologiesSection: VoidFunctionComponent = () => {
     <Section className="py-12 md:py-0 relative md:h-screen flex">
       <Container className="z-10">
         <h2
-          className={clsx('text-center text-2xl my-8 relative', styles.title)}
+          className={clsx(
+            'text-center text-2xl my-8 relative text-cs-white',
+            styles.title,
+          )}
         >
           {t('tech.title')}
         </h2>

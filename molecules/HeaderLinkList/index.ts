@@ -1,3 +1,3 @@
-import HeadeLinkList from './HeadeLinkList';
+import HeaderLinkList from '@molecules/HeaderLinkList/HeaderLinkList';
 
-export default HeadeLinkList;
+export default HeaderLinkList;

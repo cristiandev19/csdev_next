@@ -1,28 +1,15 @@
-import React, { useState, VoidFunctionComponent } from 'react';
+import { HeadeLinkListViewProps } from '@molecules/HeaderLinkList/HeaderLinkList.types';
+import useOnScroll from '@shared/hooks/useOnScroll';
+import clsx from 'clsx';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import clsx from 'clsx';
-import useOnScroll from '@shared/hooks/useOnScroll';
-import { NavigationItem } from '@shared/interfaces/utils.interfaces';
+import React, { FunctionComponent } from 'react';
 
-const HeadeLinkList: VoidFunctionComponent = () => {
-  const { t } = useTranslation();
+const HeaderLinkListView: FunctionComponent<HeadeLinkListViewProps> = ({
+  navigationUrls,
+}) => {
   const { locale, asPath } = useRouter();
   const gradient = useOnScroll();
-  const [navigationUrls] = useState<NavigationItem[]>([
-    {
-      path: '/',
-      name: t('link.home'),
-      active: false,
-    },
-    {
-      path: '/contact',
-      name: t('link.contact'),
-      active: false,
-    },
-  ]);
-
   return (
     <>
       <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
@@ -54,4 +41,4 @@ const HeadeLinkList: VoidFunctionComponent = () => {
   );
 };
 
-export default HeadeLinkList;
+export default HeaderLinkListView;
